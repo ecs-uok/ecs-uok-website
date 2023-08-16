@@ -7,8 +7,10 @@ export default function HeroSection() {
         <source src={VideoBG} type="video/mp4" />
       </video>
       <div className="absolute w-full h-full top-0 flex flex-col justify-center items-center text-white">
-        <h1 className="text-5xl">Electronics and Computer Science Club</h1>
-        <p className="mt-4 text-sm">Our club motto should be here</p>
+        <h1 className="text-7xl font-mono font-bold">
+          Electronics and Computer Science Club
+        </h1>
+        <p className="mt-4 text-lg font-mono">Our club motto should be here</p>
       </div>
     </div>
   );

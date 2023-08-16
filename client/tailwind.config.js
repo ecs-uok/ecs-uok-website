@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         primary: '#0065AD',
+        secondary: '#077DD3',
+        overlay: '#00000090',
       },
     },
   },
