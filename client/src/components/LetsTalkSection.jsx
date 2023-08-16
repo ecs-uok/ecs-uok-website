@@ -4,7 +4,7 @@ export default function LetsTalkSection() {
   return (
     <div className="bg-primary mt-8 h-80 w-full relative z-0">
       <img
-        className="h-full w-full overflow-hidden object-cover absolute -z-10"
+        className="h-full w-full overflow-hidden object-cover opacity-50 absolute -z-10"
         src={LetsTalkBG}
       />
       <div className="py-12 px-48">
