@@ -2,7 +2,7 @@ import LetsTalkBG from "../assets/lets_talk_section.png";
 
 export default function LetsTalkSection() {
   return (
-    <div className="bg-primary mt-8 h-80 w-full relative z-0">
+    <div className="bg-primary h-80 w-full relative z-0">
       <img
         className="h-full w-full overflow-hidden object-cover opacity-50 absolute -z-10"
         src={LetsTalkBG}

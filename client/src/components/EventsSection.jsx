@@ -11,7 +11,7 @@ export default function EventsSection() {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -42,47 +42,50 @@ export default function EventsSection() {
           Latest news, recent events and upcoming events
         </div>
       </div>
-      <div className="my-8">
-        <Carousel
-          autoPlay
-          autoPlaySpeed={3000}
-          transitionDuration={1000}
-          swipeable
-          draggable
-          infinite
-          showDots
-          responsive={responsive}
-          centerMode={true}
-          arrows
-        >
-          <CarouselItem
-            carouselImage={EventImageOne}
-            eventName="Electronics and Computer Science AGM"
-            eventLink="www.google.lk"
-          />
-          <CarouselItem
-            carouselImage={EventImageOne}
-            eventName="Electronics and Computer Science AGM"
-            eventLink="www.google.lk"
-          />
-          <CarouselItem
-            carouselImage={EventImageOne}
-            eventName="Electronics and Computer Science AGM"
-            eventLink="www.google.lk"
-          />
-          <CarouselItem
-            carouselImage={EventImageOne}
-            eventName="Electronics and Computer Science AGM"
-            eventLink="www.google.lk"
-          />
-        </Carousel>
-      </div>
-      <div className="flex justify-center">
-        <a href="www.facebook.com">
-          <button className="bg-primary text-white px-20 py-2 m-2 text-lg font-bold rounded-xl hover:bg-secondary duration-500">
-            More Events
-          </button>
-        </a>
+
+      <div className="bg-gray-100 py-10">
+        <div className="px-20">
+          <Carousel
+            autoPlay
+            autoPlaySpeed={3000}
+            transitionDuration={1000}
+            swipeable
+            draggable
+            infinite
+            showDots
+            responsive={responsive}
+            centerMode={true}
+            arrows
+          >
+            <CarouselItem
+              carouselImage={EventImageOne}
+              eventName="Electronics and Computer Science AGM"
+              eventLink="www.google.lk"
+            />
+            <CarouselItem
+              carouselImage={EventImageOne}
+              eventName="Electronics and Computer Science AGM"
+              eventLink="www.google.lk"
+            />
+            <CarouselItem
+              carouselImage={EventImageOne}
+              eventName="Electronics and Computer Science AGM"
+              eventLink="www.google.lk"
+            />
+            <CarouselItem
+              carouselImage={EventImageOne}
+              eventName="Electronics and Computer Science AGM"
+              eventLink="www.google.lk"
+            />
+          </Carousel>
+        </div>
+        <div className="mt-8 flex justify-center">
+          <a href="www.facebook.com">
+            <button className="bg-primary text-white px-20 py-2 m-2 text-lg font-bold rounded-xl hover:bg-secondary duration-500">
+              More Events
+            </button>
+          </a>
+        </div>
       </div>
     </>
   );

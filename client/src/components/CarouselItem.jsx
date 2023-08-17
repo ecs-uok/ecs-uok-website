@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function CarouselItem({ carouselImage, eventName, eventLink }) {
   return (
-    <div className="h-72 w-96 border border-black">
+    <div className="h-80 w-96 border border-black bg-white">
       <img
         className="w-full h-2/3 overflow-hidden object-cover"
         src={carouselImage}
