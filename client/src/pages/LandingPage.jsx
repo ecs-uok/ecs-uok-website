@@ -5,11 +5,11 @@ import PurposeSection from "../components/PurposeSection";
 
 export default function LandingPage() {
   return (
-    <div>
+    <>
       <HeroSection />
       <PurposeSection />
       <EventsSection />
       <LetsTalkSection />
-    </div>
+    </>
   );
 }

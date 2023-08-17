@@ -25,10 +25,10 @@ export default function Footer() {
             <Link to={"/"}>
               <p className="text-xl font-semibold font-mono mt-4">Events</p>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/about"}>
               <p className="text-xl font-semibold font-mono mt-4">About</p>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/contact-us"}>
               <p className="text-xl font-semibold font-mono mt-4">Contact Us</p>
             </Link>
           </div>
