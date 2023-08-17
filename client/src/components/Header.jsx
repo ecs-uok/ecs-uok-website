@@ -3,11 +3,13 @@ import HeaderLogo from "../assets/ecsc_logo_header.png";
 
 export default function Header() {
   return (
-    <header className="flex justify-around bg-primary py-2 text-white">
-      <Link to={"/"} className="flex items-center">
-        <img className="h-10" src={HeaderLogo} alt="ECSC Logo" />
-      </Link>
-      <div className="flex justify-end gap-4 ">
+    <header className="flex bg-primary text-white h-20 w-full">
+      <div>
+        <Link to={"/"}>
+          <img className="h-16 w-auto my-2" src={HeaderLogo} alt="ECSC Logo" />
+        </Link>
+      </div>
+      <div className="flex items-center gap-4 text-xl font-bold">
         <div>Home</div>
         <div>Purpose</div>
         <div>Events</div>
@@ -15,7 +17,7 @@ export default function Header() {
           <div>About</div>
         </Link>
         <Link to={"/contact-us"}>
-          <button className="bg-primary border border-white text-white px-3 rounded-full">
+          <button className="bg-primary border border-white text-white px-4 py-2 rounded-full">
             Contact Us
           </button>
         </Link>
