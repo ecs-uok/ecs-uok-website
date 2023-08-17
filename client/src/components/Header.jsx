@@ -12,7 +12,7 @@ export default function Header() {
         />
       </Link>
 
-      <div className="flex items-center gap-4 text-xl font-bold mx-10">
+      <div className="flex items-center gap-10 text-xl font-bold mx-10">
         <Link to={"/"}>
           <div>Home</div>
         </Link>
