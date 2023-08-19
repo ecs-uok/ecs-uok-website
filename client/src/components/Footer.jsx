@@ -4,7 +4,7 @@ import ECSCFooterLogo from "../assets/ecsc_logo_footer.png";
 export default function Footer() {
   return (
     <>
-      <div className="py-8 px-20 grid grid-cols-3 gap-96">
+      <div className="py-8 px-40 grid grid-cols-3 gap-96">
         <div>
           <img className="h-48 w-auto" src={ECSCFooterLogo}></img>
           <p className="text-lg font-mono font-semibold">

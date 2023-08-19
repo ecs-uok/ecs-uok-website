@@ -69,6 +69,7 @@ export default function ContactUsForm() {
             type="text"
             placeholder="Full name"
             className="text-xl px-16 py-2 w-[500px] h-[80px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            name="fullName"
             value={formData.fullName}
             onChange={handleChange}
             required
@@ -89,6 +90,7 @@ export default function ContactUsForm() {
             type="email"
             placeholder="Email address"
             className="text-xl px-16 py-2 w-[500px] h-[80px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            name="email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -109,6 +111,7 @@ export default function ContactUsForm() {
             type="tel"
             placeholder="Phone number"
             className="text-xl px-16 py-2 w-[500px] h-[58px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
           />
@@ -128,6 +131,7 @@ export default function ContactUsForm() {
             type="text"
             placeholder="Subject"
             className="text-xl px-16 py-2 w-[500px] h-[80px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            name="subject"
             value={formData.subject}
             onChange={handleChange}
             required
@@ -148,6 +152,7 @@ export default function ContactUsForm() {
             type="text"
             placeholder="Message"
             className="text-xl px-16 py-2 w-[500px] h-[200px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            name="message"
             value={formData.message}
             onChange={handleChange}
             required

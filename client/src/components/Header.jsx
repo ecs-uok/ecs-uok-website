@@ -3,7 +3,7 @@ import HeaderLogo from "../assets/ecsc_logo_header.png";
 
 export default function Header() {
   return (
-    <header className="flex bg-primary text-white h-20 w-full">
+    <header className="flex bg-primary text-white h-20 w-full justify-between">
       <Link to={"/"}>
         <img
           className="h-16 w-auto my-2 ml-10"
@@ -30,7 +30,7 @@ export default function Header() {
         </Link>
 
         <Link to={"/contact-us"}>
-          <button className="bg-primary border border-white text-white px-4 py-2 rounded-full">
+          <button className="bg-primary border border-white text-white px-4 py-2 rounded-full hover:bg-secondary duration-500">
             Contact Us
           </button>
         </Link>
