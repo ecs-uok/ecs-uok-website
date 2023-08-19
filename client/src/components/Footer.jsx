@@ -4,64 +4,56 @@ import ECSCFooterLogo from "../assets/ecsc_logo_footer.png";
 export default function Footer() {
   return (
     <>
-      <div className="py-8 px-40 grid grid-cols-3 gap-96">
+      <div className="py-8 px-40 grid grid-cols-3 gap-80">
         <div>
-          <img className="h-48 w-auto" src={ECSCFooterLogo}></img>
-          <p className="text-lg font-mono font-semibold">
+          <img className="h-full w-full" src={ECSCFooterLogo}></img>
+          <p className="text-lg font-semibold">
             &ldquo;Let&apos;s Embrace the world of Hardware and Software, to
             creat a sustainable future&ldquo;
           </p>
         </div>
 
         <div>
-          <h1 className="text-3xl font-bold font-mono">Site Map</h1>
+          <h1 className="text-3xl font-bold">Site Map</h1>
           <div className="mt-12">
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">Home</p>
+              <p className="text-xl font-semibold mt-4">Home</p>
             </Link>
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">Purpose</p>
+              <p className="text-xl font-semibold mt-4">Purpose</p>
             </Link>
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">Events</p>
+              <p className="text-xl font-semibold mt-4">Events</p>
             </Link>
             <Link to={"/about"}>
-              <p className="text-xl font-semibold font-mono mt-4">About</p>
+              <p className="text-xl font-semibold mt-4">About</p>
             </Link>
             <Link to={"/contact-us"}>
-              <p className="text-xl font-semibold font-mono mt-4">Contact Us</p>
+              <p className="text-xl font-semibold mt-4">Contact Us</p>
             </Link>
           </div>
         </div>
 
         <div>
-          <h1 className="text-3xl font-bold font-mono">Other Links</h1>
+          <h1 className="text-3xl font-bold">Other Links</h1>
           <div className="mt-12">
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">
-                Message from Dean
-              </p>
+              <p className="text-xl font-semibold mt-4">Message from Dean</p>
             </Link>
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">
-                Our Leadership
-              </p>
+              <p className="text-xl font-semibold mt-4">Our Leadership</p>
             </Link>
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">
-                Recent News
-              </p>
+              <p className="text-xl font-semibold mt-4">Recent News</p>
             </Link>
             <Link to={"/"}>
-              <p className="text-xl font-semibold font-mono mt-4">
-                Recent Events
-              </p>
+              <p className="text-xl font-semibold mt-4">Recent Events</p>
             </Link>
           </div>
         </div>
       </div>
 
-      <hr className="my-1" />
+      <hr className="mt-16" />
 
       <div className="flex gap-20 justify-center items-center my-6">
         <a href="www.linkedin.com">
