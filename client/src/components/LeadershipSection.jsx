@@ -9,11 +9,11 @@ import WebMasterImage from "../assets/members/webmaster.jpg";
 
 export default function LeadershipSection() {
   return (
-    <div className="bg-gray-100 p-12">
-      <h1 className="text-5xl font-bold font-sans text-center my-4">
+    <div className="bg-gray-100 p-12 flex flex-col justify-center items-center">
+      <h1 className="text-5xl font-bold font-sans my-4">
         Executive Committee of ECSC 2023/24
       </h1>
-      <div className="flex flex-col justify-center items-center">
+      <div className=" flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 gap-4 mt-8">
           <MemberCard
             member_photo={PresidentImage}

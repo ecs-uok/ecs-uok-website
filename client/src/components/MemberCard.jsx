@@ -7,7 +7,7 @@ export default function MemberCard({
   // member_email,
 }) {
   return (
-    <div className="w-[300px] h-[360px] border-2 border-black rounded-3xl relative cursor-default">
+    <div className="w-[240px] h-[300px] border-2 border-black rounded-3xl relative cursor-default">
       <img
         className="w-full h-full object-cover rounded-3xl"
         src={member_photo}
@@ -43,6 +43,6 @@ export default function MemberCard({
 MemberCard.propTypes = {
   member_role: PropTypes.string.isRequired,
   member_name: PropTypes.string.isRequired,
-  member_email: PropTypes.string.isRequired,
+  // member_email: PropTypes.string.isRequired,
   member_photo: PropTypes.string.isRequired,
 };

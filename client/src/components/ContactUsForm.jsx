@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function ContactUsForm() {
@@ -25,32 +25,45 @@ export default function ContactUsForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // const serviceId = "service_t04omu9";
-    // const templateId = "template_3pmflrk"; // need to change
-    // const userId = "rcyAo91xkCVPVf7Iw"; // need to change
+    const serviceId = "service_hm42gdn";
+    const templateId = "template_fwozc55";
+    const userId = "7Zdcqzz9ZKI8P9l37";
 
-    // const templateParams = {
-    //   from_name: formData.fullName,
-    //   email_id: formData.email,
-    //   tp_no: formData.phoneNumber,
-    //   subject: formData.subject,
-    //   message: formData.message,
-    // };
+    const templateParams = {
+      from_name: formData.fullName,
+      email_id: formData.email,
+      tp_no: formData.phoneNumber,
+      subject: formData.subject,
+      message: formData.message,
+    };
 
-    // emailjs
-    //   .send(serviceId, templateId, templateParams, userId)
-    //   .then((response) => {
-    //     console.log("Email sent successfully!", response);
-    //     setSuccessMessage("Successfully sent the message!");
-    //     setErrorMessage("");
-    //     setFormData(initialFormData);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error sending email:", error);
-    //     setErrorMessage("Error sending the message. Please try again later.");
-    //     setSuccessMessage("");
-    //   });
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log("Email sent successfully!", response);
+        setSuccessMessage("Successfully sent the message!");
+        setErrorMessage("");
+        setFormData(initialFormData);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        setErrorMessage("Error sending the message. Please try again later.");
+        setSuccessMessage("");
+      });
   };
+
+  useEffect(() => {
+    if (successMessage || errorMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage(false);
+        setErrorMessage(false);
+      }, 5000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [successMessage, errorMessage]);
 
   return (
     <div className="border-4 border-primary rounded-2xl">
@@ -158,7 +171,32 @@ export default function ContactUsForm() {
             required
           />
         </div>
-
+        {successMessage && (
+          <div className="text-green-600 font-bold text-xl flex gap-4 justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+              className="w-7 h-7 fill-current"
+            >
+              <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
+            </svg>
+            {successMessage}
+          </div>
+        )}
+        {errorMessage && (
+          <div className="text-red-600 font-bold text-xl flex gap-4 justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+              className="w-7 h-7 fill-current"
+            >
+              <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+            </svg>
+            {errorMessage}
+          </div>
+        )}
         <div className="flex justify-center m-4">
           <button
             type="submit"
