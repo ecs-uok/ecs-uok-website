@@ -146,7 +146,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className="">{contentComponents[activeSection]}</div>
+      <div>{contentComponents[activeSection]}</div>
     </div>
   );
 }

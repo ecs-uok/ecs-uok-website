@@ -4,22 +4,22 @@ export default function MemberCard({
   member_photo,
   member_role,
   member_name,
-  member_email,
+  // member_email,
 }) {
   return (
-    <div className="w-[300px] h-[360px] bg-black rounded-3xl relative">
+    <div className="w-[300px] h-[360px] border-2 border-black rounded-3xl relative cursor-default">
       <img
-        className="w-full rounded-t-3xl"
+        className="w-full h-full object-cover rounded-3xl"
         src={member_photo}
         alt={`${member_name} photo`}
       />
-      <div className="absolute bottom-0 w-full rounded-b-3xl bg-primary cursor-pointer">
+      <div className="absolute bottom-0 w-full rounded-b-3xl bg-primary">
         <div className="text-white text-xl text-center p-2">
           <p className="font-bold">{member_role}</p>
           <p>{member_name}</p>
         </div>
 
-        <div className="flex gap-3 justify-center items-center rounded-b-3xl p-4 w-full h-full bottom-0 absolute bg-primary opacity-0 hover:opacity-100 transition-opacity duration-500">
+        {/* <div className="flex gap-3 justify-center items-center rounded-b-3xl p-4 w-full h-full bottom-0 absolute bg-primary opacity-0 hover:opacity-100 transition-opacity duration-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -34,7 +34,7 @@ export default function MemberCard({
           >
             {member_email}
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
