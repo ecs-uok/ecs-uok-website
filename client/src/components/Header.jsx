@@ -3,10 +3,10 @@ import HeaderLogo from "../assets/ecsc_logo_header.png";
 
 export default function Header() {
   return (
-    <header className="flex bg-primary text-white h-[80px] w-full justify-between">
+    <header className="flex bg-primary text-white h-28 w-full justify-between">
       <NavLink to={"/"}>
         <img
-          className="h-full w-auto py-2 pl-10 justify-center items-center"
+          className="flex h-auto w-52 pl-10 justify-center items-center"
           src={HeaderLogo}
           alt="ECSC Logo"
         />
