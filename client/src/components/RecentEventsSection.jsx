@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CarouselItem from "./CarouselItem";
-import EventImageOne from "../assets/event_1_carousel.jpg";
+import EventImageOne from "../assets/event_1_carousel.jpeg";
 
 export default function RecentEventsSection() {
   const responsive = {

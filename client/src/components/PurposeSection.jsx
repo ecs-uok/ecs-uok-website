@@ -1,7 +1,7 @@
 import Card from "./Card";
 import ElecImg from "../assets/electronics_card.jpg";
 import CSImg from "../assets/computer_science_card.jpg";
-import UOKImg from "../assets/uok_card.png";
+import UOKImg from "../assets/uok_card.jpg";
 
 export default function PurposeSection() {
   return (

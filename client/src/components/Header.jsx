@@ -1,36 +1,36 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import HeaderLogo from "../assets/ecsc_logo_header.png";
 
 export default function Header() {
   return (
-    <header className="flex bg-primary text-white h-[80px] w-screen justify-between">
-      <Link to={"/"}>
+    <header className="flex bg-primary text-white h-[80px] w-full justify-between">
+      <NavLink to={"/"}>
         <img
           className="h-full w-auto py-2 pl-10 justify-center items-center"
           src={HeaderLogo}
           alt="ECSC Logo"
         />
-      </Link>
+      </NavLink>
 
       <div className="flex items-center gap-10 text-xl font-bold px-20">
-        <Link to={"/"}>
+        <NavLink to={"/"}>
           <div className="hover:underline">Home</div>
-        </Link>
+        </NavLink>
 
-        <Link to={"/"}>
+        <NavLink to="/#purpose-section">
           <div className="hover:underline">Purpose</div>
-        </Link>
+        </NavLink>
 
-        <Link to={"/"}>
+        <NavLink to="/#events-section" relative="path">
           <div className="hover:underline">Events</div>
-        </Link>
+        </NavLink>
 
-        <Link to={"/about"}>
+        <NavLink to={"/about"}>
           <div className="hover:underline">About</div>
-        </Link>
+        </NavLink>
 
         <Link to={"/contact-us"}>
-          <button className="bg-primary border border-white text-white px-6 py-2 rounded-full hover:bg-secondary">
+          <button className="bg-primary border border-white text-white px-6 py-2 rounded-full hover:bg-secondary duration-700">
             Contact Us
           </button>
         </Link>
