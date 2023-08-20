@@ -71,7 +71,7 @@ export default function Footer() {
           </svg>
         </a>
         <a
-          href="https://m.facebook.com/people/Electronics-and-Computer-Science-Club/61550473266598/"
+          href="https://www.facebook.com/profile.php?id=61550473266598"
           target="_blank"
           rel="noreferrer"
         >
@@ -85,7 +85,7 @@ export default function Footer() {
           </svg>
         </a>
         <a
-          href="https://instagram.com/ecsc_uok?igshid=MzRlODBiNWFlZA=="
+          href="https://instagram.com/ecsc_uok"
           target="_blank"
           rel="noreferrer"
         >
