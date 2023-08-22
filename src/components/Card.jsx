@@ -10,7 +10,7 @@ export default function Card({ cardImage, cardTitle, cardDesc }) {
       />
       <div className="flex flex-col justify-center text-white p-4 w-full h-full top-0 right-0 absolute bg-overlay backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity duration-700">
         <h1 className="text-xl uppercase font-bold">{cardTitle}</h1>
-        <p className="text-lg capitalize pt-4">{cardDesc}</p>
+        <p className="text-lg pt-4">{cardDesc}</p>
       </div>
     </div>
   );
