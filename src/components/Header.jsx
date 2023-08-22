@@ -9,22 +9,24 @@ const Header = () => {
   const [colorChange, setColorchange] = useState(false);
   const [isSideBarActive, setIsSideBarActive] = useState(false);
 
-
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
-        setColorchange(true);
+      setColorchange(true);
+    } else {
+      setColorchange(false);
     }
-    else {
-        setColorchange(false);
-    }
-};
+  };
 
-window.addEventListener('scroll', changeNavbarColor);
+  window.addEventListener("scroll", changeNavbarColor);
 
-const showSidebar = () => setIsSideBarActive(!isSideBarActive);
+  const showSidebar = () => setIsSideBarActive(!isSideBarActive);
 
   return (
-    <div className={`fixed top-0 w-full h-fit ${colorChange ? "bg-primary" :"bg-transparent"} z-20 left-0 transition-colors duration-500` }>
+    <div
+      className={`fixed top-0 w-full h-fit ${
+        colorChange ? "bg-primary" : "bg-transparent"
+      } z-20 left-0 transition-colors duration-500`}
+    >
       <header
         className="flex text-white h-[80px] w-full justify-between px-10 py-0"
         id="homeSection"
@@ -37,9 +39,10 @@ const showSidebar = () => setIsSideBarActive(!isSideBarActive);
           />
         </NavLink>
 
-      <div className="flex items-center gap-10 text-xl font-bold px-20">
-
-      <button className="h-full w-auto flex justify-center items-center lg:hidden cursor-pointer" onClick={showSidebar} >
+        <button
+          className="h-full w-auto flex justify-center items-center lg:hidden cursor-pointer"
+          onClick={showSidebar}
+        >
           {/* <MenuIcon /> */}
           <MenuIcon2 />
         </button>
@@ -49,31 +52,21 @@ const showSidebar = () => setIsSideBarActive(!isSideBarActive);
             <div className="hover:underline">Home</div>
           </NavLink>
 
-        <ScrollLink
-          to="purposeSection"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-80}
-        >
-          <div className="hover:underline cursor-pointer">Purpose</div>
-        </ScrollLink>
-
-        <ScrollLink
-          to="eventsSection"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-78}
-        >
-          <div className="hover:underline cursor-pointer">Events</div>
-        </ScrollLink>
-
-          <ScrollLink to="purposeSection" spy={true} smooth={true} duration={500}>
+          <ScrollLink
+            to="purposeSection"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <div className="hover:underline cursor-pointer">Purpose</div>
           </ScrollLink>
 
-          <ScrollLink to="eventsSection" spy={true} smooth={true} duration={500}>
+          <ScrollLink
+            to="eventsSection"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <div className="hover:underline cursor-pointer">Events</div>
           </ScrollLink>
 
@@ -88,12 +81,9 @@ const showSidebar = () => setIsSideBarActive(!isSideBarActive);
           </Link>
         </div>
       </header>
-      <SideNav
-        visible={isSideBarActive}
-        setVisible={setIsSideBarActive}
-      />
+      <SideNav visible={isSideBarActive} setVisible={setIsSideBarActive} />
     </div>
   );
-}
+};
 
 export default Header;
