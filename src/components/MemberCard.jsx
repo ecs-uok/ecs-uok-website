@@ -4,18 +4,18 @@ export default function MemberCard({
   member_photo,
   member_role,
   member_name,
+  fontsize,
   // member_email,
 }) {
   return (
-    <div className="w-[240px] h-[300px] shadow-lg shadow-gray-500 rounded-3xl relative cursor-default">
+    <div className="w-[240px] h-[280px] 2xl:shadow-lg 2xl:shadow-gray-500 shadow-md rounded-3xl relative cursor-pointer">
       <img
-        loading="lazy"
         className="w-full h-full object-cover rounded-3xl"
         src={member_photo}
         alt={`${member_name} photo`}
       />
       <div className="absolute bottom-0 w-full rounded-b-3xl bg-primary">
-        <div className="text-white text-xl text-center p-2">
+        <div className={`text-white text-center p-2 text-${fontsize || "sm"}`}>
           <p className="font-bold">{member_role}</p>
           <p>{member_name}</p>
         </div>
@@ -46,4 +46,5 @@ MemberCard.propTypes = {
   member_name: PropTypes.string.isRequired,
   // member_email: PropTypes.string.isRequired,
   member_photo: PropTypes.string.isRequired,
+  fontsize: PropTypes.string.isRequired,
 };

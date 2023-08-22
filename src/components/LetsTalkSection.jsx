@@ -31,6 +31,7 @@ export default function LetsTalkSection() {
           </button>
           <button className="bg-primary w-fit border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 px-6 hover:bg-secondary duration-500">
             <pre> +94 74 087 6190 </pre>
+
           </button>
         </div>
       </div>
