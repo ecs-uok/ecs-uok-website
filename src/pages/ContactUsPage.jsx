@@ -1,12 +1,13 @@
 import ContactUsCard from "../components/ContactUsCard";
 import GoogleMap from "../components/GoogleMap";
-import ECSCLogo from "../assets/ecs_logo.png";
+import ECSCLogo from "../assets/ecsc_logo.png";
+import ContactUsPhoto from "../assets/members/chamith_contact.jpg";
 import ContactUsForm from "../components/ContactUsForm";
 
 export default function ContactUsPage() {
   return (
     <>
-      <div className="bg-primary py-12 px-48">
+      <div className="bg-primary py-12 px-48 mt-20">
         <div className="flex gap-6">
           <span className="text-white text-5xl font-bold">Connect With Us</span>
           <svg
@@ -35,10 +36,10 @@ export default function ContactUsPage() {
             text="ecs.uok@gmail.com"
           />
           <ContactUsCard
-            image={ECSCLogo}
-            name="John Doe"
+            image={ContactUsPhoto}
+            name="Chamith Dilshan"
             linkType="tel:"
-            text="012 345 6789"
+            text="+94782563766"
           />
 
           <GoogleMap />

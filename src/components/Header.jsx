@@ -5,12 +5,12 @@ import HeaderLogo from "../assets/ecsc_logo_header.png";
 export default function Header() {
   return (
     <header
-      className="flex bg-primary text-white h-28 w-full justify-between"
+      className="flex bg-primary text-white h-20 w-full justify-between fixed z-50"
       id="homeSection"
     >
       <NavLink to={"/"}>
         <img
-          className="flex h-auto w-52 pl-10 justify-center items-center"
+          className="flex h-auto w-32 my-2 pl-16 justify-center items-center"
           src={HeaderLogo}
           alt="ECSC Logo"
         />
@@ -21,11 +21,23 @@ export default function Header() {
           <div className="hover:underline">Home</div>
         </NavLink>
 
-        <ScrollLink to="purposeSection" spy={true} smooth={true} duration={500}>
+        <ScrollLink
+          to="purposeSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
+        >
           <div className="hover:underline cursor-pointer">Purpose</div>
         </ScrollLink>
 
-        <ScrollLink to="eventsSection" spy={true} smooth={true} duration={500}>
+        <ScrollLink
+          to="eventsSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-78}
+        >
           <div className="hover:underline cursor-pointer">Events</div>
         </ScrollLink>
 
