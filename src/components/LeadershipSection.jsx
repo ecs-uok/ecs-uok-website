@@ -13,7 +13,7 @@ import MembershipDevelopmentLead from "../assets/members/chamodya.jpg";
 import FinanceLead from "../assets/members/janada.jpg";
 import EditorialLead from "../assets/members/vichaksha.jpg";
 import EventAndLogisticsLead from "../assets/members/vidhushan.jpg";
-import TechCoLeadOne from "../assets/member_image.png";
+import TechCoLeadOne from "../assets/members/thisara.jpg";
 import TechCoLeadTwo from "../assets/members/himal.jpg";
 import AcademicCoLeadOne from "../assets/members/ruchira.jpg";
 import AcademicCoLeadTwo from "../assets/members/roaman.jpg";
