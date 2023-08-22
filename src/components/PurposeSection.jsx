@@ -42,7 +42,10 @@ export default function PurposeSection() {
         />
       </div>
 
-      <div className="flex px-96 justify-center items-center py-4">
+      <div
+        className="flex px-96 justify-center items-center py-4"
+        id="visionMission"
+      >
         <div className="mr-10">
           <div className="flex gap-3">
             <svg

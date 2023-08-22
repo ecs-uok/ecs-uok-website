@@ -37,7 +37,9 @@ const showSidebar = () => setIsSideBarActive(!isSideBarActive);
           />
         </NavLink>
 
-        <button className="h-full w-auto flex justify-center items-center lg:hidden cursor-pointer" onClick={showSidebar} >
+      <div className="flex items-center gap-10 text-xl font-bold px-20">
+
+      <button className="h-full w-auto flex justify-center items-center lg:hidden cursor-pointer" onClick={showSidebar} >
           {/* <MenuIcon /> */}
           <MenuIcon2 />
         </button>
@@ -46,6 +48,26 @@ const showSidebar = () => setIsSideBarActive(!isSideBarActive);
           <NavLink to={"/"}>
             <div className="hover:underline">Home</div>
           </NavLink>
+
+        <ScrollLink
+          to="purposeSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
+        >
+          <div className="hover:underline cursor-pointer">Purpose</div>
+        </ScrollLink>
+
+        <ScrollLink
+          to="eventsSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-78}
+        >
+          <div className="hover:underline cursor-pointer">Events</div>
+        </ScrollLink>
 
           <ScrollLink to="purposeSection" spy={true} smooth={true} duration={500}>
             <div className="hover:underline cursor-pointer">Purpose</div>

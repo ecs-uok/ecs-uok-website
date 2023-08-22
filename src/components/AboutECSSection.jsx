@@ -2,12 +2,13 @@ import AboutHeaderImage from "../assets/about_header.jpg";
 
 export default function AboutECS() {
   return (
-    <div className="bg-gray-100 p-12">
+    <div className="bg-gray-100 p-12" id="aboutusPage">
       <h1 className="text-5xl font-bold font-sans text-center">
         Electronics and Computer Science Club
       </h1>
       <img
         className="mt-8 w-full h-[360px] object-cover"
+        loading="lazy"
         src={AboutHeaderImage}
       />
       <div className="text-xl font-semibold">
