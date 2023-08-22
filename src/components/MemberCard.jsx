@@ -7,8 +7,9 @@ export default function MemberCard({
   // member_email,
 }) {
   return (
-    <div className="w-[240px] h-[300px] border-2 border-black rounded-3xl relative cursor-default">
+    <div className="w-[240px] h-[300px] shadow-lg shadow-gray-500 rounded-3xl relative cursor-default">
       <img
+        loading="lazy"
         className="w-full h-full object-cover rounded-3xl"
         src={member_photo}
         alt={`${member_name} photo`}

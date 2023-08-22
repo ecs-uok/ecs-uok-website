@@ -1,12 +1,12 @@
 import Card from "./Card";
-import ElecImg from "../assets/electronics_card.jpg";
-import CSImg from "../assets/computer_science_card.jpg";
-import UOKImg from "../assets/uok_card.jpg";
+import ElecImg from "../assets/UOK/elec_lab.jpeg";
+import CSImg from "../assets/UOK/cs_lab.jpg";
+import UOKImg from "../assets/UOK/uok.jpg";
 
 export default function PurposeSection() {
   return (
     <>
-      <div className="bg-primary py-12 px-48">
+      <div className="bg-primary py-12 px-48" id="purposeSection">
         <div className="flex gap-4 text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,11 +38,11 @@ export default function PurposeSection() {
         <Card
           cardImage={UOKImg}
           cardTitle="University of Kelaniya"
-          cardDesc="The roof where we all became one another. This enlightening pillar stands always behind us through our life. Long Live 'Kelani Matha'"
+          cardDesc="The Roof where we all became one another. This enlightening pillar will stand always behind us through our our lives. Long live 'Kelani Matha'"
         />
       </div>
 
-      <div className="flex px-96 py-4 gap-10">
+      <div className="flex px-96 justify-center items-center py-4">
         <div className="mr-10">
           <div className="flex gap-3">
             <svg

@@ -1,9 +1,13 @@
 import { NavLink, Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import HeaderLogo from "../assets/ecsc_logo_header.png";
 
 export default function Header() {
   return (
-    <header className="flex bg-primary text-white h-28 w-full justify-between">
+    <header
+      className="flex bg-primary text-white h-28 w-full justify-between"
+      id="homeSection"
+    >
       <NavLink to={"/"}>
         <img
           className="flex h-auto w-52 pl-10 justify-center items-center"
@@ -17,13 +21,13 @@ export default function Header() {
           <div className="hover:underline">Home</div>
         </NavLink>
 
-        <NavLink to="/#purpose-section">
-          <div className="hover:underline">Purpose</div>
-        </NavLink>
+        <ScrollLink to="purposeSection" spy={true} smooth={true} duration={500}>
+          <div className="hover:underline cursor-pointer">Purpose</div>
+        </ScrollLink>
 
-        <NavLink to="/#events-section" relative="path">
-          <div className="hover:underline">Events</div>
-        </NavLink>
+        <ScrollLink to="eventsSection" spy={true} smooth={true} duration={500}>
+          <div className="hover:underline cursor-pointer">Events</div>
+        </ScrollLink>
 
         <NavLink to={"/about"}>
           <div className="hover:underline">About</div>

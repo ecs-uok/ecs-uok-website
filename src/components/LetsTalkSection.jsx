@@ -2,12 +2,12 @@ import LetsTalkBG from "../assets/lets_talk_section.png";
 
 export default function LetsTalkSection() {
   return (
-    <div className="bg-primary h-80 w-full relative z-0">
+    <div className="bg-primary h-96 w-full relative z-0">
       <img
         className="h-full w-full overflow-hidden object-cover opacity-50 absolute -z-10"
         src={LetsTalkBG}
       />
-      <div className="py-12 px-48">
+      <div className="py-20 px-48 flex flex-col justify-center">
         <div className="text-white flex gap-4">
           <h1 className="text-4xl">Let&apos;s Talk</h1>
           <svg
@@ -29,12 +29,12 @@ export default function LetsTalkSection() {
             <br />
           </p>
         </div>
-        <div className="mt-10 flex gap-4">
-          <button className="bg-primary border-white border-4 text-white text-lg font-bold font-mono rounded-full py-2 px-12 hover:bg-secondary duration-500">
+        <div className="mt-10 gap-4 grid grid-cols-1 md:grid-cols-12">
+          <button className="bg-primary col-span-2 border-white border-4 text-white text-lg font-bold font-mono rounded-full py-2 px-10 hover:bg-secondary duration-500">
             ecs.uok@gmail.com
           </button>
-          <button className="bg-primary border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 px-12 hover:bg-secondary duration-500">
-            +94 12 345 6789
+          <button className="bg-primary col-span-2 border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 px-6 hover:bg-secondary duration-500">
+            +94 74 087 6190
           </button>
         </div>
       </div>
