@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function Card({ cardImage, cardTitle, cardDesc }) {
   return (
-    <div className="cursor-pointer w-96 h-96 border rounded-2xl overflow-hidden relative">
+    <div className="cursor-pointer w-[80%] h-80 lg:w-80 lg:h-80 border rounded-2xl overflow-hidden relative">
       <img
         className="w-full h-full object-cover"
         src={cardImage}
