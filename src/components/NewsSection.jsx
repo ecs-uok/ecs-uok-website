@@ -1,7 +1,7 @@
 export default function NewsSection() {
   return (
     <>
-      <div className="flex p-12 gap-4 w-full justify-center">
+      <div className="flex p-12 gap-4 w-full justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1em"

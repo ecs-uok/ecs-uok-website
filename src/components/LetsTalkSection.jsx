@@ -30,11 +30,21 @@ export default function LetsTalkSection() {
           </p>
         </div>
         <div className="mt-10 gap-4 grid grid-cols-1 md:grid-cols-12">
-          <button className="bg-primary col-span-2 border-white border-4 text-white text-lg font-bold font-mono rounded-full py-2 px-10 hover:bg-secondary duration-500">
-            ecs.uok@gmail.com
+          <button className="bg-primary col-span-2 border-white border-4 text-white text-lg font-bold font-mono rounded-full py-2 hover:bg-secondary duration-500">
+            <a
+              className="text-base mt-4 cursor-pointer"
+              href="mailto:ecs.uok@gmail.com"
+            >
+              ecs.uok@gmail.com
+            </a>
           </button>
-          <button className="bg-primary col-span-2 border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 px-6 hover:bg-secondary duration-500">
-            +94 74 087 6190
+          <button className="bg-primary col-span-2 border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 hover:bg-secondary duration-500">
+            <a
+              className="text-base mt-4 cursor-pointer"
+              href="tel:+94782563766"
+            >
+              +94 78 256 3766
+            </a>
           </button>
         </div>
       </div>
