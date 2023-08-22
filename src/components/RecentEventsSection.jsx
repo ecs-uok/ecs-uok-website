@@ -25,7 +25,7 @@ export default function RecentEventsSection() {
 
   return (
     <>
-      <div className="bg-primary py-12 px-48 mt-8" id="eventsSection">
+      <div className="bg-primary py-12 mt-8 px-10 w-full md:px-48 transition-all duration-1000" id="eventsSection">
         <div className="flex gap-4 text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function RecentEventsSection() {
         </div>
       </div>
 
-      <div className="bg-gray-100 py-10">
+      <div className="bg-gray-100 py-10 w-full">
         <div className="px-20">
           <Carousel
             autoPlay
@@ -56,6 +56,7 @@ export default function RecentEventsSection() {
             responsive={responsive}
             centerMode={true}
             arrows
+            
           >
             <CarouselItem
               carouselImage={EventImageOne}

@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Layout() {
   return (
     <div 
-      className="w-full"
+      className="w-full w-min-[600px]"
       // min-h-screen w-full flex flex-col justify-between items-center p-0 m-0
     >
       <Header />
