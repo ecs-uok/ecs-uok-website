@@ -1,4 +1,4 @@
-import LetsTalkBG from "../assets/lets_talk_section.png";
+// import LetsTalkBG from "../assets/lets_talk_section.png";
 
 export default function LetsTalkSection() {
   return (
