@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Layout() {
   return (
     <div 
-      className=""
+      className="w-full overflow-hidden"
       // min-h-screen w-full flex flex-col justify-between items-center p-0 m-0
     >
       <Header />

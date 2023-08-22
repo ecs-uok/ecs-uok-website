@@ -97,70 +97,71 @@ export default function Footer() {
 
 
         <div className="w-full md:w-[70%] h-fit flex flex-col justify-between mt-10" >
-          <div className="flex flex-row w-full justify-around" >
-        
-        {/* Site Map */}
-            <div className="flex flex-col justify-start items-start" >
-              <h1 className="text-base font-bold">Site Map</h1>
-                
-                { siteMapLinkArray.map((item,i) => {
-                    return (
-                        <div className="ml-0" key={i}>
-                          <ScrollLink
-                            to={item.to}
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                          >
-                            <p className="text-base font-sans mt-2 cursor-pointer">
-                              {item.name}
-                            </p>
-                          </ScrollLink>
-                        </div>
-                   )})
-                }
+          <div className="flex flex-col items-center md:items-start md:flex-row space-y-5 w-full justify-around" >
+            <div className="flex flex-col sm:flex-row space-y-5 w-full justify-around items-center sm:items-start">
+              {/* Site Map */}
+              <div className="flex flex-col justify-start items-start t-0" >
+                <h1 className="text-base font-bold">Site Map</h1>
+                  
+                  { siteMapLinkArray.map((item,i) => {
+                      return (
+                          <div className="ml-0" key={i}>
+                            <ScrollLink
+                              to={item.to}
+                              spy={true}
+                              smooth={true}
+                              duration={500}
+                            >
+                              <p className="text-base font-sans mt-2 cursor-pointer">
+                                {item.name}
+                              </p>
+                            </ScrollLink>
+                          </div>
+                    )})
+                  }
 
-                { [{name:'About', to:'/about'},{name:'Contact Us',to:'/contact-us'}].map((item,i) => {
-                    return (
-                        <div className="ml-0" key={i}>
-                          <Link
-                            to={item.to}
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                          >
-                            <p className="text-base font-sans mt-4 cursor-pointer">
-                              {item.name}
-                            </p>
-                          </Link>
-                        </div>
-                   )})
+                  { [{name:'About', to:'/about'},{name:'Contact Us',to:'/contact-us'}].map((item,i) => {
+                      return (
+                          <div className="ml-0" key={i}>
+                            <Link
+                              to={item.to}
+                              spy={true}
+                              smooth={true}
+                              duration={500}
+                            >
+                              <p className="text-base font-sans mt-4 cursor-pointer">
+                                {item.name}
+                              </p>
+                            </Link>
+                          </div>
+                    )})
+                  }
+              </div>
+
+              {/* Other Links */}
+              <div className="flex flex-col justify-start items-start">
+                <h1 className="text-base font-bold">Other Links</h1>
+                { OtherLinkArray.map((item,i) => {
+                  return (
+                      <div className="ml-0" key={i}>
+                        <ScrollLink
+                          to={item.to}
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                        >
+                          <p className="text-base font-sans mt-2 cursor-pointer">
+                            {item.name}
+                          </p>
+                        </ScrollLink>
+                      </div>
+                  )})
                 }
+              </div>
             </div>
 
-          {/* Other Links */}
-            <div className="flex flex-col justify-start items-start">
-              <h1 className="text-base font-bold">Other Links</h1>
-              { OtherLinkArray.map((item,i) => {
-                return (
-                    <div className="ml-0" key={i}>
-                      <ScrollLink
-                        to={item.to}
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                      >
-                        <p className="text-base font-sans mt-2 cursor-pointer">
-                          {item.name}
-                        </p>
-                      </ScrollLink>
-                    </div>
-                )})
-              }
-            </div>
-
-            {/*  */}
-            <div className="space-y-4">
+            {/* Stay Connected */}
+            <div className="space-y-4 flex flex-col items-start pb-5">
               <h1 className="text-base font-bold">Stay Connected</h1>
                 { StayConnectedLinkArray.map((item,i) => {
                   return (
@@ -181,7 +182,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media */}
-          <div className="flex space-x-10 w-full justify-center m-5" >
+          <div className="flex space-x-7 w-full justify-center p-5 items-center" >
             { SocialMediaLinksArray.map((item,i) => {
               return (
                   <a
