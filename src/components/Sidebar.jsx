@@ -76,14 +76,14 @@ export default function Sidebar() {
 
   return (
     <div className="bg-white grid grid-cols-12 mt-20">
-      <div className="col-span-2 hidden 2xl:block">
+      <div className="col-span-2">
         <div className="flex gap-4 items-center justify-center text-4xl font-bold capitalize text-white bg-primary w-full h-[200px]">
           {React.cloneElement(icons[activeSection], {
             className: "w-10 h-10 fill-current",
           })}
           {activeSection}
         </div>
-        <div className="font-bold text-xl cursor-pointer mx-12 mt-12 mb-20 2xl:block hidden">
+        <div className="font-bold text-xl cursor-pointer mx-12 mt-12 mb-20">
           {/* about ecs sidemenu item */}
           <div
             className={`flex gap-4 py-6 px-10 hover:text-secondary hover:translate-x-4 duration-500 ${
@@ -146,9 +146,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className="2xl:col-span-10 col-span-12">
-        {contentComponents[activeSection]}
-      </div>
+      <div className="col-span-10">{contentComponents[activeSection]}</div>
     </div>
   );
 }
