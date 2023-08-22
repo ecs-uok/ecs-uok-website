@@ -6,7 +6,9 @@ export default function CarouselItem({ carouselImage, eventName, eventLink }) {
       <img
         className="w-full h-2/3 overflow-hidden object-cover"
         src={carouselImage}
-      ></img>
+        loading="lazy"
+        alt={`${carouselImage} event`}
+      />
       <div className="my-8 mx-2">
         <h2 className="text-lg font-bold">{eventName}</h2>
         <a className="text-base font-medium text-blue-700" href={eventLink}>

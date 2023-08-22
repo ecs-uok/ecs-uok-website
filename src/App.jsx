@@ -11,10 +11,6 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/about" element={<AboutPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
       </Route>
     </Routes>

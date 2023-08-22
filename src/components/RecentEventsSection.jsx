@@ -25,7 +25,7 @@ export default function RecentEventsSection() {
 
   return (
     <>
-      <div className="bg-primary py-12 px-48 mt-8">
+      <div className="bg-primary py-12 px-48 mt-8" id="eventsSection">
         <div className="flex gap-4 text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,27 +60,27 @@ export default function RecentEventsSection() {
             <CarouselItem
               carouselImage={EventImageOne}
               eventName="Electronics and Computer Science AGM"
-              eventLink="www.google.lk"
+              eventLink="https://facebook.com"
             />
             <CarouselItem
               carouselImage={EventImageOne}
               eventName="Electronics and Computer Science AGM"
-              eventLink="www.google.lk"
+              eventLink="https://facebook.com"
             />
             <CarouselItem
               carouselImage={EventImageOne}
               eventName="Electronics and Computer Science AGM"
-              eventLink="www.google.lk"
+              eventLink="https://facebook.com"
             />
             <CarouselItem
               carouselImage={EventImageOne}
               eventName="Electronics and Computer Science AGM"
-              eventLink="www.google.lk"
+              eventLink="https://facebook.com"
             />
           </Carousel>
         </div>
         <div className="mt-8 flex justify-center">
-          <a href="www.facebook.com">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
             <button className="bg-primary text-white px-20 py-2 m-2 text-lg font-bold rounded-xl hover:bg-secondary duration-500">
               More Events
             </button>
