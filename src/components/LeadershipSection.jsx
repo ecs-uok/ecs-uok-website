@@ -25,8 +25,8 @@ export default function LeadershipSection() {
         Executive Committee of ECSC 2023/24
       </h1>
 
-      <div className=" flex flex-col justify-center items-center">
-        <div className="grid grid-cols-1 gap-8 mt-8 2xl:grid-cols-3">
+      <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
           <MemberCard
             member_photo={President}
             member_role="President"
@@ -46,7 +46,7 @@ export default function LeadershipSection() {
             fontsize="lg"
           />
         </div>
-        <div className="grid grid-cols-1 2xl:grid-cols-4 gap-8 mt-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
           <MemberCard
             member_photo={VicePresident}
             member_role="Vice President"
@@ -72,7 +72,7 @@ export default function LeadershipSection() {
             fontsize="lg"
           />
         </div>
-        <div className="grid grid-cols-1 2xl:grid-cols-5 gap-8 mt-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
           <MemberCard
             member_photo={WebMaster}
             member_role="Web Master"
@@ -92,24 +92,32 @@ export default function LeadershipSection() {
             member_photo={MembershipDevelopmentLead}
             member_role="Membership Development Lead"
             member_name="Chamodya Rajapaksha"
+            fontsize="xs"
           />
+        </div>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
           <MemberCard
             member_photo={FinanceLead}
             member_role="Finance Lead"
             member_name="Janada Jayathilake"
           />
-        </div>
-        <div className="grid grid-cols-1 2xl:grid-cols-6 gap-8 mt-8">
           <MemberCard
             member_photo={EditorialLead}
             member_role="Editorial Lead"
             member_name="Vichaksha Viduranga"
           />
           <MemberCard
+            member_photo={EventAndLogisticsLead}
+            member_role="Event and Logistics Lead"
+            member_name="Vidhushan Viswarajah"
+          />
+          <MemberCard
             member_photo={AcademicCoLeadOne}
             member_role="Academic Co Lead"
             member_name="Ruchira Sandeepa"
           />
+        </div>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
           <MemberCard
             member_photo={AcademicCoLeadTwo}
             member_role="Academic Co Lead"
@@ -124,11 +132,6 @@ export default function LeadershipSection() {
             member_photo={TechCoLeadTwo}
             member_role="Tech Co Lead"
             member_name="Himal Gunawardhana"
-          />
-          <MemberCard
-            member_photo={EventAndLogisticsLead}
-            member_role="Event and Logistics Lead"
-            member_name="Vidhushan Viswarajah"
           />
         </div>
       </div>
