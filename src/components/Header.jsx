@@ -1,18 +1,24 @@
 import { NavLink, Link } from "react-router-dom";
 import HeaderLogo from "../assets/ecsc_logo_header.png";
+import { MenuIcon, MenuIcon2 } from "../assets/Icon";
 
 export default function Header() {
   return (
-    <header className="flex bg-primary text-white h-28 w-full justify-between">
+    <header className="flex bg-primary text-white h-[80px] w-full justify-between px-10 py-0">
       <NavLink to={"/"}>
         <img
-          className="flex h-auto w-52 pl-10 justify-center items-center"
+          className="flex h-full w-fit  justify-center items-center"
           src={HeaderLogo}
           alt="ECSC Logo"
         />
       </NavLink>
 
-      <div className="flex items-center gap-10 text-xl font-bold px-20">
+      <div className="h-full w-auto flex justify-center items-center lg:hidden cursor-pointer" >
+        {/* <MenuIcon /> */}
+        <MenuIcon2 />
+      </div>
+
+      <div className="lg:flex hidden items-center gap-10 text-xl font-bold">
         <NavLink to={"/"}>
           <div className="hover:underline">Home</div>
         </NavLink>
