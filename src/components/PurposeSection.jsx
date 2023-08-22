@@ -6,7 +6,7 @@ import UOKImg from "../assets/UOK/uok.jpg";
 export default function PurposeSection() {
   return (
     <>
-      <div className="bg-primary py-12 px-48" id="purposeSection">
+      <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000" id="purposeSection">
         <div className="flex gap-4 text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
