@@ -4,10 +4,14 @@ import Footer from "./Footer";
 
 export default function Layout() {
   return (
-    <div className="min-h-screen w-screen flex flex-col justify-between items-center p-0 m-0 overflow-hidden">
+    <div 
+      className=""
+      // min-h-screen w-full flex flex-col justify-between items-center p-0 m-0
+    >
       <Header />
+
       <Outlet />
-      {/* <hr /> */}
+      <hr />
       <Footer />
     </div>
   );
