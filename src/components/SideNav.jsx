@@ -32,9 +32,9 @@ const SideNav = ({visible,setVisible}) => {
                     }
                 >
                 <div className="w-full h-screen flex flex-col justify-start items-center space-y-3" >
-                    <div className="w-full" >
+                    <div className="w-[50%] pt-7 justify-center items-center" >
                     <img
-                        className="flex h-full w-fit  justify-center items-center"
+                        className="flex h-full w-full justify-center items-center"
                         src={HeaderLogo}
                         alt="ECSC Logo"
                     />

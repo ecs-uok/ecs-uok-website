@@ -1,13 +1,9 @@
-import LetsTalkBG from "../assets/lets_talk_section.png";
+// import LetsTalkBG from "../assets/lets_talk_section.png";
 
 export default function LetsTalkSection() {
   return (
-    <div className="bg-primary h-96 w-full relative z-0">
-      <img
-        className="h-full w-full overflow-hidden object-cover opacity-50 absolute -z-10"
-        src={LetsTalkBG}
-      />
-      <div className="py-20 px-48 flex flex-col justify-center">
+    <div className="bg-primary h-fit relative py-6 mt-8 px-10 w-full md:px-48 transition-all duration-1000">
+      <div className=" py-6 mt-0 px-3 w-full md:px-10 flex flex-col justify-center">
         <div className="text-white flex gap-4">
           <h1 className="text-4xl">Let&apos;s Talk</h1>
           <svg
@@ -29,22 +25,13 @@ export default function LetsTalkSection() {
             <br />
           </p>
         </div>
-        <div className="mt-10 gap-4 grid grid-cols-1 md:grid-cols-12">
-          <button className="bg-primary col-span-2 border-white border-4 text-white text-lg font-bold font-mono rounded-full py-2 hover:bg-secondary duration-500">
-            <a
-              className="text-base mt-4 cursor-pointer"
-              href="mailto:ecs.uok@gmail.com"
-            >
-              ecs.uok@gmail.com
-            </a>
+        <div className="mt-10 flex flex-col space-y-4">
+          <button className="bg-primary w-fit border-white border-4 text-white text-lg font-bold font-mono rounded-full py-2 px-10 hover:bg-secondary duration-500">
+            ecs.uok@gmail.com
           </button>
-          <button className="bg-primary col-span-2 border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 hover:bg-secondary duration-500">
-            <a
-              className="text-base mt-4 cursor-pointer"
-              href="tel:+94782563766"
-            >
-              +94 78 256 3766
-            </a>
+          <button className="bg-primary w-fit border-4 border-white text-white text-lg font-bold font-mono rounded-full py-1 px-6 hover:bg-secondary duration-500">
+            <pre> +94 74 087 6190 </pre>
+
           </button>
         </div>
       </div>

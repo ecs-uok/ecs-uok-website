@@ -6,7 +6,7 @@ import UOKImg from "../assets/UOK/uok.jpg";
 export default function PurposeSection() {
   return (
     <>
-      <div className="bg-primary py-12 px-48" id="purposeSection">
+      <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000" id="purposeSection">
         <div className="flex gap-4 text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +23,8 @@ export default function PurposeSection() {
           Sneak-peak into Electronic and Compute Science Club
         </div>
       </div>
-
-      <div className="flex gap-10 justify-center m-10">
+    
+      <div className="flex gap-10 justify-center lg:flex-row flex-col items-center w-[100%] mt-10 p-0 ">
         <Card
           cardImage={ElecImg}
           cardTitle="Electronics"
@@ -42,10 +42,7 @@ export default function PurposeSection() {
         />
       </div>
 
-      <div
-        className="flex px-96 justify-center items-center py-4"
-        id="visionMission"
-      >
+      <div className="flex justify-center items-center py-4 md:px-20 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-5 w-full">
         <div className="mr-10">
           <div className="flex gap-3">
             <svg
@@ -67,7 +64,7 @@ export default function PurposeSection() {
           </div>
         </div>
 
-        <div className="mx-10"></div>
+        {/* <div className="mx-10"></div> */}
 
         <div>
           <div className="flex gap-3">

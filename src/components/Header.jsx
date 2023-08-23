@@ -22,13 +22,10 @@ const Header = () => {
   const showSidebar = () => setIsSideBarActive(!isSideBarActive);
 
   return (
-    <div
-      className={`fixed top-0 w-full h-fit ${
-        colorChange ? "bg-primary" : "bg-primary"
-      } z-20 left-0 transition-colors duration-500`}
-    >
+    <div className={`fixed top-0 w-full h-fit ${colorChange ? "bg-primary" :"bg-transparent"} z-20 left-0 transition-colors duration-500 ` }>
+
       <header
-        className="flex text-white h-[80px] w-full justify-between px-10 py-0"
+        className="flex text-white h-[80px] w-full justify-between px-10 py-3"
         id="homeSection"
       >
         <NavLink to={"/"}>
