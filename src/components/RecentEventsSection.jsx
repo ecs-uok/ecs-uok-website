@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CarouselItem from "./CarouselItem";
 import EventImageOne from "../assets/event_1_carousel.jpeg";
+import { NewsIcon } from "../assets/Icon";
 
 export default function RecentEventsSection() {
   const responsive = {
@@ -25,16 +26,12 @@ export default function RecentEventsSection() {
 
   return (
     <>
-      <div className="bg-primary py-12 mt-8 px-10 w-full md:px-48 transition-all duration-1000" id="eventsSection">
+      <div
+        className="bg-primary py-12 mt-8 px-10 w-full md:px-48 transition-all duration-1000"
+        id="eventsSection"
+      >
         <div className="flex gap-4 text-white">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 512 512"
-            className="w-10 h-10 fill-white"
-          >
-            <path d="M168 80c-13.3 0-24 10.7-24 24V408c0 8.4-1.4 16.5-4.1 24H440c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H168zM72 480c-39.8 0-72-32.2-72-72V112C0 98.7 10.7 88 24 88s24 10.7 24 24V408c0 13.3 10.7 24 24 24s24-10.7 24-24V104c0-39.8 32.2-72 72-72H440c39.8 0 72 32.2 72 72V408c0 39.8-32.2 72-72 72H72zM176 136c0-13.3 10.7-24 24-24h96c13.3 0 24 10.7 24 24v80c0 13.3-10.7 24-24 24H200c-13.3 0-24-10.7-24-24V136zm200-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zM200 272H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
-          </svg>
+          <NewsIcon />
 
           <span className="text-white text-4xl">Latest Updates</span>
         </div>
@@ -56,7 +53,6 @@ export default function RecentEventsSection() {
             responsive={responsive}
             centerMode={true}
             arrows
-            
           >
             <CarouselItem
               carouselImage={EventImageOne}
