@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import HeaderLogo from "../assets/ecsc_logo_header.png";
-import { MenuIcon2 } from "../assets/Icon";
+import { CloseIcon, MenuIcon2 } from "../assets/Icon";
 import SideNav from "./SideNav";
 
 const Header = () => {
@@ -22,8 +22,11 @@ const Header = () => {
   const showSidebar = () => setIsSideBarActive(!isSideBarActive);
 
   return (
-    <div className={`fixed top-0 w-full h-fit ${colorChange ? "bg-primary" :"bg-primary"} z-20 left-0 transition-colors duration-500 ` }>
-
+    <div
+      className={`fixed top-0 w-full h-fit ${
+        colorChange ? "bg-primary" : "bg-primary"
+      } z-20 left-0 transition-colors duration-500 `}
+    >
       <header
         className="flex text-white h-[80px] w-full justify-between px-10 py-3"
         id="homeSection"
@@ -41,7 +44,7 @@ const Header = () => {
           onClick={showSidebar}
         >
           {/* <MenuIcon /> */}
-          <MenuIcon2 />
+          {isSideBarActive ? <CloseIcon /> : <MenuIcon2 />}
         </button>
 
         <div className="lg:flex hidden items-center gap-10 text-xl font-bold">

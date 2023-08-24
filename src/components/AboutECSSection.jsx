@@ -10,6 +10,7 @@ export default function AboutECS() {
         className="mt-8 w-full h-[360px] object-cover"
         loading="lazy"
         src={AboutHeaderImage}
+        alt="About us header image"
       />
       <div className="text-xl font-semibold">
         <p className="my-6">
