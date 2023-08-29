@@ -11,6 +11,9 @@ import useFetch from "./hooks/useFetch";
 import NewsSection from "./components/NewsSection";
 import EventsSection from "./components/EventsSection";
 
+// const defaultUrl = "https://ecsc-uok.com"
+// const localUrl = https://localhost:1337
+
 function App() {
   let { loading, error, data } = useFetch(
     "https://ecsc-uok.com/api/board-members?populate=*"
