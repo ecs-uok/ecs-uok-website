@@ -17,7 +17,7 @@ export default function ContactUsPage() {
         />
         <link rel="canonical" href="/contact-us" />
       </Helmet>
-      <div className="bg-primary py-12 px-48 mt-20">
+      <div className="bg-primary py-12 px-48">
         <div className="flex gap-6">
           <span className="text-white text-5xl font-bold">Connect With Us</span>
           <HeadphonesIcon />

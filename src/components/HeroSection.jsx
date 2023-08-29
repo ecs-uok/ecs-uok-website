@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <div className="w-full h-screen">
       <video
-        className="w-full h-full object-cover relative"
+        className="w-full h-full object-cover"
         autoPlay
         loop
         muted

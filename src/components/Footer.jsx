@@ -18,8 +18,16 @@ export default function Footer() {
       to: "/",
     },
     {
-      name: "About",
-      to: "/about",
+      name: "About ECSC",
+      to: "/about/about-ecsc",
+    },
+    {
+      name: "Messages",
+      to: "/about/messages",
+    },
+    {
+      name: "Executive Committee",
+      to: "/about/executive-committee",
     },
     {
       name: "News",
@@ -77,7 +85,7 @@ export default function Footer() {
   return (
     <>
       <div className="w-full bg-white text-black py-2 px-12">
-        <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-4">
+        <div className="mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-4">
           <div className="items-center col-span-2 justify-center flex flex-col mb-12 md-my-0">
             <img src={Logo} alt="logo" className="w-auto h-[240px]" />
             <p>
@@ -94,7 +102,7 @@ export default function Footer() {
                 return (
                   <div className="ml-0" key={i}>
                     <Link to={item.to}>
-                      <li className="text-base font-sans mt-2 cursor-pointer">
+                      <li className="text-base font-sans cursor-pointer">
                         {item.name}
                       </li>
                     </Link>

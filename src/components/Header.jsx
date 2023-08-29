@@ -20,20 +20,20 @@ export default function Header() {
   };
 
   return (
-    <div className="w-full h-[80px] z-10 bg-primary drop-shadow-lg relative">
-      <div className="flex justify-between items-center w-full, h-full md:max-w-[1240px] m-auto">
+    <div className="w-full h-[80px] z-10 bg-primary drop-shadow-lg fixed">
+      <div className="flex justify-between items-center w-full h-full m-auto">
         <div className="flex items-center">
           <Link to={"/"}>
             <img
               src={Logo}
               alt="logo"
-              className="sm:ml-10 ss:ml-10 md:ml-3 w-auto h-[64px]"
+              className="sm:ml-10 ss:ml-10 md:ml-20 w-auto h-[64px]"
             />
           </Link>
         </div>
 
         <div className="flex items-center">
-          <ul className="hidden md:flex text-white text-2xl">
+          <ul className="hidden md:flex text-white text-2xl gap-12">
             <Link to={"/"}>
               <li>Home</li>
             </Link>
@@ -46,18 +46,26 @@ export default function Header() {
             <ul
               className={
                 toggleMenu
-                  ? `absolute mt-[72px] ml-28 bg-primary max-w-[300px] p-4 text-white`
+                  ? `absolute mt-[72px] ml-28 bg-primary max-w-[300px] px-4 text-white`
                   : `hidden`
               }
             >
               <Link to={"/about/about-ecsc"}>
-                <li onClick={handleCloseMenu}>About ECSC</li>
+                <li className="py-8" onClick={handleCloseMenu}>
+                  About ECSC
+                </li>
+                <hr />
               </Link>
               <Link to={"/about/messages"}>
-                <li onClick={handleCloseMenu}>Messages</li>
+                <li className="py-8" onClick={handleCloseMenu}>
+                  Messages
+                </li>
+                <hr />
               </Link>
               <Link to={"/about/executive-committee"}>
-                <li onClick={handleCloseMenu}>Executive Committee</li>
+                <li className="py-8" onClick={handleCloseMenu}>
+                  Executive Committee
+                </li>
               </Link>
             </ul>
             <Link to={"/news"}>
@@ -72,7 +80,7 @@ export default function Header() {
         <div className="hidden md:flex sm:mr-10 md:mr-10">
           <Link to={"/contact-us"}>
             <button
-              className="px-8 py-2 text-xl hover:bg-secondary hover:text-white hover:border-white duration-500"
+              className="px-8 py-2 text-xl mr-12 hover:bg-secondary hover:text-white hover:border-white duration-500"
               onClick={() => {
                 setToggleNavBar(false);
               }}
