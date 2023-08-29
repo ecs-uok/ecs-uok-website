@@ -7,6 +7,8 @@ import ContactUsPage from "./pages/ContactUsPage";
 import AboutECS from "./components/AboutECSSection";
 import MessagesSection from "./components/MessagesSection";
 import LeadershipSection from "./components/LeadershipSection";
+import NewsSection from "./components/NewsSection";
+import EventsSection from "./components/EventsSection";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             element={<LeadershipSection />}
           />
         </Route>
+        <Route path="/news" element={<NewsSection />} />
+        <Route path="/events" element={<EventsSection />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
       </Route>
     </Routes>
