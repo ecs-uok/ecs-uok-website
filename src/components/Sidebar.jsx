@@ -75,7 +75,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="bg-white grid grid-cols-12 mt-20">
+    <div className="bg-white grid grid-cols-12">
       <div className="col-span-2">
         <div className="flex gap-4 items-center justify-center text-4xl font-bold capitalize text-white bg-primary w-full h-[200px]">
           {React.cloneElement(icons[activeSection], {

@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-button.primary{
-    background-color: #00568c;
-    @apply bg-primary p-2 w-full text-white rounded-2xl;
+@layer base {
+    li {
+        @apply p-4
+    }
+
+    button {
+        @apply text-white border bg-primary hover:bg-transparent hover:text-primary hover:border-primary rounded-3xl
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .line-break {
+        white-space: pre-wrap;
+    }
 }

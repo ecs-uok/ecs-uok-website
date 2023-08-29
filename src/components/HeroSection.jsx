@@ -1,4 +1,5 @@
 import VideoBG from "../assets/hero_section_video.mp4";
+import VideoBGLazy from "../assets/hero_section_lazy_load.jpg";
 
 export default function HeroSection() {
   return (
@@ -8,6 +9,8 @@ export default function HeroSection() {
         autoPlay
         loop
         muted
+        preload="none"
+        poster={VideoBGLazy}
       >
         <source src={VideoBG} type="video/mp4" />
       </video>

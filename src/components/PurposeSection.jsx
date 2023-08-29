@@ -7,10 +7,7 @@ import { EyeIcon, AimIcon, ListIcon } from "../assets/Icon";
 export default function PurposeSection() {
   return (
     <>
-      <div
-        className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000"
-        id="purposeSection"
-      >
+      <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
         <div className="flex gap-4 text-white">
           <ListIcon />
           <span className="text-white text-4xl">Purpose</span>
@@ -20,7 +17,7 @@ export default function PurposeSection() {
         </div>
       </div>
 
-      <div className="flex gap-10 justify-center lg:flex-row flex-col items-center w-[100%] mt-10 p-0 ">
+      <div className="flex gap-10 justify-evenly lg:flex-row lg:px-12 flex-col items-center w-[100%] my-12 p-0 ">
         <Card
           cardImage={ElecImg}
           cardTitle="Electronics"
@@ -38,7 +35,7 @@ export default function PurposeSection() {
         />
       </div>
 
-      <div className="flex justify-center items-center py-4 md:px-20 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-5 w-full">
+      <div className="flex justify-center items-center py-4 md:px-80 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-16 w-full">
         <div className="mr-10">
           <div className="flex gap-3">
             <EyeIcon />

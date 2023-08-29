@@ -1,5 +1,5 @@
-import Sidebar from "../components/Sidebar";
 import { Helmet } from "react-helmet-async";
+import { Outlet } from "react-router-dom";
 
 export default function AboutPage() {
   return (
@@ -12,7 +12,8 @@ export default function AboutPage() {
         />
         <link rel="canonical" href="/about" />
       </Helmet>
-      <Sidebar />
+      {/* <Sidebar /> */}
+      {<Outlet />}
     </div>
   );
 }
