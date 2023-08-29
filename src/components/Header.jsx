@@ -1,89 +1,146 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
-import HeaderLogo from "../assets/ecsc_logo_header.png";
-import { CloseIcon, MenuIcon2 } from "../assets/Icon";
-import SideNav from "./SideNav";
+import Logo from "../assets/ecsc_logo_header.png";
+import { Link } from "react-router-dom";
+import { CarotDown, CarotRight, CloseIcon, MenuIcon2 } from "../assets/Icon";
 
-const Header = () => {
-  const [colorChange, setColorchange] = useState(false);
-  const [isSideBarActive, setIsSideBarActive] = useState(false);
+export default function Header() {
+  const [toggleNabBar, setToggleNabBar] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(true);
 
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
+  const handleClickNavBar = () => {
+    setToggleNabBar(!toggleNabBar);
   };
 
-  window.addEventListener("scroll", changeNavbarColor);
+  const handleClickMenuBar = () => {
+    setToggleMenu(!toggleMenu);
+  };
 
-  const showSidebar = () => setIsSideBarActive(!isSideBarActive);
+  const handleCloseMenu = () => {
+    setToggleMenu(false);
+  };
 
   return (
-    <div
-      className={`fixed top-0 w-full h-fit ${
-        colorChange ? "bg-primary" : "bg-primary"
-      } z-20 left-0 transition-colors duration-500 `}
-    >
-      <header
-        className="flex text-white h-[80px] w-full justify-between px-10 py-3"
-        id="homeSection"
-      >
-        <NavLink to={"/"}>
-          <img
-            className="flex h-full w-fit  justify-center items-center"
-            src={HeaderLogo}
-            alt="ECSC Logo"
-          />
-        </NavLink>
-
-        <button
-          className="h-full w-auto flex justify-center items-center lg:hidden cursor-pointer"
-          onClick={showSidebar}
-        >
-          {/* <MenuIcon /> */}
-          {isSideBarActive ? <CloseIcon /> : <MenuIcon2 />}
-        </button>
-
-        <div className="lg:flex hidden items-center gap-10 text-xl font-bold">
-          <NavLink to={"/"}>
-            <div className="hover:underline">Home</div>
-          </NavLink>
-
-          <ScrollLink
-            to="purposeSection"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            <div className="hover:underline cursor-pointer">Purpose</div>
-          </ScrollLink>
-
-          <ScrollLink
-            to="eventsSection"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            <div className="hover:underline cursor-pointer">Events</div>
-          </ScrollLink>
-
-          <NavLink to={"/about"}>
-            <div className="hover:underline">About</div>
-          </NavLink>
-
-          <Link to={"/contact-us"}>
-            <button className="bg-primary border border-white text-white px-6 py-2 rounded-full hover:bg-secondary duration-700">
-              Contact Us
-            </button>
+    <div className="w-full h-[80px] z-10 bg-primary drop-shadow-lg relative">
+      <div className="flex justify-between items-center w-full, h-full md:max-w-[1240px] m-auto">
+        <div className="flex items-center">
+          <Link to={"/"}>
+            <img
+              src={Logo}
+              alt="logo"
+              className="sm:ml-10 ss:ml-10 md:ml-3 w-auto h-[64px]"
+            />
           </Link>
         </div>
-      </header>
-      <SideNav visible={isSideBarActive} setVisible={setIsSideBarActive} />
+
+        <div className="flex items-center">
+          <ul className="hidden md:flex text-white text-2xl">
+            <Link to={"/"}>
+              <li>Home</li>
+            </Link>
+            <li
+              className="cursor-pointer flex items-center gap-4 "
+              onClick={handleClickMenuBar}
+            >
+              About {toggleMenu ? <CarotDown /> : <CarotRight />}
+            </li>
+            <ul
+              className={
+                toggleMenu
+                  ? `absolute mt-[72px] ml-28 bg-primary max-w-[300px] p-4 text-white`
+                  : `hidden`
+              }
+            >
+              <Link to={"/about/about-ecsc"}>
+                <li onClick={handleCloseMenu}>About ECSC</li>
+              </Link>
+              <Link to={"/about/messages"}>
+                <li onClick={handleCloseMenu}>Messages</li>
+              </Link>
+              <Link to={"/about/executive-committee"}>
+                <li onClick={handleCloseMenu}>Executive Committee</li>
+              </Link>
+            </ul>
+            <Link to={"/news"}>
+              <li>News</li>
+            </Link>
+            <Link to={"/events"}>
+              <li>Events</li>
+            </Link>
+          </ul>
+        </div>
+
+        <div className="hidden md:flex sm:mr-10 md:mr-10">
+          <button className="px-8 py-2 text-xl">Contact Us</button>
+        </div>
+
+        <div
+          className="md:hidden cursor-pointer mr-10"
+          onClick={handleClickNavBar}
+        >
+          {toggleNabBar ? <CloseIcon /> : <MenuIcon2 />}
+        </div>
+      </div>
+
+      <ul
+        className={
+          toggleNabBar
+            ? `bg-primary w-full px-8 md:hidden text-white`
+            : `hidden`
+        }
+      >
+        <Link to={"/"}>
+          <li>Home</li>
+        </Link>
+        <li
+          className="cursor-pointer flex items-center gap-4 "
+          onClick={handleClickMenuBar}
+        >
+          About {toggleMenu ? <CarotDown /> : <CarotRight />}
+        </li>
+        {toggleMenu ? (
+          <div className="pl-4">
+            <Link to={"/about/about-ecsc"}>
+              <li
+                onClick={() => {
+                  setToggleNabBar(false);
+                }}
+              >
+                About ECSC
+              </li>
+            </Link>
+            <Link to={"/about/messages"}>
+              <li
+                onClick={() => {
+                  setToggleNabBar(false);
+                }}
+              >
+                Messages
+              </li>
+            </Link>
+            <Link to={"/about/executive-committee"}>
+              <li
+                onClick={() => {
+                  setToggleNabBar(false);
+                }}
+              >
+                Executive Committee
+              </li>
+            </Link>
+          </div>
+        ) : (
+          ""
+        )}
+
+        <Link to={"/news"}>
+          <li>News</li>
+        </Link>
+        <Link to={"/events"}>
+          <li>Events</li>
+        </Link>
+        <div className="flex flex-col py-8">
+          <button className="px-8 py-3">Contact Us</button>
+        </div>
+      </ul>
     </div>
   );
-};
-
-export default Header;
+}

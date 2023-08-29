@@ -12,7 +12,7 @@ export default function MemberCard({
       <img
         className="w-full h-full object-cover rounded-3xl"
         src={member_photo}
-        alt={`${member_name} photo`}
+        alt={`${member_role} photo`}
       />
       <div className="absolute bottom-0 w-full rounded-b-3xl bg-primary">
         <div className={`text-white text-center p-2 text-${fontsize || "sm"}`}>
