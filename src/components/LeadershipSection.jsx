@@ -32,7 +32,7 @@ export default function LeadershipSection({ members }) {
             className="col-span-12 xl:col-span-3 lg:col-span-4 sm:col-span-6"
           >
             <MemberCard
-              member_photo={`https://ecsc-uok.com${member.attributes.memberImage.data.attributes.url}`}
+              member_photo={`https://localhost:1337${member.attributes.memberImage.data.attributes.url}`}
               member_role={member.attributes.memberRole}
               member_name={member.attributes.memberName}
             />

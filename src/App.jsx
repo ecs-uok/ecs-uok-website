@@ -16,7 +16,7 @@ import EventsSection from "./components/EventsSection";
 
 function App() {
   let { loading, error, data } = useFetch(
-    "https://ecsc-uok.com/api/board-members?populate=*"
+    "https://localhost:1337/api/board-members?populate=*"
   );
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
