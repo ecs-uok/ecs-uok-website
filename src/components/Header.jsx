@@ -5,7 +5,7 @@ import { CarotDown, CarotRight, CloseIcon, MenuIcon2 } from "../assets/Icon";
 
 export default function Header() {
   const [toggleNabBar, setToggleNabBar] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(true);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleClickNavBar = () => {
     setToggleNabBar(!toggleNabBar);
