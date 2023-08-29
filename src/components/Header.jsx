@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { CarotDown, CarotRight, CloseIcon, MenuIcon2 } from "../assets/Icon";
 
 export default function Header() {
-  const [toggleNabBar, setToggleNabBar] = useState(false);
+  const [toggleNabBar, setToggleNavBar] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleClickNavBar = () => {
-    setToggleNabBar(!toggleNabBar);
+    setToggleNavBar(!toggleNabBar);
   };
 
   const handleClickMenuBar = () => {
@@ -70,7 +70,16 @@ export default function Header() {
         </div>
 
         <div className="hidden md:flex sm:mr-10 md:mr-10">
-          <button className="px-8 py-2 text-xl">Contact Us</button>
+          <Link to={"/contact-us"}>
+            <button
+              className="px-8 py-2 text-xl hover:bg-secondary hover:text-white hover:border-white duration-500"
+              onClick={() => {
+                setToggleNavBar(false);
+              }}
+            >
+              Contact Us
+            </button>
+          </Link>
         </div>
 
         <div
@@ -102,7 +111,7 @@ export default function Header() {
             <Link to={"/about/about-ecsc"}>
               <li
                 onClick={() => {
-                  setToggleNabBar(false);
+                  setToggleNavBar(false);
                 }}
               >
                 About ECSC
@@ -111,7 +120,7 @@ export default function Header() {
             <Link to={"/about/messages"}>
               <li
                 onClick={() => {
-                  setToggleNabBar(false);
+                  setToggleNavBar(false);
                 }}
               >
                 Messages
@@ -120,7 +129,7 @@ export default function Header() {
             <Link to={"/about/executive-committee"}>
               <li
                 onClick={() => {
-                  setToggleNabBar(false);
+                  setToggleNavBar(false);
                 }}
               >
                 Executive Committee
@@ -138,7 +147,16 @@ export default function Header() {
           <li>Events</li>
         </Link>
         <div className="flex flex-col py-8">
-          <button className="px-8 py-3">Contact Us</button>
+          <Link to={"/contact-us"}>
+            <button
+              className="px-8 py-3 hover:bg-secondary hover:text-white hover:border-white duration-500"
+              onClick={() => {
+                setToggleNavBar(false);
+              }}
+            >
+              Contact Us
+            </button>
+          </Link>
         </div>
       </ul>
     </div>
