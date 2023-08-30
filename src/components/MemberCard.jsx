@@ -26,10 +26,10 @@ export default function MemberCard({
           <StarSolid />
           <h3 className="text-lg">{member_role}</h3>
         </div>
-        <div className="flex gap-2 items-center">
+        {/* <div className="flex gap-2 items-center">
           <MailIcon color={"primary"} />
           <p className="text-lg">{member_email}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
