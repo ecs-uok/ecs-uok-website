@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { MailIcon, StarSolid, UserSolid } from "../assets/Icon";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export default function MemberCard({
   member_photo,
@@ -18,7 +19,12 @@ export default function MemberCard({
       <div className="text-primary p-4 flex flex-col justify-center gap-2">
         <div className="flex gap-2 items-center">
           <UserSolid />
-          <a href={member_linkedinUrl} className="text-xl font-bold">
+          <a
+            className="text-xl font-bold"
+            href={member_linkedinUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             {member_name}
           </a>
         </div>
@@ -26,10 +32,10 @@ export default function MemberCard({
           <StarSolid />
           <h3 className="text-lg">{member_role}</h3>
         </div>
-        {/* <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center">
           <MailIcon color={"primary"} />
           <p className="text-lg">{member_email}</p>
-        </div> */}
+        </div>
       </div>
     </div>
   );
