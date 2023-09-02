@@ -18,7 +18,12 @@ export default function MemberCard({
       <div className="text-primary p-4 flex flex-col justify-center gap-2">
         <div className="flex gap-2 items-center">
           <UserSolid />
-          <a href={member_linkedinUrl} className="text-xl font-bold">
+          <a
+            className="text-xl font-bold"
+            href={member_linkedinUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             {member_name}
           </a>
         </div>

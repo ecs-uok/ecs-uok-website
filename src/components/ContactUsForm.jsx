@@ -81,7 +81,7 @@ export default function ContactUsForm() {
           <input
             type="text"
             placeholder="Full name"
-            className="text-xl px-16 py-2 w-[500px] h-[80px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="text-xl px-16 py-2 w-[500px] md:w-[400px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -102,7 +102,7 @@ export default function ContactUsForm() {
           <input
             type="email"
             placeholder="Email address"
-            className="text-xl px-16 py-2 w-[500px] h-[80px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="text-xl px-16 py-2 w-[500px] md:w-[400px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -123,7 +123,7 @@ export default function ContactUsForm() {
           <input
             type="tel"
             placeholder="Phone number"
-            className="text-xl px-16 py-2 w-[500px] h-[58px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="text-xl px-16 py-2 w-[500px] md:w-[400px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
@@ -143,7 +143,7 @@ export default function ContactUsForm() {
           <input
             type="text"
             placeholder="Subject"
-            className="text-xl px-16 py-2 w-[500px] h-[80px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="text-xl px-16 py-2 w-[500px] md:w-[400px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
@@ -164,7 +164,7 @@ export default function ContactUsForm() {
           <textarea
             type="text"
             placeholder="Message"
-            className="text-xl px-16 py-2 w-[500px] h-[200px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="text-xl px-16 py-2 w-[500px] md:w-[400px] h-[180px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
             name="message"
             value={formData.message}
             onChange={handleChange}
