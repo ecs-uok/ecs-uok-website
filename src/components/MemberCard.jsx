@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { MailIcon, StarSolid, UserSolid } from "../assets/Icon";
-import "react-loading-skeleton/dist/skeleton.css";
 
 export default function MemberCard({
   member_photo,

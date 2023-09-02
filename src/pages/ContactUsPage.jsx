@@ -17,12 +17,12 @@ export default function ContactUsPage() {
         />
         <link rel="canonical" href="/contact-us" />
       </Helmet>
-      <div className="bg-primary py-12 px-48">
-        <div className="flex gap-6">
+      <div className="bg-primary w-full py-12 md:px-48 px-16 flex flex-col justify-center transition-all duration-500">
+        <div className="flex md:gap-6 mt-[80px]">
           <span className="text-white text-5xl font-bold">Connect With Us</span>
           <HeadphonesIcon />
         </div>
-        <div className="mt-4 w-2/5">
+        <div className="mt-4 w-3/5">
           <p className="text-lg text-white font-medium">
             If you are interested on Electronics or Computer Science or both, we
             are more than happy to help you out. Or else if you need to clarify
@@ -31,8 +31,8 @@ export default function ContactUsPage() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center bg-gray-100 py-8 gap-40">
-        <div className="">
+      <div className="flex justify-center items-center bg-gray-100 py-8 gap-8 md:gap-16 flex-col md:flex-row transition-all duration-500">
+        <div>
           <ContactUsCard
             image={ECSCLogo}
             linkType="mailto:"

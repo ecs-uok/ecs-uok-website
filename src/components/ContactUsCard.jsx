@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 export default function ContactUsCard({ image, text, linkType, name }) {
   return (
-    <div className="flex rounded-xl mt-4 bg-primary w-[500px] h-[80px] hover:bg-secondary duration-1000">
-      <div className="flex items-center mx-10  gap-10">
+    <div className="flex rounded-xl mb-4 bg-primary w-[500px] md:w-[400px] h-[80px] hover:bg-secondary duration-1000">
+      <div className="flex items-center mx-10 gap-10">
         <div className="h-14 w-14 rounded-full overflow-hidden bg-white">
           <img className="h-full w-full" src={image} alt={`${image} image`} />
         </div>
@@ -20,5 +20,5 @@ ContactUsCard.propTypes = {
   image: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   linkType: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
 };
