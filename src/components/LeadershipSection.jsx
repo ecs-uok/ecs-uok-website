@@ -20,8 +20,8 @@ import AcademicCoLeadTwo from "../assets/members/roaman.jpg";
 
 export default function LeadershipSection() {
   return (
-    <div className="bg-gray-100 px-2 py-4 flex flex-col justify-center items-center absolute mt-[80px]">
-      <h1 className="text-5xl font-bold font-sans">
+    <div className="bg-gray-100 px-2 py-4 flex flex-col justify-center items-center">
+      <h1 className="text-5xl font-bold font-sans mt-[80px]">
         Executive Committee of ECSC 2023/24
       </h1>
 
