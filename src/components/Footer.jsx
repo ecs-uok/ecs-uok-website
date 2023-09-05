@@ -60,23 +60,31 @@ export default function Footer() {
   const SocialMediaLinksArray = [
     {
       to: "https://www.linkedin.com/company/electronics-and-computer-science-club/",
-      icon: <FaLinkedin />,
+      icon: (
+        <FaLinkedin size={32} className="hover:fill-blue-800 duration-500" />
+      ),
     },
     {
       to: "https://www.facebook.com/profile.php?id=61550473266598",
-      icon: <FaFacebook />,
+      icon: (
+        <FaFacebook size={32} className="hover:fill-primary duration-500" />
+      ),
     },
     {
       to: "https://instagram.com/ecsc_uok",
-      icon: <FaInstagram />,
+      icon: (
+        <FaInstagram size={32} className="hover:fill-pink-600 duration-500" />
+      ),
     },
     {
       to: "www.discord.gg",
-      icon: <FaDiscord />,
+      icon: (
+        <FaDiscord size={32} className="hover:fill-secondary duration-500" />
+      ),
     },
     {
       to: "https://youtube.com/@ECSCUOK",
-      icon: <FaYoutube />,
+      icon: <FaYoutube size={32} className="hover:fill-red-600 duration-500" />,
     },
   ];
 
