@@ -34,7 +34,7 @@ export default function MemberCard({
         <div className="flex gap-2 items-center">
           <FaEnvelope color={"primary"} />
           <p className="text-lg">{member_email}</p>
-        </div> */}
+        </div>
       </div>
     </div>
   );
