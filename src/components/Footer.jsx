@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/ecsc_logo_footer.png";
 import {
-  FaceBookIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  LocationIcon,
-  MailIcon,
-  TelephoneIcon,
-  TiktokIcon,
-  YoutubeIcon,
-} from "../assets/Icon";
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaDiscord,
+  FaYoutube,
+  FaLocationDot,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa6";
 
 export default function Footer() {
   const siteMapLinkArray = [
@@ -43,40 +43,40 @@ export default function Footer() {
     {
       name: "Faculty of Science, University of Kelaniya",
       to: "https://goo.gl/maps/98oGFdWo3nPwue2d9",
-      icon: <LocationIcon />,
+      icon: <FaLocationDot />,
     },
     {
       name: "(+94) 78 256 3766",
       to: "tel:+94782563766",
-      icon: <TelephoneIcon />,
+      icon: <FaPhone />,
     },
     {
       name: "ecs.uok@gmail.com",
       to: "mailto:ecs.uok@gmail.com",
-      icon: <MailIcon />,
+      icon: <FaEnvelope />,
     },
   ];
 
   const SocialMediaLinksArray = [
     {
       to: "https://www.linkedin.com/company/electronics-and-computer-science-club/",
-      icon: <LinkedInIcon />,
+      icon: <FaLinkedin />,
     },
     {
       to: "https://www.facebook.com/profile.php?id=61550473266598",
-      icon: <FaceBookIcon />,
+      icon: <FaFacebook />,
     },
     {
       to: "https://instagram.com/ecsc_uok",
-      icon: <InstagramIcon />,
+      icon: <FaInstagram />,
     },
     {
-      to: "www.tiktok.com",
-      icon: <TiktokIcon />,
+      to: "www.discord.gg",
+      icon: <FaDiscord />,
     },
     {
       to: "https://youtube.com/@ECSCUOK",
-      icon: <YoutubeIcon />,
+      icon: <FaYoutube />,
     },
   ];
 

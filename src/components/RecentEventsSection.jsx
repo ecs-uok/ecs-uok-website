@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CarouselItem from "./CarouselItem";
 import EventImageOne from "../assets/event_1_carousel.jpeg";
-import { NewsIcon } from "../assets/Icon";
+import { FaNewspaper } from "react-icons/fa6";
 
 export default function RecentEventsSection() {
   const responsive = {
@@ -31,7 +31,7 @@ export default function RecentEventsSection() {
         id="eventsSection"
       >
         <div className="flex gap-4 text-white">
-          <NewsIcon />
+          <FaNewspaper className="w-10 h-12" />
 
           <span className="text-white text-4xl">Latest Updates</span>
         </div>

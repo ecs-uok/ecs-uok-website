@@ -1,4 +1,4 @@
-import { LetsTalkIcon } from "../assets/Icon";
+import { FaHeadset } from "react-icons/fa6";
 
 export default function LetsTalkSection() {
   return (
@@ -6,7 +6,7 @@ export default function LetsTalkSection() {
       <div className=" py-6 mt-0 px-3 w-full md:px-10 flex flex-col justify-center">
         <div className="text-white flex gap-4">
           <h1 className="text-4xl">Let&apos;s Talk</h1>
-          <LetsTalkIcon />
+          <FaHeadset className="w-10 h-12" />
         </div>
         <div>
           <p className="text-white text-lg pt-2">
