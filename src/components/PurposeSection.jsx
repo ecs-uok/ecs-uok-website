@@ -9,7 +9,7 @@ export default function PurposeSection() {
     <>
       <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
         <div className="flex gap-4 text-white">
-          <FaList className="w-10 h-12" />
+          <FaList className="w-9 h-11" />
           <span className="text-white text-4xl">Purpose</span>
         </div>
         <div className="text-lg text-white pt-2">

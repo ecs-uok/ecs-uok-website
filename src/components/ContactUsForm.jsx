@@ -75,15 +75,17 @@ export default function ContactUsForm() {
   }, [successMessage, errorMessage]);
 
   return (
-    <form className="mx-auto" onSubmit={handleSubmit}>
-      <div className="border-4 border-primary rounded-2xl">
+    <form onSubmit={handleSubmit}>
+      <div className="border-4 border-primary rounded-2xl mx-auto min-w-[540px]">
         {/* username input */}
-        <div className="flex items-center m-4 ">
-          <FaUser size={24} className="absolute ml-4" />
+        <div className="relative m-4">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+            <FaUser size={24} className="fill-primary" />
+          </span>
           <input
             type="text"
             placeholder="Full name"
-            className="flex text-xl px-16 py-2 max-w-[480px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -92,12 +94,14 @@ export default function ContactUsForm() {
         </div>
 
         {/* email input */}
-        <div className="flex  items-center m-4">
-          <FaEnvelope size={24} className="absolute ml-4" />
+        <div className="relative m-4">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+            <FaEnvelope size={24} className="fill-primary" />
+          </span>
           <input
             type="email"
             placeholder="Email address"
-            className="flex text-xl px-16 py-2 max-w-[480px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -106,12 +110,14 @@ export default function ContactUsForm() {
         </div>
 
         {/* phone number input */}
-        <div className="flex  items-center m-4">
-          <FaPhone size={24} className="absolute ml-4" />
+        <div className="relative m-4">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+            <FaPhone size={24} className="fill-primary" />
+          </span>
           <input
             type="tel"
             placeholder="Phone number"
-            className="flex text-xl px-16 py-2 max-w-[480px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
@@ -119,12 +125,14 @@ export default function ContactUsForm() {
         </div>
 
         {/* subject input */}
-        <div className="flex  items-center m-4">
-          <FaInbox size={24} className="absolute ml-4" />
+        <div className="relative m-4">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+            <FaInbox size={24} className="fill-primary" />
+          </span>
           <input
             type="text"
             placeholder="Subject"
-            className="flex text-xl px-16 py-2 max-w-[480px] h-[60px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
@@ -133,12 +141,14 @@ export default function ContactUsForm() {
         </div>
 
         {/* message input */}
-        <div className="flex  m-4">
-          <FaMessage size={24} className="absolute ml-4 mt-4" />
+        <div className="relative m-4">
+          <span className="absolute inset-y-0 left-0 top-6 flex pl-3">
+            <FaMessage size={24} className="fill-primary" />
+          </span>
           <textarea
             type="text"
             placeholder="Message"
-            className="flex text-xl px-16 py-2 max-w-[480px] h-[180px] border-4 border-primary rounded-2xl bg-gray-100 focus:border-secondary"
+            className="w-full min-h-[200px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -147,20 +157,20 @@ export default function ContactUsForm() {
         </div>
         {successMessage && (
           <div className="text-green-600 font-bold text-xl flex gap-4 justify-center">
-            <FaCircleCheck />
+            <FaCircleCheck size={24} color="green" />
             {successMessage}
           </div>
         )}
         {errorMessage && (
           <div className="text-red-600 font-bold text-xl flex gap-4 justify-center">
-            <FaCircleXmark />
+            <FaCircleXmark size={24} color="red" />
             {errorMessage}
           </div>
         )}
         <div className="flex justify-center m-4">
           <button
             type="submit"
-            className="bg-primary w-full h-[60px] rounded-full text-xl text-white font-bold hover:bg-secondary duration-700"
+            className="bg-primary w-full h-[60px] rounded-full text-xl text-white font-bold hover:bg-secondary hover:text-white duration-700"
           >
             Send Message
           </button>
