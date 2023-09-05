@@ -157,7 +157,7 @@ export default function Footer() {
                 placeholder="Enter your email"
               />
               <button
-                className="py-2 px-8 mb-2 bg-primary"
+                className="py-2 px-8 mb-2 duration-500"
                 onClick={handleSubscribe}
               >
                 Subscribe

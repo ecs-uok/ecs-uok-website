@@ -45,32 +45,38 @@ export default function CarouselSlider() {
       <Slider {...settings}>
         <CarouselCard
           cardImage={Image1}
-          cardTitle="Electronics and Computer Science AGM '23"
+          cardTitle="ECS Club AGM '23"
+          cardSubTitle="ECSC | Events"
           cardLink="https://m.facebook.com/story.php?story_fbid=pfbid0wePBandx2eNN19t76TcRJfEHWv7HcF9GvEpsgJ4GeBiWPmBMf2dthz7y6tSV9KHNl&id=61550473266598&mibextid=ZbWKwL"
         />
         <CarouselCard
           cardImage={Image2}
           cardTitle="ML and Industrial Automation"
+          cardSubTitle="Tech Symphony | Workshop Series"
           cardLink="https://m.facebook.com/story.php?story_fbid=pfbid02a3dfxmB3GYdnxjrk9e9D9NQv8QQYrx1P3X7viHEqVJeAp3AK9CT6gEpfFgtaAFhrl&id=61550473266598&mibextid=ZbWKwL"
         />
         <CarouselCard
           cardImage={Image1}
-          cardTitle="Electronics and Computer Science AGM '23"
+          cardTitle="ECS Club AGM '23"
+          cardSubTitle="ECSC | Events"
           cardLink="https://m.facebook.com/story.php?story_fbid=pfbid0wePBandx2eNN19t76TcRJfEHWv7HcF9GvEpsgJ4GeBiWPmBMf2dthz7y6tSV9KHNl&id=61550473266598&mibextid=ZbWKwL"
         />
         <CarouselCard
           cardImage={Image2}
           cardTitle="ML and Industrial Automation"
+          cardSubTitle="Tech Symphony | Workshop Series"
           cardLink="https://m.facebook.com/story.php?story_fbid=pfbid02a3dfxmB3GYdnxjrk9e9D9NQv8QQYrx1P3X7viHEqVJeAp3AK9CT6gEpfFgtaAFhrl&id=61550473266598&mibextid=ZbWKwL"
         />
         <CarouselCard
           cardImage={Image1}
-          cardTitle="Electronics and Computer Science AGM '23"
+          cardTitle="ECS Club AGM '23"
+          cardSubTitle="ECSC | Events"
           cardLink="https://m.facebook.com/story.php?story_fbid=pfbid02a3dfxmB3GYdnxjrk9e9D9NQv8QQYrx1P3X7viHEqVJeAp3AK9CT6gEpfFgtaAFhrl&id=61550473266598&mibextid=ZbWKwL"
         />
         <CarouselCard
           cardImage={Image2}
           cardTitle="ML and Industrial Automation"
+          cardSubTitle="Tech Symphony | Workshop Series"
           cardLink="https://m.facebook.com/story.php?story_fbid=pfbid0wePBandx2eNN19t76TcRJfEHWv7HcF9GvEpsgJ4GeBiWPmBMf2dthz7y6tSV9KHNl&id=61550473266598&mibextid=ZbWKwL"
         />
       </Slider>
