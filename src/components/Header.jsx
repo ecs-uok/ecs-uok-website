@@ -71,8 +71,8 @@ export default function Header() {
             <Link to={"/news"}>
               <li>News</li>
             </Link>
-            <Link to={"/events"}>
-              <li>Events</li>
+            <Link to={"/achievement"}>
+              <li>Achievements</li>
             </Link>
           </ul>
         </div>
@@ -155,8 +155,8 @@ export default function Header() {
         <Link to={"/news"}>
           <li>News</li>
         </Link>
-        <Link to={"/events"}>
-          <li>Events</li>
+        <Link to={"/achievement"}>
+          <li>Achievements</li>
         </Link>
         <div className="flex flex-col py-8">
           <Link to={"/contact-us"}>
