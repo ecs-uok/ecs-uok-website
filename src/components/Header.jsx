@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../assets/ecsc_logo_header.png";
 import { Link } from "react-router-dom";
-import { CarotDown, CarotRight, CloseIcon, MenuIcon2 } from "../assets/Icon";
+import { FaCaretDown, FaCaretRight, FaBars, FaXmark } from "react-icons/fa6";
 
 export default function Header() {
   const [toggleNabBar, setToggleNavBar] = useState(false);
@@ -41,7 +41,7 @@ export default function Header() {
               className="cursor-pointer flex items-center gap-4 "
               onClick={handleClickMenuBar}
             >
-              About {toggleMenu ? <CarotDown /> : <CarotRight />}
+              About {toggleMenu ? <FaCaretDown /> : <FaCaretRight />}
             </li>
             <ul
               className={
@@ -94,7 +94,11 @@ export default function Header() {
           className="md:hidden cursor-pointer mr-10"
           onClick={handleClickNavBar}
         >
-          {toggleNabBar ? <CloseIcon /> : <MenuIcon2 />}
+          {toggleNabBar ? (
+            <FaXmark color="white" className="w-6 h-8" />
+          ) : (
+            <FaBars color="white" className="w-6 h-8" />
+          )}
         </div>
       </div>
 
@@ -112,7 +116,7 @@ export default function Header() {
           className="cursor-pointer flex items-center gap-4 "
           onClick={handleClickMenuBar}
         >
-          About {toggleMenu ? <CarotDown /> : <CarotRight />}
+          About {toggleMenu ? <FaCaretDown /> : <FaCaretRight />}
         </li>
         {toggleMenu ? (
           <div className="pl-4">

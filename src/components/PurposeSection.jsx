@@ -2,14 +2,14 @@ import Card from "./Card";
 import ElecImg from "../assets/UOK/elec_lab.jpeg";
 import CSImg from "../assets/UOK/cs_lab.jpg";
 import UOKImg from "../assets/UOK/uok.jpg";
-import { EyeIcon, AimIcon, ListIcon } from "../assets/Icon";
+import { FaEye, FaBullseye, FaList } from "react-icons/fa6";
 
 export default function PurposeSection() {
   return (
     <>
       <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
         <div className="flex gap-4 text-white">
-          <ListIcon />
+          <FaList className="w-10 h-12" />
           <span className="text-white text-4xl">Purpose</span>
         </div>
         <div className="text-lg text-white pt-2">
@@ -38,7 +38,7 @@ export default function PurposeSection() {
       <div className="flex justify-center items-center py-4 md:px-80 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-16 w-full">
         <div className="mr-10">
           <div className="flex gap-3">
-            <EyeIcon />
+            <FaEye color="gold" className="w-10 h-8" />
             <span className="text-3xl font-mono font-bold">Our Vision</span>
           </div>
           <div>
@@ -54,7 +54,7 @@ export default function PurposeSection() {
 
         <div>
           <div className="flex gap-3">
-            <AimIcon />
+            <FaBullseye color="red" className="w-10 h-8" />
             <span className="text-3xl font-mono font-bold">Our Mission</span>
           </div>
           <div>

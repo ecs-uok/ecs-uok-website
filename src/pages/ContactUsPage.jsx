@@ -1,10 +1,7 @@
-import ContactUsCard from "../components/ContactUsCard";
 import GoogleMap from "../components/GoogleMap";
-import ECSCLogo from "../assets/ecsc_logo.png";
-import ContactUsPhoto from "../assets/members/chamith_contact.jpg";
 import ContactUsForm from "../components/ContactUsForm";
 import { Helmet } from "react-helmet-async";
-import { HeadphonesIcon } from "../assets/Icon";
+import { FaHeadset } from "react-icons/fa6";
 
 export default function ContactUsPage() {
   return (
@@ -20,7 +17,7 @@ export default function ContactUsPage() {
       <div className="bg-primary w-full py-12 md:px-48 px-16 flex flex-col justify-center transition-all duration-500">
         <div className="flex md:gap-6 mt-[80px]">
           <span className="text-white text-5xl font-bold">Connect With Us</span>
-          <HeadphonesIcon />
+          <FaHeadset color="white" className="w-10 h-12" />
         </div>
         <div className="mt-4 w-3/5">
           <p className="text-lg text-white font-medium">
@@ -31,23 +28,10 @@ export default function ContactUsPage() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center bg-gray-100 py-8 gap-8 md:gap-16 flex-col md:flex-row transition-all duration-500">
+      <div className="flex flex-col md:flex-row items-center justify-center bg-gray-100 py-8 gap-8 md:gap-16">
         <div>
-          <ContactUsCard
-            image={ECSCLogo}
-            linkType="mailto:"
-            text="ecs.uok@gmail.com"
-          />
-          <ContactUsCard
-            image={ContactUsPhoto}
-            name="Chamith Dilshan"
-            linkType="tel:"
-            text="+94782563766"
-          />
-
           <GoogleMap />
         </div>
-
         <div>
           <ContactUsForm />
         </div>
