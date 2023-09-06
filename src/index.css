@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+    * {
+        @apply font-poppins;
+    }
+
     li {
         @apply p-4
     }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/ecsc_logo_footer.png";
+import Logo from "../assets/logo/ecsc_logo_footer.png";
 import {
   FaFacebook,
   FaInstagram,

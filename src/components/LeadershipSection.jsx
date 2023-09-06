@@ -18,6 +18,153 @@ import TechCoLeadTwo from "../assets/members/himal.jpg";
 import AcademicCoLeadOne from "../assets/members/ruchira.jpg";
 import AcademicCoLeadTwo from "../assets/members/roaman.jpg";
 
+const boardMembers = [
+  {
+    id: 1,
+    photo: President,
+    role: "President",
+    name: "Chamith Dilshan",
+    url: "https://www.linkedin.com/in/chamith-dilshan-5aa04424a/",
+    email: "dilshankmc91@gmail.com",
+  },
+  {
+    id: 2,
+    photo: Secretary,
+    role: "Secretary",
+    name: "Movindu Gamage",
+    url: "https://www.linkedin.com/in/movindu-gamage/",
+    email: "movindugamage1@gmail.com",
+  },
+  {
+    id: 3,
+    photo: JRTreasurer,
+    role: "Junior Treasurer",
+    name: "Kasun Buddhika",
+    url: "https://www.linkedin.com/in/kasun-buddhika-38239a213/",
+    email: "mkasunbuddhika@gmail.com",
+  },
+  {
+    id: 4,
+    photo: VicePresident,
+    role: "Vice President",
+    name: "Waruna Hashan",
+    url: "https://www.linkedin.com/",
+    email: "hashanrashmika2001@gmail.com",
+  },
+  {
+    id: 5,
+    photo: ViceSecretary,
+    role: "Vice Secretary",
+    name: "Shiva Yakshi",
+    url: "https://www.linkedin.com/in/yakshika-sivaperumal-760018231/",
+    email: "sivayakshika17@gmail.com",
+  },
+  {
+    id: 6,
+    photo: CoEditorOne,
+    role: "Co Editor",
+    name: "Lakindu Banneheka",
+    url: "https://www.linkedin.com/in/lakindu-banneheka/",
+    email: "lakindubannaheka@gmail.com",
+  },
+  {
+    id: 7,
+    photo: CoEditorTwo,
+    role: "Co Editor",
+    name: "Basuru Jagadakshi",
+    url: "https://www.linkedin.com/in/basuru-jagadakshi-15056b276/",
+    email: "jagadakshibasuru@gmail.com",
+  },
+  {
+    id: 8,
+    photo: WebMaster,
+    role: "Web Master",
+    name: "Mindula Madhuhansa",
+    url: "https://www.linkedin.com/in/mindula-madhuhansa/",
+    email: "mimmindula@gmail.com",
+  },
+  {
+    id: 9,
+    photo: IndustryRelationLead,
+    role: "Industry Relation Lead",
+    name: "Thulani Magedara",
+    url: "https://www.linkedin.com/in/thulani-magedara-99868724b/",
+    email: "thulanimagedara@gmail.com",
+  },
+  {
+    id: 10,
+    photo: PublicVisibilityLead,
+    role: "Public Visibility Lead",
+    name: "Rusiru Erandaka",
+    url: "https://www.linkedin.com/in/rusiru-erandaka/",
+    email: "erandakarusiru214@gmail.com",
+  },
+  {
+    id: 11,
+    photo: MembershipDevelopmentLead,
+    role: "Membership Development Lead",
+    name: "Chamodya Rajapaksha",
+    url: "https://www.linkedin.com/",
+    email: "chamodyarajapaksha1@gmail.com",
+  },
+  {
+    id: 12,
+    photo: FinanceLead,
+    role: "Finance Lead",
+    name: "Janada Jayathilaka",
+    url: "https://www.linkedin.com/in/janada-jayathilaka-58b47228a/",
+    email: "lakvindujayathilaka@gmail.com",
+  },
+  {
+    id: 13,
+    photo: EditorialLead,
+    role: "Editorial Lead",
+    name: "Vichaksha Viduranga",
+    url: "https://www.linkedin.com/in/vichaksha-viduranga-a3b293227/",
+    email: "vichakshaviduranga@gmail.com",
+  },
+  {
+    id: 14,
+    photo: EventAndLogisticsLead,
+    role: "Event and Logistics Lead",
+    name: "Vidhushan Viswarajah",
+    url: "https://www.linkedin.com/",
+    email: "Vidhushan1017@gmail.com",
+  },
+  {
+    id: 15,
+    photo: AcademicCoLeadOne,
+    role: "Academic Co Lead",
+    name: "Ruchira Sandeepa",
+    url: "https://www.linkedin.com/",
+    email: "rrsandeepa@gmail.com",
+  },
+  {
+    id: 16,
+    photo: AcademicCoLeadTwo,
+    role: "Academic Co Lead",
+    name: "Roman Figurado",
+    url: "https://www.linkedin.com/in/roman-anojan-figurado-2528b2213/",
+    email: "romananojan21@gmail.com",
+  },
+  {
+    id: 17,
+    photo: TechCoLeadOne,
+    role: "Tech Co Lead",
+    name: "Thisara Yashodha",
+    url: "https://www.linkedin.com/in/thisara-yashodha-217187246/",
+    email: "thisarayashodha4@gmail.com",
+  },
+  {
+    id: 18,
+    photo: TechCoLeadTwo,
+    role: "Tech Co Lead",
+    name: "Himal Geethanjana",
+    url: "https://www.linkedin.com/in/himal-geethanjana-1166011b2/",
+    email: "himalgeethanjana18@gmail.com",
+  },
+];
+
 export default function LeadershipSection() {
   return (
     <div className="bg-gray-100 px-2 py-4 flex flex-col justify-center items-center">
@@ -25,143 +172,19 @@ export default function LeadershipSection() {
         Executive Committee of ECSC 2023/24
       </h1>
 
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-          <MemberCard
-            member_photo={President}
-            member_role="President"
-            member_name="Chamith Dilshan"
-            member_linkedinUrl="https://www.linkedin.com/in/chamith-dilshan-5aa04424a/"
-            member_email="dilshankmc91@gmail.com"
-          />
-          <MemberCard
-            member_photo={Secretary}
-            member_role="Secretary"
-            member_name="Movindu Gamage"
-            member_linkedinUrl="https://www.linkedin.com/in/movindu-gamage/"
-            member_email="movindugamage1@gmail.com"
-          />
-          <MemberCard
-            member_photo={JRTreasurer}
-            member_role="Junior Treasurer"
-            member_name="Kasun Buddhika"
-            member_linkedinUrl="https://www.linkedin.com/in/kasun-buddhika-38239a213/"
-            member_email="mkasunbuddhika@gmail.com"
-          />
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-          <MemberCard
-            member_photo={VicePresident}
-            member_role="Vice President"
-            member_name="Waruna Hashan"
-            member_linkedinUrl="https://www.linkedin.com/"
-            member_email="hashanrashmika2001@gmail.com"
-          />
-          <MemberCard
-            member_photo={ViceSecretary}
-            member_role="Vice Secretary"
-            member_name="Shiva Yakshi"
-            member_linkedinUrl="https://www.linkedin.com/in/yakshika-sivaperumal-760018231/"
-            member_email="sivayakshika17@gmail.com"
-          />
-          <MemberCard
-            member_photo={CoEditorOne}
-            member_role="Co Editor"
-            member_name="Lakindu Banneheka"
-            member_linkedinUrl="https://www.linkedin.com/in/lakindu-banneheka/"
-            member_email="lakindubannaheka@gmail.com"
-          />
-          <MemberCard
-            member_photo={CoEditorTwo}
-            member_role="Co Editor"
-            member_name="Basuru Jagadakshi"
-            member_linkedinUrl="https://www.linkedin.com/in/basuru-jagadakshi-15056b276/"
-            member_email="jagadakshibasuru@gmail.com"
-          />
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-          <MemberCard
-            member_photo={WebMaster}
-            member_role="Web Master"
-            member_name="Mindula Madhuhansa"
-            member_linkedinUrl="https://www.linkedin.com/in/mindula-madhuhansa/"
-            member_email="mimmindula@gmail.com"
-          />
-          <MemberCard
-            member_photo={IndustryRelationLead}
-            member_role="Industry Relation Lead"
-            member_name="Thulani Magedara"
-            member_linkedinUrl="https://www.linkedin.com/in/thulani-magedara-99868724b/"
-            member_email="thulanimagedara@gmail.com"
-          />
-          <MemberCard
-            member_photo={PublicVisibilityLead}
-            member_role="Public Visibility Lead"
-            member_name="Rusiru Erandaka"
-            member_linkedinUrl="https://www.linkedin.com/in/rusiru-erandaka/"
-            member_email="erandakarusiru214@gmail.com"
-          />
-          <MemberCard
-            member_photo={MembershipDevelopmentLead}
-            member_role="Membership Development Lead"
-            member_name="Chamodya Rajapaksha"
-            member_linkedinUrl="https://www.linkedin.com/"
-            member_email="chamodyarajapaksha1@gmail.com"
-          />
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-          <MemberCard
-            member_photo={FinanceLead}
-            member_role="Finance Lead"
-            member_name="Janada Jayathilaka"
-            member_linkedinUrl="https://www.linkedin.com/in/janada-jayathilaka-58b47228a/"
-            member_email="lakvindujayathilaka@gmail.com"
-          />
-          <MemberCard
-            member_photo={EditorialLead}
-            member_role="Editorial Lead"
-            member_name="Vichaksha Viduranga"
-            member_linkedinUrl="https://www.linkedin.com/in/vichaksha-viduranga-a3b293227/"
-            member_email="vichakshaviduranga@gmail.com"
-          />
-          <MemberCard
-            member_photo={EventAndLogisticsLead}
-            member_role="Event and Logistics Lead"
-            member_name="Vidhushan Viswarajah"
-            member_linkedinUrl="https://www.linkedin.com/"
-            member_email="Vidhushan1017@gmail.com"
-          />
-          <MemberCard
-            member_photo={AcademicCoLeadOne}
-            member_role="Academic Co Lead"
-            member_name="Ruchira Sandeepa"
-            member_linkedinUrl="https://www.linkedin.com/"
-            member_email="rrsandeepa@gmail.com"
-          />
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-          <MemberCard
-            member_photo={AcademicCoLeadTwo}
-            member_role="Academic Co Lead"
-            member_name="Roman Figurado"
-            member_linkedinUrl="https://www.linkedin.com/in/roman-anojan-figurado-2528b2213/"
-            member_email="romananojan21@gmail.com"
-          />
-          <MemberCard
-            member_photo={TechCoLeadOne}
-            member_role="Tech Co Lead"
-            member_name="Thisara Yashodha"
-            member_linkedinUrl="https://www.linkedin.com/in/thisara-yashodha-217187246/"
-            member_email="thisarayashodha4@gmail.com"
-          />
-          <MemberCard
-            member_photo={TechCoLeadTwo}
-            member_role="Tech Co Lead"
-            member_name="Himal Geethanjana"
-            member_linkedinUrl="https://www.linkedin.com/in/himal-geethanjana-1166011b2/"
-            member_email="himalgeethanjana18@gmail.com"
-          />
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto my-8">
+        {boardMembers.map((memeber) => {
+          return (
+            <MemberCard
+              key={memeber.id}
+              member_photo={memeber.photo}
+              member_role={memeber.role}
+              member_name={memeber.name}
+              member_linkedinUrl={memeber.url}
+              member_email={memeber.email}
+            />
+          );
+        })}
       </div>
     </div>
   );
