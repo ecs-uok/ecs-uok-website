@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaShareNodes, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FacebookShareButton } from "react-share";
 export default function AchievementCard({
@@ -31,3 +32,11 @@ export default function AchievementCard({
     </div>
   );
 }
+
+AchievementCard.propTypes = {
+  cardDate: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardTitle: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardLink: PropTypes.string.isRequired,
+};
