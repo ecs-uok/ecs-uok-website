@@ -1,7 +1,7 @@
 import Card from "./Card";
-import ElecImg from "../assets/uok/elec_lab.jpeg";
-import CSImg from "../assets/uok/cs_lab.jpg";
-import UOKImg from "../assets/uok/uok.jpg";
+import ElecImg from "../assets/UOK/elec_lab.jpeg";
+import CSImg from "../assets/UOK/cs_lab.jpg";
+import UOKImg from "../assets/UOK/uok.jpg";
 import { FaEye, FaBullseye, FaList } from "react-icons/fa6";
 
 const purposeSectionCards = [
