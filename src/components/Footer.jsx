@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/ecsc_logo_footer.png";
+import Logo from "../assets/logo/ecsc_logo_footer.png";
 import {
   FaFacebook,
   FaInstagram,
@@ -157,7 +157,7 @@ export default function Footer() {
                 placeholder="Enter your email"
               />
               <button
-                className="py-2 px-8 mb-2 bg-primary"
+                className="py-2 px-8 mb-2 duration-500"
                 onClick={handleSubscribe}
               >
                 Subscribe

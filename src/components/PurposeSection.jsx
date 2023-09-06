@@ -4,6 +4,30 @@ import CSImg from "../assets/UOK/cs_lab.jpg";
 import UOKImg from "../assets/UOK/uok.jpg";
 import { FaEye, FaBullseye, FaList } from "react-icons/fa6";
 
+const purposeSectionCards = [
+  {
+    id: 1,
+    image: ElecImg,
+    title: "Electronics",
+    description:
+      "Electronics is one of the main subjects. Starting from the Fundamentals itself, the subject knowledge becomes widened in each state. The passion for Electronics leads the path of this journey.",
+  },
+  {
+    id: 2,
+    image: CSImg,
+    title: "Computer Science",
+    description:
+      "Computer Science is one of the main subjects. The enthusiasm for discovering new technologies and the syllabus, lifts us to another height. The key to a creative solution maker gradually comes closer.",
+  },
+  {
+    id: 3,
+    image: UOKImg,
+    title: "University of Kelaniya",
+    description:
+      "The Roof where we all became one another. This enlightening pillar will stand always behind us through our our lives. Long live 'Kelani Matha'",
+  },
+];
+
 export default function PurposeSection() {
   return (
     <>
@@ -17,22 +41,17 @@ export default function PurposeSection() {
         </div>
       </div>
 
-      <div className="flex gap-10 justify-evenly lg:flex-row lg:px-12 flex-col items-center w-[100%] my-12 p-0 ">
-        <Card
-          cardImage={ElecImg}
-          cardTitle="Electronics"
-          cardDesc="Electronics is one of the main subjects. Starting from the Fundamentals itself, the subject knowledge becomes widened in each state. The passion for Electronics leads the path of this journey."
-        />
-        <Card
-          cardImage={CSImg}
-          cardTitle="Computer Science"
-          cardDesc="Computer Science is one of the main subjects. The enthusiasm for discovering new technologies and the syllabus, lifts us to another height. The key to a creative solution maker gradually comes closer. "
-        />
-        <Card
-          cardImage={UOKImg}
-          cardTitle="University of Kelaniya"
-          cardDesc="The Roof where we all became one another. This enlightening pillar will stand always behind us through our our lives. Long live 'Kelani Matha'"
-        />
+      <div className="flex gap-10 px-12 justify-evenly md:flex-row md:px-24 flex-col items-center w-full my-12">
+        {purposeSectionCards.map((card) => {
+          return (
+            <Card
+              key={card.id}
+              cardImage={card.image}
+              cardTitle={card.title}
+              cardDesc={card.description}
+            />
+          );
+        })}
       </div>
 
       <div className="flex justify-center items-center py-4 md:px-80 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-16 w-full">

@@ -1,5 +1,5 @@
 import VideoBG from "../assets/hero_section_video.mp4";
-import VideoBGLazy from "../assets/hero_section_lazy_load.jpg";
+import VideoBGLazy from "../assets/placeholders/hero_section_lazy_load.jpg";
 
 export default function HeroSection() {
   return (

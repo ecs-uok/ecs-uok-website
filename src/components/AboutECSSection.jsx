@@ -1,4 +1,4 @@
-import AboutHeaderImage from "../assets/about_header.jpg";
+import AboutHeaderImage from "../assets/uok/about_header.jpg";
 
 export default function AboutECS() {
   return (

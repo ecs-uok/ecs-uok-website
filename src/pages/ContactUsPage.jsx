@@ -28,7 +28,7 @@ export default function ContactUsPage() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center bg-gray-100 py-8 gap-8 md:gap-16">
+      <div className="flex flex-col md:flex-row items-center justify-center bg-gray-100 py-8 gap-8">
         <div>
           <GoogleMap />
         </div>
