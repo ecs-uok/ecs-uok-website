@@ -69,8 +69,6 @@ export default function PurposeSection() {
           </div>
         </div>
 
-        {/* <div className="mx-10"></div> */}
-
         <div>
           <div className="flex gap-3">
             <FaBullseye color="red" className="w-10 h-8" />

@@ -3,7 +3,7 @@ import VideoBGLazy from "../assets/placeholders/hero_section_lazy_load.jpg";
 
 export default function HeroSection() {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen ">
       <video
         className="w-full h-full object-cover relative"
         autoPlay
@@ -24,7 +24,7 @@ export default function HeroSection() {
         <p className="mt-12 text-xl">
           &quot;Let&apos;s Embrace the world of Hardware and Software,
           <br />
-          to creat a sustainable future&quot;
+          to create a sustainable future&quot;
         </p>
       </div>
     </div>

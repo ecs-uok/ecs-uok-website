@@ -27,7 +27,7 @@ export default function Header() {
             <img
               src={Logo}
               alt="logo"
-              className="sm:ml-10 ss:ml-10 md:ml-20 w-auto h-[64px]"
+              className="ml-10 md:ml-20 w-auto h-[64px]"
             />
           </Link>
         </div>
@@ -46,7 +46,7 @@ export default function Header() {
             <ul
               className={
                 toggleMenu
-                  ? `absolute mt-[72px] ml-28 bg-primary max-w-[300px] px-4 text-white`
+                  ? `absolute mt-12 ml-16 bg-primary max-w-[300px] px-4 text-white`
                   : `hidden`
               }
             >
