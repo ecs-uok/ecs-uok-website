@@ -53,8 +53,8 @@ const StayConnectedLinkArray = [
   },
   {
     id: 2,
-    name: "(+94) 78 256 3766",
-    to: "tel:+94782563766",
+    name: "(+94) 12 345 6789",
+    to: "tel:+94123456789",
     icon: <FaPhone size={18} />,
   },
   {

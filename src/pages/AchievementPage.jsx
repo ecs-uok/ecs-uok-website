@@ -23,7 +23,7 @@ export default function AchievementPage() {
           <span className="text-white text-4xl">Achievements</span>
         </div>
         <div className="text-lg text-white pt-2">
-          Achievements by ECSC Club Members
+          The times when ECSC folks were their most active!
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto bg-gray-100 ">

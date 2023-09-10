@@ -9,17 +9,17 @@ export default function MemberCard({
   member_email,
 }) {
   return (
-    <div className="h-[160px] w-[450px] bg-white rounded-2xl drop-shadow-lg flex">
+    <div className="max-h-[160px] max-w-[450px] bg-white rounded-2xl drop-shadow-lg flex">
       <img
         src={member_photo}
         alt={`${member_role} photo`}
-        className="h-auto w-[120px] object-cover overflow-hidden rounded-s-2xl"
+        className="h-full w-[1/4] object-contain rounded-s-2xl"
       />
-      <div className="text-primary p-4 flex flex-col justify-center gap-2">
+      <div className="text-primary p-4 my-auto">
         <div className="flex gap-2 items-center">
-          <FaUser size={20} color={"primary"} />
+          <FaUser color={"primary"} />
           <a
-            className="text-xl font-bold"
+            className="text-lg md:text-xl font-bold"
             href={member_linkedinUrl}
             target="_blank"
             rel="noreferrer"
@@ -28,12 +28,12 @@ export default function MemberCard({
           </a>
         </div>
         <div className="flex gap-2 items-center">
-          <FaRankingStar size={20} color={"primary"} />
-          <h3 className="text-lg">{member_role}</h3>
+          <FaRankingStar color={"primary"} />
+          <h3 className="text-base md:text-lg">{member_role}</h3>
         </div>
         <div className="flex gap-2 items-center">
-          <FaEnvelope size={20} color={"primary"} />
-          <p className="text-lg">{member_email}</p>
+          <FaEnvelope color={"primary"} />
+          <p className="text-sm md:text-lg">{member_email}</p>
         </div>
       </div>
     </div>
