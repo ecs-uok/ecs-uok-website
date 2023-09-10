@@ -58,7 +58,7 @@ export default function PurposeSection() {
         <div className="mr-10">
           <div className="flex gap-3">
             <FaEye color="gold" className="w-10 h-8" />
-            <span className="text-3xl font-mono font-bold">Our Vision</span>
+            <span className="text-3xl font-bold">Our Vision</span>
           </div>
           <div>
             <p className="mt-4 font-semibold text-lg">
@@ -72,7 +72,7 @@ export default function PurposeSection() {
         <div>
           <div className="flex gap-3">
             <FaBullseye color="red" className="w-10 h-8" />
-            <span className="text-3xl font-mono font-bold">Our Mission</span>
+            <span className="text-3xl font-bold">Our Mission</span>
           </div>
           <div>
             <p className="mt-4 font-semibold text-lg">

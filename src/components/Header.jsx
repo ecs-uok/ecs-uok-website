@@ -110,10 +110,10 @@ export default function Header() {
         }
       >
         <Link to={"/"}>
-          <li>Home</li>
+          <li className="p-4">Home</li>
         </Link>
         <li
-          className="cursor-pointer flex items-center gap-4 "
+          className="cursor-pointer flex items-center gap-4 p-4"
           onClick={handleClickMenuBar}
         >
           About {toggleMenu ? <FaCaretDown /> : <FaCaretRight />}
@@ -122,6 +122,7 @@ export default function Header() {
           <div className="pl-4">
             <Link to={"/about/about-ecsc"}>
               <li
+                className="p-4"
                 onClick={() => {
                   setToggleNavBar(false);
                 }}
@@ -131,6 +132,7 @@ export default function Header() {
             </Link>
             <Link to={"/about/messages"}>
               <li
+                className="p-4"
                 onClick={() => {
                   setToggleNavBar(false);
                 }}
@@ -140,6 +142,7 @@ export default function Header() {
             </Link>
             <Link to={"/about/executive-committee"}>
               <li
+                className="p-4"
                 onClick={() => {
                   setToggleNavBar(false);
                 }}
@@ -153,10 +156,10 @@ export default function Header() {
         )}
 
         <Link to={"/news"}>
-          <li>News</li>
+          <li className="p-4">News</li>
         </Link>
         <Link to={"/achievement"}>
-          <li>Achievements</li>
+          <li className="p-4">Achievements</li>
         </Link>
         <div className="flex flex-col py-8">
           <Link to={"/contact-us"}>

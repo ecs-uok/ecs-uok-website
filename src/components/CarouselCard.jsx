@@ -16,7 +16,7 @@ export default function CarouselCard({
       />
       <div>
         <h1 className="text-xl font-bold pt-4">{cardTitle}</h1>
-        <h2 className="text-sm font-medium">{cardSubTitle}</h2>
+        <h2 className="text-sm font-medium">{cardSubTitle}</h2>,{" "}
         <a href={cardLink} target="_blank" rel="noreferrer">
           <button className="flex w-full text-base mt-4 p-2 rounded-2xl items-center justify-center hover:bg-secondary hover:text-white duration-500 gap-4">
             Read More
