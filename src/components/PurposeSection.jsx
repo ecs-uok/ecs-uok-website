@@ -70,8 +70,8 @@ export default function PurposeSection() {
         </div>
 
         <div>
-          <div className="flex gap-3">
-            <FaBullseye color="red" className="w-10 h-8" />
+          <div className="flex items-center gap-4">
+            <FaBullseye color="red" className="w-8 h-8" />
             <span className="text-3xl font-bold">Our Mission</span>
           </div>
           <div>

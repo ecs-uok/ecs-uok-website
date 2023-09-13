@@ -5,7 +5,7 @@ export default function RecentEventsSection() {
   return (
     <>
       <div className="bg-primary py-12 mt-8 px-10 w-full md:px-48 transition-all duration-1000">
-        <div className="flex gap-4 text-white">
+        <div className="flex items-center gap-4 text-white">
           <FaNewspaper className="w-9 h-11" />
           <span className="text-white text-4xl">Latest Updates</span>
         </div>

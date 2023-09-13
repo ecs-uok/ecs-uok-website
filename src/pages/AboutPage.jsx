@@ -12,7 +12,6 @@ export default function AboutPage() {
         />
         <link rel="canonical" href="/about" />
       </Helmet>
-      {/* <Sidebar /> */}
       {<Outlet />}
     </div>
   );

@@ -16,10 +16,10 @@ const achievementCards = [
 
 export default function AchievementPage() {
   return (
-    <div className="pt-[80px]">
+    <div className="pt-20">
       <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
-        <div className="flex gap-4 text-white">
-          <FaStar className="w-9 h-11" />
+        <div className="flex items-center gap-4 text-white">
+          <FaStar size={40} />
           <span className="text-white text-4xl">Achievements</span>
         </div>
         <div className="text-lg text-white pt-2">

@@ -15,7 +15,7 @@ export default function ContactUsPage() {
         <link rel="canonical" href="/contact-us" />
       </Helmet>
       <div className="bg-primary w-full py-12 md:px-48 px-16 flex flex-col justify-center transition-all duration-500">
-        <div className="flex md:gap-6 mt-[80px]">
+        <div className="flex items-center md:gap-6 mt-20">
           <span className="text-white text-5xl font-bold">Connect With Us</span>
           <FaHeadset color="white" className="w-10 h-12" />
         </div>

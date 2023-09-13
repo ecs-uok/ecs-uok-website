@@ -1,18 +1,26 @@
+import { FaQuestion } from "react-icons/fa6";
 import AboutHeaderImage from "../assets/UOK/about_header.jpg";
 
 export default function AboutECS() {
   return (
-    <div className="bg-gray-100 p-12">
-      <h1 className="text-5xl font-bold font-sans text-center  mt-[80px]">
-        Electronics and Computer Science Club
-      </h1>
+    <div className="bg-gray-100 pt-20">
+      <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
+        <div className="flex items-center gap-4 text-white">
+          <FaQuestion size={40} />
+          <span className="text-white text-4xl">About ECSC</span>
+        </div>
+        <div className="text-lg text-white pt-2">
+          Let&apos;s delve into the history of the Electronics and Computer
+          Science degree program!
+        </div>
+      </div>
       <img
-        className="mt-8 w-full h-[360px] object-cover"
+        className="w-full max-h-[360px] object-cover"
         loading="lazy"
         src={AboutHeaderImage}
         alt="About us header image"
       />
-      <div className="text-xl font-semibold">
+      <div className="text-xl p-4 md:p-8 font-semibold">
         <p className="my-6">
           Electronics and Computer Science Club was established by the
           undergraduates of the degree program of BSc (Hons) in Electronics and

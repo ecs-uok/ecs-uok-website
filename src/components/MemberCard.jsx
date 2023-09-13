@@ -9,31 +9,28 @@ export default function MemberCard({
   member_email,
 }) {
   return (
-    <div className="max-h-[160px] max-w-[450px] bg-white rounded-2xl drop-shadow-lg flex">
-      <img
-        src={member_photo}
-        alt={`${member_role} photo`}
-        className="h-full w-[1/4] object-contain rounded-s-2xl"
-      />
-      <div className="text-primary p-4 my-auto">
-        <div className="flex gap-2 items-center">
-          <FaUser color={"primary"} />
-          <a
-            className="text-lg md:text-xl font-bold"
-            href={member_linkedinUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
+    <div className="flex flex-col md:flex-row md:max-h-[180px] rounded-2xl drop-shadow-md bg-white md:gap-4">
+      <div className="h-full">
+        <img
+          src={member_photo}
+          alt={`${member_role} image`}
+          className="h-full object-contain rounded-t-2xl md:rounded-l-2xl md:rounded-r-none"
+        />
+      </div>
+      <div className="flex flex-col gap-2 mx-auto md:mx-0 md:justify-center my-4 text-secondary text-base md:text-lg font-semibold">
+        <div className="flex gap-4 items-center">
+          <FaUser color="#0065AD" />
+          <a href={member_linkedinUrl} target="_blank" rel="noreferrer">
             {member_name}
           </a>
         </div>
-        <div className="flex gap-2 items-center">
-          <FaRankingStar color={"primary"} />
-          <h3 className="text-base md:text-lg">{member_role}</h3>
+        <div className="flex gap-4 items-center">
+          <FaRankingStar color="#0065AD" />
+          <p>{member_role}</p>
         </div>
-        <div className="flex gap-2 items-center">
-          <FaEnvelope color={"primary"} />
-          <p className="text-sm md:text-lg">{member_email}</p>
+        <div className="flex gap-4 items-center">
+          <FaEnvelope color="#0065AD" />
+          <p>{member_email}</p>
         </div>
       </div>
     </div>
@@ -44,6 +41,6 @@ MemberCard.propTypes = {
   member_role: PropTypes.string.isRequired,
   member_name: PropTypes.string.isRequired,
   member_photo: PropTypes.string.isRequired,
-  member_linkedinUrl: PropTypes.string.isRequired,
+  member_linkedinUrl: PropTypes.string,
   member_email: PropTypes.string.isRequired,
 };

@@ -4,7 +4,7 @@ export default function LetsTalkSection() {
   return (
     <div className="bg-primary h-fit relative py-6 px-10 w-full md:px-48 transition-all duration-1000">
       <div className=" py-6 mt-0 px-3 w-full md:px-10 flex flex-col justify-center">
-        <div className="text-white flex gap-4">
+        <div className="text-white flex items-center gap-4">
           <FaHeadset className="w-10 h-12" />
           <h1 className="text-4xl">Let&apos;s Talk</h1>
         </div>
