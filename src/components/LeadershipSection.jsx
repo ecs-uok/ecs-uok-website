@@ -156,7 +156,7 @@ export default function LeadershipSection() {
     "https://ecsc-website-strapi.onrender.com/api/board-members?populate=*"
   );
 
-  const cachedData = !loading && data;
+  const cachedData = !loading && !error && data;
 
   return (
     <div className="bg-gray-100 flex flex-col justify-center items-center pt-20">

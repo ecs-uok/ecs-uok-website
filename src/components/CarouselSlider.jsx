@@ -5,6 +5,7 @@ import CarouselCard from "./CarouselCard";
 import AGM from "../assets/carousel/agm23.jpg";
 import MLTSW1 from "../assets/carousel/ml_ts_w1.jpg";
 import SLUGRuchira from "../assets/achievements/slug_ruchira_wrestling.jpg";
+import useFetch from "../hooks/useFetch";
 
 const carouselCards = [
   {
@@ -52,6 +53,12 @@ const carouselCards = [
 ];
 
 export default function CarouselSlider() {
+  let { loading, error, data } = useFetch(
+    "https://ecsc-website-strapi.onrender.com/api/board-members?populate=*"
+  );
+
+  const cachedData = !loading && !error && data;
+
   const settings = {
     dots: true,
     infinite: true,
@@ -85,6 +92,8 @@ export default function CarouselSlider() {
       },
     ],
   };
+
+  console.log(cachedData);
 
   return (
     <div className="my-8 mx-16 ">
