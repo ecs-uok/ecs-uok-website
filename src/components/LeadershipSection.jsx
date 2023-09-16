@@ -32,7 +32,7 @@ export default function LeadershipSection() {
           {cachedData &&
             cachedData.data.map((member) => (
               <MemberCard
-                key={member.id}
+                key={member.attributes.memberId}
                 member_photo={member.attributes.memberPhoto.data.attributes.url}
                 member_name={member.attributes.memberName}
                 member_linkedinUrl={member.attributes.memberLinkedinUrl}
