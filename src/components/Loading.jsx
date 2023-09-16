@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-export default function Loading() {
+export default function Loading({ marginY }) {
   const [dots, setDots] = useState("");
   const dotsCycle = [".", "..", "..."];
   const delay = 1000;
@@ -20,7 +21,9 @@ export default function Loading() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center text-center bg-gray-100 my-20">
+    <div
+      className={`flex flex-col justify-center items-center text-center bg-gray-100 py-12 my-${marginY}`}
+    >
       <div className="animate-bounce rounded-full h-16 w-16 border-4 border-gray-900 flex justify-center items-center">
         <div className="rounded-full h-12 w-12 bg-primary"></div>
       </div>
@@ -30,3 +33,7 @@ export default function Loading() {
     </div>
   );
 }
+
+Loading.propTypes = {
+  marginY: PropTypes.number,
+};
