@@ -15,12 +15,14 @@ export default function ContactUsPage() {
         <link rel="canonical" href="/contact-us" />
       </Helmet>
       <div className="bg-primary w-full py-12 md:px-48 px-16 flex flex-col justify-center transition-all duration-500">
-        <div className="flex items-center md:gap-6 mt-20">
-          <span className="text-white text-5xl font-bold">Connect With Us</span>
-          <FaHeadset color="white" className="w-10 h-12" />
+        <div className="flex items-center gap-4 md:gap-6 mt-20">
+          <span className="text-white text-2xl md:text-5xl font-bold">
+            Connect With Us
+          </span>
+          <FaHeadset color="white" className="w-8 h-10 md:w-10 md:h-12" />
         </div>
-        <div className="mt-4 w-3/5">
-          <p className="text-lg text-white font-medium">
+        <div className="mt-4 w-3/4 md:w-3/5">
+          <p className="text-base md:text-lg text-white font-medium">
             If you are interested on Electronics or Computer Science or both, we
             are more than happy to help you out. Or else if you need to clarify
             your doubts regarding the degree program, we are always here.

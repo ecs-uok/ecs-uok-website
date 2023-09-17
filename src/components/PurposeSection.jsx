@@ -1,34 +1,16 @@
 import Card from "./Card";
-import ElecImg from "../assets/UOK/elec_lab.jpeg";
-import CSImg from "../assets/UOK/cs_lab.jpg";
-import UOKImg from "../assets/UOK/uok.jpg";
 import { FaEye, FaBullseye, FaList } from "react-icons/fa6";
-
-const purposeSectionCards = [
-  {
-    id: 1,
-    image: ElecImg,
-    title: "Electronics",
-    description:
-      "Electronics is one of the main subjects. Starting from the Fundamentals itself, the subject knowledge becomes widened in each state. The passion for Electronics leads the path of this journey.",
-  },
-  {
-    id: 2,
-    image: CSImg,
-    title: "Computer Science",
-    description:
-      "Computer Science is one of the main subjects. The enthusiasm for discovering new technologies and the syllabus, lifts us to another height. The key to a creative solution maker gradually comes closer.",
-  },
-  {
-    id: 3,
-    image: UOKImg,
-    title: "University of Kelaniya",
-    description:
-      "The Roof where we all became one another. This enlightening pillar will stand always behind us through our our lives. Long live 'Kelani Matha'",
-  },
-];
+import useFetch from "../hooks/useFetch";
+import Error from "./Error";
+import Loading from "./Loading";
 
 export default function PurposeSection() {
+  let { loading, error, data } = useFetch(
+    "https://ecsc-strapi-backend-8d83d27854c0.herokuapp.com/api/cards/?populate=*"
+  );
+
+  const cachedData = !loading && !error && data;
+
   return (
     <>
       <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
@@ -41,18 +23,24 @@ export default function PurposeSection() {
         </div>
       </div>
 
-      <div className="flex gap-10 px-12 justify-evenly md:flex-row md:px-24 flex-col items-center w-full my-12">
-        {purposeSectionCards.map((card) => {
-          return (
-            <Card
-              key={card.id}
-              cardImage={card.image}
-              cardTitle={card.title}
-              cardDesc={card.description}
-            />
-          );
-        })}
-      </div>
+      {error ? (
+        <Error marginY={0} />
+      ) : loading ? (
+        <Loading marginY={0} />
+      ) : (
+        <div className="flex gap-10 px-12 justify-evenly md:flex-row md:px-24 flex-col items-center w-full my-12">
+          {cachedData.data.map((card) => {
+            return (
+              <Card
+                key={card.id}
+                cardImage={card.attributes.cardImage.data.attributes.url}
+                cardTitle={card.attributes.cardTitle}
+                cardDesc={card.attributes.cardText}
+              />
+            );
+          })}
+        </div>
+      )}
 
       <div className="flex justify-center items-center py-4 md:px-80 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-16 w-full">
         <div className="mr-10">
