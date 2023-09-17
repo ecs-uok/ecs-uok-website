@@ -6,7 +6,6 @@ export default function Layout() {
   return (
     <div className="w-full w-min-[600px]">
       <Header />
-
       <Outlet />
       <hr />
       <Footer />
