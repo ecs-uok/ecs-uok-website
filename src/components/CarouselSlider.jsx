@@ -47,8 +47,6 @@ export default function CarouselSlider() {
     ],
   };
 
-  console.log(cachedData);
-
   return (
     <>
       {error ? (
