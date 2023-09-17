@@ -76,7 +76,7 @@ export default function ContactUsForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="border-4 border-primary rounded-2xl mx-auto min-w-[540px]">
+      <div className="border-4 border-primary rounded-2xl mx-auto w-80 md:w-[540px]">
         {/* username input */}
         <div className="relative m-4">
           <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -85,7 +85,7 @@ export default function ContactUsForm() {
           <input
             type="text"
             placeholder="Full name"
-            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="w-full h-12 md:h-16 text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -101,7 +101,7 @@ export default function ContactUsForm() {
           <input
             type="email"
             placeholder="Email address"
-            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="w-full  h-12 md:h-16 text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -117,7 +117,7 @@ export default function ContactUsForm() {
           <input
             type="tel"
             placeholder="Phone number"
-            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="w-full h-12 md:h-16 text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
@@ -132,7 +132,7 @@ export default function ContactUsForm() {
           <input
             type="text"
             placeholder="Subject"
-            className="w-full min-h-[64px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="w-full h-12 md:h-16 text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
@@ -148,7 +148,7 @@ export default function ContactUsForm() {
           <textarea
             type="text"
             placeholder="Message"
-            className="w-full min-h-[200px] text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="w-full h-40 md:h-52 text-xl pl-12 pr-3 py-4 border-4 border-primary rounded-2xl focus:border-blue-500 focus:ring focus:ring-blue-200"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -170,7 +170,7 @@ export default function ContactUsForm() {
         <div className="flex justify-center m-4">
           <button
             type="submit"
-            className="bg-primary w-full h-[60px] rounded-full text-xl text-white font-bold hover:bg-secondary hover:text-white duration-700"
+            className="bg-primary w-full h-12 md:h-16 rounded-full text-xl text-white font-bold hover:bg-secondary hover:text-white duration-700"
           >
             Send Message
           </button>

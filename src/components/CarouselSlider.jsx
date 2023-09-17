@@ -11,8 +11,6 @@ export default function CarouselSlider() {
     "https://ecsc-strapi-backend-8d83d27854c0.herokuapp.com/api/blog-posts/?populate=*"
   );
 
-  console.log(data);
-
   const cachedData = !loading && !error && data;
 
   const settings = {
