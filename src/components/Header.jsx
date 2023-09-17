@@ -27,18 +27,18 @@ export default function Header() {
             <img
               src={Logo}
               alt="logo"
-              className="ml-10 md:ml-20 w-auto h-[64px]"
+              className="ml-10 md:ml-20 w-auto max-h-[64px]"
             />
           </Link>
         </div>
 
         <div className="flex items-center">
-          <ul className="hidden md:flex text-white text-2xl gap-12">
+          <ul className="hidden md:flex text-white text-xl gap-12">
             <Link to={"/"}>
               <li>Home</li>
             </Link>
             <li
-              className="cursor-pointer flex items-center gap-4 "
+              className="cursor-pointer flex items-center gap-4"
               onClick={handleClickMenuBar}
             >
               About {toggleMenu ? <FaCaretDown /> : <FaCaretRight />}
@@ -46,24 +46,24 @@ export default function Header() {
             <ul
               className={
                 toggleMenu
-                  ? `absolute mt-12 ml-16 bg-primary max-w-[300px] px-4 text-white`
+                  ? `absolute mt-12 ml-16 bg-primary max-w-[300px] px-4 text-white rounded-b-2xl`
                   : `hidden`
               }
             >
               <Link to={"/about/about-ecsc"}>
-                <li className="py-8" onClick={handleCloseMenu}>
+                <li className="py-6" onClick={handleCloseMenu}>
                   About ECSC
                 </li>
                 <hr />
               </Link>
               <Link to={"/about/messages"}>
-                <li className="py-8" onClick={handleCloseMenu}>
+                <li className="py-6" onClick={handleCloseMenu}>
                   Messages
                 </li>
                 <hr />
               </Link>
               <Link to={"/about/executive-committee"}>
-                <li className="py-8" onClick={handleCloseMenu}>
+                <li className="py-6" onClick={handleCloseMenu}>
                   Executive Committee
                 </li>
               </Link>
@@ -161,10 +161,10 @@ export default function Header() {
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>
         </Link>
-        <div className="flex flex-col py-8">
+        <div className="flex flex-col pt-2 pb-6">
           <Link to={"/contact-us"}>
             <button
-              className="px-8 py-3 hover:bg-secondary hover:text-white hover:border-white duration-500"
+              className="px-6 py-1 hover:bg-secondary hover:text-white hover:border-white duration-500"
               onClick={() => {
                 setToggleNavBar(false);
               }}
