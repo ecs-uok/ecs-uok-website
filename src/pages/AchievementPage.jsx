@@ -43,3 +43,49 @@ export default function AchievementPage() {
     </div>
   );
 }
+
+// export default function AchievementPage() {
+//   let { loading, error, data } = useFetch(
+//     "https://ecsc-strapi-backend-8d83d27854c0.herokuapp.com/api/blog-posts/?populate=*"
+//   );
+
+//   const cachedData = !loading && !error && data;
+
+//   return (
+//     <div className="pt-20">
+//       <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
+//         <div className="flex items-center gap-4 text-white">
+//           <FaStar size={40} />
+//           <span className="text-white text-4xl">Achievements</span>
+//         </div>
+//         <div className="text-lg text-white pt-2">
+//           The times when ECSC folks were their most active!
+//         </div>
+//       </div>
+//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto bg-gray-100 ">
+//         {error ? (
+//           <Error marginY={0} />
+//         ) : loading ? (
+//           <Loading marginY={0} />
+//         ) : (
+//           <>
+//             {cachedData.data.map((achievementCard) => {
+//               return (
+//                 <AchievementCard
+//                   key={achievementCard.id}
+//                   cardDate={achievementCard.attributes.blogDate}
+//                   cardImage={
+//                     achievementCard.attributes.coverImage.data.attributes.url
+//                   }
+//                   cardTitle={achievementCard.attributes.blogTitle}
+//                   cardDescription={achievementCard.attributes.blogContent}
+//                   cardLink={achievementCard.attributes.blogUrl}
+//                 />
+//               );
+//             })}
+//           </>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }

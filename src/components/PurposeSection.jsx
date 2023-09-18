@@ -29,16 +29,17 @@ export default function PurposeSection() {
         <Loading marginY={0} />
       ) : (
         <div className="flex gap-10 px-12 justify-evenly md:flex-row md:px-24 flex-col items-center w-full my-12">
-          {cachedData.data.map((card) => {
-            return (
-              <Card
-                key={card.id}
-                cardImage={card.attributes.cardImage.data.attributes.url}
-                cardTitle={card.attributes.cardTitle}
-                cardDesc={card.attributes.cardText}
-              />
-            );
-          })}
+          {cachedData &&
+            cachedData.data.map((card) => {
+              return (
+                <Card
+                  key={card.id}
+                  cardImage={card.attributes.cardImage.data.attributes.url}
+                  cardTitle={card.attributes.cardTitle}
+                  cardDesc={card.attributes.cardText}
+                />
+              );
+            })}
         </div>
       )}
 
