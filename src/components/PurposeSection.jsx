@@ -1,8 +1,8 @@
 import Card from "./Card";
 import { FaEye, FaBullseye, FaList } from "react-icons/fa6";
 import useFetch from "../hooks/useFetch";
-import Error from "./Error";
-import Loading from "./Loading";
+import Error from "./animations/Error";
+import Loading from "./animations/Loading";
 
 export default function PurposeSection() {
   let { loading, error, data } = useFetch(

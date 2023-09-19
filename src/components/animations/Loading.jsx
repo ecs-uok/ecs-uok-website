@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 // import PropTypes from "prop-types";
 import { useLottie } from "lottie-react";
-import loadingAnimation from "../assets/animations/loading.json";
+import loadingAnimation from "../animations/loading.json";
 
 export default function Loading() {
   const style = {

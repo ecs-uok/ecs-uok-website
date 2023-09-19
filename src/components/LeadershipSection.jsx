@@ -1,8 +1,8 @@
 import MemberCard from "./MemberCard";
 import useFetch from "../hooks/useFetch";
 import { FaUserGroup } from "react-icons/fa6";
-import Loading from "./Loading";
-import Error from "./Error";
+import Loading from "./animations/Loading";
+import Error from "./animations/Error";
 
 export default function LeadershipSection() {
   let { loading, error, data } = useFetch(

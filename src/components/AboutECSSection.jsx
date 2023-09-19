@@ -1,7 +1,7 @@
 import { FaQuestion } from "react-icons/fa6";
 import useFetch from "../hooks/useFetch";
-import Error from "./Error";
-import Loading from "./Loading";
+import Error from "./animations/Error";
+import Loading from "./animations/Loading";
 import ReactMarkdown from "react-markdown";
 
 export default function AboutECS() {
@@ -25,9 +25,9 @@ export default function AboutECS() {
       </div>
       <>
         {error ? (
-          <Error marginY={0} />
+          <Error />
         ) : loading ? (
-          <Loading marginY={0} />
+          <Loading />
         ) : (
           <>
             <img

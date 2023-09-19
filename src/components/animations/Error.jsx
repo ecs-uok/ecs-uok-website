@@ -1,6 +1,6 @@
 // import PropTypes from "prop-types";
 import { useLottie } from "lottie-react";
-import errorAnimation from "../assets/animations/error.json";
+import errorAnimation from "../animations/error.json";
 
 export default function Loading() {
   const style = {
