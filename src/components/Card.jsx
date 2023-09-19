@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 export default function Card({ cardImage, cardTitle, cardDesc }) {
   return (
-    <div className="cursor-pointer w-[80%] h-[480px] lg:w-[640px] lg:h-[480px] border rounded-2xl overflow-hidden relative">
+    <div className="cursor-pointer md:w-96 md:h-96 border rounded-2xl overflow-hidden relative">
       <img
-        className="w-full h-full object-cover"
+        className="aspect-square object-cover"
         src={cardImage}
         alt={`${cardTitle} card image`}
       />

@@ -26,7 +26,7 @@ export default function CarouselSlider() {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -50,11 +50,11 @@ export default function CarouselSlider() {
   return (
     <>
       {error ? (
-        <Error marginY={0} />
+        <Error />
       ) : loading ? (
-        <Loading marginY={0} />
+        <Loading />
       ) : (
-        <div className="my-8 mx-16 ">
+        <div className="my-8 mx-8 md:mx-16">
           <Slider {...settings}>
             {cachedData &&
               cachedData.data.map((blog) => {

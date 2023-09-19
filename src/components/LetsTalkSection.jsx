@@ -18,14 +18,6 @@ export default function LetsTalkSection() {
             <br />
           </p>
         </div>
-        <div className="mt-6 md:flex gap-4">
-          <button className="bg-primary mb-2 w-full h-auto md:w-fit md:h-full border-white border-4 text-white text-lg font-bold rounded-full py-2 px-10 hover:bg-secondary hover:text-white hover:border-white duration-500">
-            ecs.uok@gmail.com
-          </button>
-          <button className="bg-primary w-full h-auto md:w-fit md:h-full border-4 border-white text-white text-lg font-bold rounded-full py-2 px-6 hover:bg-secondary hover:text-white hover:border-white duration-500">
-            +94 12 345 6789
-          </button>
-        </div>
       </div>
     </div>
   );

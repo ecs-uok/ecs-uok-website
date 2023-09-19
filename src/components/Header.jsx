@@ -32,7 +32,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center mr-24">
           <ul className="hidden md:flex text-white text-xl gap-12">
             <Link to={"/"}>
               <li>Home</li>
@@ -46,7 +46,7 @@ export default function Header() {
             <ul
               className={
                 toggleMenu
-                  ? `absolute mt-12 ml-16 bg-primary max-w-[300px] px-4 text-white rounded-b-2xl`
+                  ? `absolute mt-12 ml-16 bg-primary max-w-[300px] px-8 text-white`
                   : `hidden`
               }
             >
@@ -77,7 +77,7 @@ export default function Header() {
           </ul>
         </div>
 
-        <div className="hidden md:flex sm:mr-10 md:mr-10">
+        {/* <div className="hidden md:flex sm:mr-10 md:mr-10">
           <Link to={"/contact-us"}>
             <button
               className="px-8 py-2 text-xl mr-12 hover:bg-secondary hover:text-white hover:border-white duration-500"
@@ -88,7 +88,7 @@ export default function Header() {
               Contact Us
             </button>
           </Link>
-        </div>
+        </div> */}
 
         <div
           className="md:hidden cursor-pointer mr-10"
@@ -161,7 +161,7 @@ export default function Header() {
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>
         </Link>
-        <div className="flex flex-col pt-2 pb-6">
+        {/* <div className="flex flex-col pt-2 pb-6">
           <Link to={"/contact-us"}>
             <button
               className="px-6 py-1 hover:bg-secondary hover:text-white hover:border-white duration-500"
@@ -172,7 +172,7 @@ export default function Header() {
               Contact Us
             </button>
           </Link>
-        </div>
+        </div> */}
       </ul>
     </div>
   );
