@@ -24,9 +24,9 @@ export default function LeadershipSection() {
         </div>
       </div>
       {error ? (
-        <Error marginY={20} />
+        <Error />
       ) : loading ? (
-        <Loading marginY={20} />
+        <Loading />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-8 my-8">
           {cachedData &&

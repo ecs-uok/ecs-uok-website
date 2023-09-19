@@ -170,7 +170,7 @@ export default function ContactUsForm() {
         <div className="flex justify-center m-4">
           <button
             type="submit"
-            className="bg-primary w-full h-12 md:h-16 rounded-full text-xl text-white font-bold hover:bg-secondary hover:text-white duration-700"
+            className="bg-primary w-full h-12 md:h-16 rounded-full text-lg md:text-xl text-white font-bold hover:bg-secondary hover:text-white duration-700"
           >
             Send Message
           </button>

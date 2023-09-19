@@ -13,9 +13,9 @@ export default function PurposeSection() {
 
   return (
     <>
-      <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
-        <div className="flex gap-4 text-white">
-          <FaList className="w-9 h-11" />
+      <div className="bg-primary w-full py-12 px-10 md:px-48 transition-all duration-1000">
+        <div className="flex items-center gap-4 text-white">
+          <FaList className="w-10 h-8" />
           <span className="text-white text-4xl">Purpose</span>
         </div>
         <div className="text-lg text-white pt-2">
@@ -24,27 +24,28 @@ export default function PurposeSection() {
       </div>
 
       {error ? (
-        <Error marginY={0} />
+        <Error />
       ) : loading ? (
-        <Loading marginY={0} />
+        <Loading />
       ) : (
-        <div className="flex gap-10 px-12 justify-evenly md:flex-row md:px-24 flex-col items-center w-full my-12">
-          {cachedData.data.map((card) => {
-            return (
-              <Card
-                key={card.id}
-                cardImage={card.attributes.cardImage.data.attributes.url}
-                cardTitle={card.attributes.cardTitle}
-                cardDesc={card.attributes.cardText}
-              />
-            );
-          })}
+        <div className="flex gap-10 my-12 mx-8 justify-center items-center flex-col md:flex-row">
+          {cachedData &&
+            cachedData.data.map((card) => {
+              return (
+                <Card
+                  key={card.id}
+                  cardImage={card.attributes.cardImage.data.attributes.url}
+                  cardTitle={card.attributes.cardTitle}
+                  cardDesc={card.attributes.cardText}
+                />
+              );
+            })}
         </div>
       )}
 
-      <div className="flex justify-center items-center py-4 md:px-80 px-10 pt-[2.5rem] flex-col md:flex-row space-x-3 gap-16 w-full">
-        <div className="mr-10">
-          <div className="flex gap-3">
+      <div className="flex justify-center md:mx-96 px-8 gap-8 md:gap-20 flex-col md:flex-row">
+        <div>
+          <div className="flex items-center gap-4">
             <FaEye color="gold" className="w-10 h-8" />
             <span className="text-3xl font-bold">Our Vision</span>
           </div>
