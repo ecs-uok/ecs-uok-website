@@ -3,8 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CarouselCard from "./CarouselCard";
 import useFetch from "../hooks/useFetch";
-import Error from "./Error";
-import Loading from "./Loading";
+import Error from "./animations/Error";
+import Loading from "./animations/Loading";
 
 export default function CarouselSlider() {
   let { loading, error, data } = useFetch(

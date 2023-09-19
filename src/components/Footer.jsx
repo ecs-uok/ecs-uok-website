@@ -69,29 +69,27 @@ const SocialMediaLinksArray = [
   {
     id: 1,
     to: "https://www.linkedin.com/company/electronics-and-computer-science-club/",
-    icon: <FaLinkedin size={32} className="hover:fill-blue-800 duration-500" />,
+    icon: <FaLinkedin size={32} className="hover:fill-black duration-500" />,
   },
   {
     id: 2,
     to: "https://www.facebook.com/profile.php?id=61550473266598",
-    icon: <FaFacebook size={32} className="hover:fill-primary duration-500" />,
+    icon: <FaFacebook size={32} className="hover:fill-black duration-500" />,
   },
   {
     id: 3,
     to: "https://instagram.com/ecsc_uok",
-    icon: (
-      <FaInstagram size={32} className="hover:fill-pink-600 duration-500" />
-    ),
+    icon: <FaInstagram size={32} className="hover:fill-black duration-500" />,
   },
   {
     id: 4,
     to: "www.discord.gg",
-    icon: <FaDiscord size={32} className="hover:fill-secondary duration-500" />,
+    icon: <FaDiscord size={32} className="hover:fill-black duration-500" />,
   },
   {
     id: 5,
     to: "https://youtube.com/@ECSCUOK",
-    icon: <FaYoutube size={32} className="hover:fill-red-600 duration-500" />,
+    icon: <FaYoutube size={32} className="hover:fill-black duration-500" />,
   },
 ];
 
@@ -99,8 +97,8 @@ export default function Footer() {
   const handleSubscribe = () => {};
 
   return (
-    <div className="w-full bg-white text-black p-4 my-4">
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mx-20 border-b-2 border-gray-600 pb-8">
+    <div className="w-full bg-primary text-white p-4 static bottom-0">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mx-20 border-b-2 border-white pb-8">
         <div className="flex flex-col items-center justify-center">
           <img src={Logo} alt="ecsc logo" className="w-auto max-h-[200px]" />
           <p>
@@ -109,7 +107,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="col-span-2 flex flex-col items-center">
+        <div className="col-span-2 flex flex-col items-center md:mt-8">
           <h6 className="font-bold uppercase">Site Map</h6>
           <ol>
             {siteMapLinkArray.map((item) => {
@@ -124,7 +122,7 @@ export default function Footer() {
           </ol>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center md:mt-8">
           <h6 className="font-bold uppercase">Stay Connected</h6>
           <ol>
             {StayConnectedLinkArray.map((item) => {
@@ -148,7 +146,7 @@ export default function Footer() {
           </ol>
         </div>
 
-        <div className="col-span-2 flex flex-col items-center">
+        <div className="col-span-2 flex flex-col items-center md:mt-8">
           <p className="font-bold uppercase">Subscribe To Our Newsletter</p>
           <p className="py-4 text-center md:text-start">
             The latest news, articles and resources will be sent to your inbox
@@ -161,7 +159,7 @@ export default function Footer() {
               placeholder="Enter your email"
             />
             <button
-              className="py-2 px-8 mb-2 bg-primary text-white hover:bg-secondary hover:text-white duration-500"
+              className="py-2 px-8 mb-2 bg-primary text-white hover:bg-secondary hover:text-white hover:border-white duration-500"
               onClick={handleSubscribe}
             >
               Subscribe
@@ -170,7 +168,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col pt-8 justify-center items-center text-center text-gray-500 ">
+      <div className="flex flex-col pt-8 justify-center items-center text-center text-white">
         <div className="flex text-2xl mb-4 gap-8 md:gap-12">
           {SocialMediaLinksArray.map((item) => {
             return (
@@ -180,7 +178,17 @@ export default function Footer() {
             );
           })}
         </div>
-        <p>© Copyright 2023 by GenZ DevLabs. All Rights Reserved.</p>
+        <p>
+          © Copyright 2023 by{" "}
+          <a
+            href="https://www.genzdevlabs.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GenZ DevLabs
+          </a>
+          . All Rights Reserved.
+        </p>
       </div>
     </div>
   );
