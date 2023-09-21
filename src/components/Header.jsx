@@ -77,19 +77,6 @@ export default function Header() {
           </ul>
         </div>
 
-        {/* <div className="hidden md:flex sm:mr-10 md:mr-10">
-          <Link to={"/contact-us"}>
-            <button
-              className="px-8 py-2 text-xl mr-12 hover:bg-secondary hover:text-white hover:border-white duration-500"
-              onClick={() => {
-                setToggleNavBar(false);
-              }}
-            >
-              Contact Us
-            </button>
-          </Link>
-        </div> */}
-
         <div
           className="md:hidden cursor-pointer mr-10"
           onClick={handleClickNavBar}
@@ -161,18 +148,6 @@ export default function Header() {
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>
         </Link>
-        {/* <div className="flex flex-col pt-2 pb-6">
-          <Link to={"/contact-us"}>
-            <button
-              className="px-6 py-1 hover:bg-secondary hover:text-white hover:border-white duration-500"
-              onClick={() => {
-                setToggleNavBar(false);
-              }}
-            >
-              Contact Us
-            </button>
-          </Link>
-        </div> */}
       </ul>
     </div>
   );

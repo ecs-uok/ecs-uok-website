@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { FaShareNodes, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import ReactMarkdown from "react-markdown";
 import { FacebookShareButton } from "react-share";
 export default function AchievementCard({
   cardDate,
@@ -14,7 +15,9 @@ export default function AchievementCard({
         <p className="mb-2 text-lg font-medium">{cardDate}</p>
         <img src={cardImage} alt={cardTitle} className="w-full" />
         <h1 className="font-bold text-black text-xl mt-4">{cardTitle}</h1>
-        <p className="text-black text-base mt-4">{cardDescription}</p>
+        <ReactMarkdown className="text-black text-base mt-4 whitespace-pre-wrap">
+          {cardDescription}
+        </ReactMarkdown>
       </div>
       <div className="flex justify-between mt-4">
         <a href={cardLink} target="_blank" rel="noreferrer">
