@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
-// import ContactUsPage from "./pages/ContactUsPage";
 import AboutECS from "./components/AboutECSSection";
 import MessagesSection from "./components/MessagesSection";
 import LeadershipSection from "./components/LeadershipSection";
@@ -24,7 +23,6 @@ function App() {
         </Route>
         <Route path="/news" element={<NewsPage />} />
         <Route path="/achievement" element={<AchievementPage />} />
-        {/* <Route path="/contact-us" element={<ContactUsPage />} /> */}
       </Route>
     </Routes>
   );
