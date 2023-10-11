@@ -8,7 +8,7 @@ export default function LandingPage() {
   return (
     <div>
       <Helmet>
-        <title>Home - Electronics and Computer Science Club</title>
+        <title>Electronics and Computer Science Club</title>
         <meta
           name="description"
           content="Welcome to the Electronics and Computer Science Club at the University of Kelaniya."

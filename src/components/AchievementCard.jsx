@@ -10,12 +10,14 @@ export default function AchievementCard({
   cardLink,
 }) {
   return (
-    <div className="p-4 mx-4 my-8 bg-white drop-shadow-lg rounded-xl max-w-[400px] max-h-[800px]">
+    <div className="p-4 m-4 bg-white drop-shadow-lg rounded-xl max-w-[400px] max-h-[800px]">
       <div>
-        <p className="mb-2 text-lg font-medium">{cardDate}</p>
+        <p className="mb-2 text-base md:text-lg font-medium">{cardDate}</p>
         <img src={cardImage} alt={cardTitle} className="w-full" />
-        <h1 className="font-bold text-black text-xl mt-4">{cardTitle}</h1>
-        <ReactMarkdown className="text-black text-base mt-4 whitespace-pre-wrap">
+        <h1 className="font-bold text-black text-lg md:text-xl mt-6">
+          {cardTitle}
+        </h1>
+        <ReactMarkdown className="text-black text-base md:text-lg mt-2 whitespace-pre-wrap">
           {cardDescription}
         </ReactMarkdown>
       </div>

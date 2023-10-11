@@ -14,7 +14,7 @@ export default function AchievementPage() {
   return (
     <>
       <Helmet>
-        <title>Achievement - Electronics and Computer Science Club</title>
+        <title>Electronics and Computer Science Club</title>
         <meta
           name="description"
           content="Stay updated with our tech-related activities and events."
@@ -22,12 +22,14 @@ export default function AchievementPage() {
         <link rel="canonical" href="/contact-us" />
       </Helmet>
       <div className="pt-20">
-        <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
+        <div className="bg-primary py-6 md:py-12 px-10 w-full md:px-48 transition-all duration-1000">
           <div className="flex items-center gap-4 text-white">
-            <FaStar size={40} />
-            <span className="text-white text-4xl">Achievements</span>
+            <FaStar className="w-8 h-8 ms:w-10 md:h-10" />
+            <span className="text-white text-3xl md:text-4xl">
+              Achievements
+            </span>
           </div>
-          <div className="text-lg text-white pt-2">
+          <div className="text-base md:text-lg text-white pt-2">
             The times when ECSC folks were their most active!
           </div>
         </div>

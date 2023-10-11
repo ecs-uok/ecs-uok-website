@@ -13,12 +13,12 @@ export default function LeadershipSection() {
 
   return (
     <div className="bg-gray-100 flex flex-col justify-center items-center pt-20">
-      <div className="bg-primary py-12 px-10 w-full md:px-48 transition-all duration-1000">
-        <div className="flex items-center gap-4 text-white">
-          <FaUserGroup size={40} />
-          <span className="text-white text-4xl">Leadership</span>
+      <div className="bg-primary py-6 md:py-12 px-10 w-full md:px-48 transition-all duration-1000">
+        <div className="flex items-center gap-2 md:gap-4 text-white">
+          <FaUserGroup className="w-8 h-10 md:w-10 md:h-12" />
+          <span className="text-white text-3xl md:text-4xl">Leadership</span>
         </div>
-        <div className="text-lg text-white pt-2">
+        <div className="text-base md:text-lg text-white pt-2">
           Get to Know the Dedicated and Visionary Leadership Team of the ECS
           Club
         </div>
@@ -28,7 +28,7 @@ export default function LeadershipSection() {
       ) : loading ? (
         <Loading />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-8 my-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 m-4 md:m-8">
           {cachedData &&
             cachedData.data.map((member) => (
               <MemberCard

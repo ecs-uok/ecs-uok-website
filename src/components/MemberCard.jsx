@@ -9,7 +9,7 @@ export default function MemberCard({
   member_email,
 }) {
   return (
-    <div className="flex flex-col md:flex-row md:max-h-[180px] rounded-2xl drop-shadow-md bg-white md:gap-4">
+    <div className="flex flex-col md:flex-row md:h-[180px] rounded-2xl drop-shadow-md bg-white md:gap-4">
       <div className="h-full">
         <img
           src={member_photo}
@@ -17,19 +17,19 @@ export default function MemberCard({
           className="h-full object-contain rounded-t-2xl md:rounded-l-2xl md:rounded-r-none"
         />
       </div>
-      <div className="flex flex-col gap-2 mx-auto md:mx-0 md:justify-center my-4 text-secondary text-base md:text-lg font-semibold">
-        <div className="flex gap-4 items-center">
-          <FaUser color="#0065AD" />
+      <div className="flex flex-col gap-2 mx-auto md:mx-0 md:justify-center my-4 md:my-0 text-secondary text-base md:text-lg font-medium md:font-semibold">
+        <div className="flex gap-3 md:gap-4 items-center">
+          <FaUser className="w-5 h-5 md:w-6 md:h-6" color="#0065AD" />
           <a href={member_linkedinUrl} target="_blank" rel="noreferrer">
             {member_name}
           </a>
         </div>
-        <div className="flex gap-4 items-center">
-          <FaRankingStar color="#0065AD" />
+        <div className="flex gap-3 md:gap-4 items-center">
+          <FaRankingStar className="w-5 h-5 md:w-6 md:h-6" color="#0065AD" />
           <p>{member_role}</p>
         </div>
-        <div className="flex gap-4 items-center">
-          <FaEnvelope color="#0065AD" />
+        <div className="flex gap-3 md:gap-4 items-center">
+          <FaEnvelope className="w-5 h-5 md:w-6 md:h-6" color="#0065AD" />
           <p>{member_email}</p>
         </div>
       </div>

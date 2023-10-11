@@ -7,10 +7,10 @@ export default function NewsArticle({ newsImage, newsTitle, newsContent }) {
       <img
         src={newsImage}
         alt={newsTitle}
-        className="max-w-[500px] max-h-[500px]"
+        className="w-full h-auto md:w-[500px] md:h-auto"
       />
-      <h1 className="mt-8 text-xl font-bold">{newsTitle}</h1>
-      <ReactMarkdown className="mt-4 whitespace-pre-wrap">
+      <h1 className="mt-4 text-lg md:text-2xl font-bold">{newsTitle}</h1>
+      <ReactMarkdown className="mt-8 text-base md:text-lg whitespace-pre-wrap">
         {newsContent}
       </ReactMarkdown>
     </div>

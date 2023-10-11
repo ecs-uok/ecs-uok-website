@@ -8,7 +8,7 @@ export default function CarouselCard({
   blogDate,
 }) {
   return (
-    <div className="bg-gray-200 rounded-xl drop-shadow-md p-4 m-4 ring ring-primary">
+    <div className="bg-gray-200 rounded-xl drop-shadow-md p-4 m-4 border-2 md:border-4 border-primary">
       <img
         className="aspect-square object-cover"
         src={blogImage}
@@ -20,9 +20,12 @@ export default function CarouselCard({
         </h1>
         <h2 className="text-sm md:text-base font-medium pt-1">{blogDate}</h2>
         <a href={blogUrl} target="_blank" rel="noreferrer">
-          <button className="flex w-full text-base mt-2 p-2 rounded-2xl items-center justify-center hover:bg-secondary hover:text-white duration-500 gap-4">
+          <button className="flex w-full text-base md:text-lg mt-2 p-2 rounded-2xl items-center justify-center hover:bg-secondary hover:text-white duration-500 gap-4">
             Read More
-            <FaArrowUpRightFromSquare size={20} color="white" />
+            <FaArrowUpRightFromSquare
+              className="w-4 h-4 md:w-5 md:h-5"
+              color="white"
+            />
           </button>
         </a>
       </div>
