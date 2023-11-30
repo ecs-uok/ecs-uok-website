@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FaShareNodes, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import ReactMarkdown from "react-markdown";
 import { FacebookShareButton } from "react-share";
-export default function AchievementCard({
+export default function BlogCard({
   cardDate,
   cardImage,
   cardTitle,
@@ -12,7 +12,9 @@ export default function AchievementCard({
   return (
     <div className="p-4 m-4 bg-white drop-shadow-lg rounded-xl max-w-[400px] max-h-[800px]">
       <div>
-        <p className="mb-2 text-base md:text-lg font-medium">{cardDate}</p>
+        <p className="mb-2 text-base md:text-lg font-medium">
+          {cardDate || ""}
+        </p>
         <img src={cardImage} alt={cardTitle} className="w-full" />
         <h1 className="font-bold text-black text-lg md:text-xl mt-6">
           {cardTitle}
@@ -38,7 +40,7 @@ export default function AchievementCard({
   );
 }
 
-AchievementCard.propTypes = {
+BlogCard.propTypes = {
   cardDate: PropTypes.string.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardTitle: PropTypes.string.isRequired,

@@ -71,6 +71,9 @@ export default function Header() {
             <Link to={"/news"}>
               <li>News</li>
             </Link>
+            <Link to={"/did-you-know"}>
+              <li>Did You Know?</li>
+            </Link>
             <Link to={"/achievement"}>
               <li>Achievements</li>
             </Link>
@@ -144,6 +147,9 @@ export default function Header() {
 
         <Link to={"/news"}>
           <li className="p-4">News</li>
+        </Link>
+        <Link to={"/did-you-know"}>
+          <li>Did You Know?</li>
         </Link>
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>

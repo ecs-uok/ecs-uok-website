@@ -38,6 +38,11 @@ const siteMapLinkArray = [
     to: "/news",
   },
   {
+    id: 5,
+    name: "Did You Know?",
+    to: "/did-you-know",
+  },
+  {
     id: 6,
     name: "Events",
     to: "/events",

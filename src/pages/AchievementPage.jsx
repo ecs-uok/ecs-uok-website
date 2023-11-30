@@ -1,4 +1,4 @@
-import AchievementCard from "../components/AchievementCard";
+import BlogCard from "../components/BlogCard";
 import { FaStar } from "react-icons/fa6";
 import useFetch from "../hooks/useFetch";
 import Error from "../components/animations/Error";
@@ -42,7 +42,7 @@ export default function AchievementPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto bg-gray-100">
             {cachedData &&
               cachedData.data.map((achievement) => (
-                <AchievementCard
+                <BlogCard
                   key={achievement.id}
                   cardImage={
                     achievement.attributes.coverImage.data.attributes.url
