@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import LetsTalkSection from "../components/LetsTalkSection";
 import PurposeSection from "../components/PurposeSection";
 import { Helmet } from "react-helmet-async";
+import Scoreboard from "../components/Scoreboard";
 
 export default function LandingPage() {
   return (
@@ -16,6 +17,7 @@ export default function LandingPage() {
         <link rel="canonical" href="/" />
       </Helmet>
       <HeroSection />
+      <Scoreboard />
       <PurposeSection />
       <RecentEventsSection />
       <LetsTalkSection />
