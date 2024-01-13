@@ -8,6 +8,7 @@ import LeadershipSection from "./components/LeadershipSection";
 import NewsPage from "./pages/NewsPage";
 import AchievementPage from "./pages/AchievementPage";
 import DidYouKnow from "./pages/DidYouKnow";
+import ECSCCricketPage from "./pages/ECSCCricketPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/did-you-know" element={<DidYouKnow />} />
         <Route path="/achievement" element={<AchievementPage />} />
+        <Route path="/ecsc-cricket-livescore" element={<ECSCCricketPage />} />
       </Route>
     </Routes>
   );
