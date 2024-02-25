@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import LetsTalkSection from "../components/LetsTalkSection";
 import PurposeSection from "../components/PurposeSection";
 import { Helmet } from "react-helmet-async";
+import RobotBattleBanner from "../components/RoboBattleBanner";
 // import Scoreboard from "../components/Scoreboard";
 
 export default function LandingPage() {
@@ -18,6 +19,7 @@ export default function LandingPage() {
       </Helmet>
       <HeroSection />
       {/* <Scoreboard /> */}
+      <RobotBattleBanner />
       <PurposeSection />
       <RecentEventsSection />
       <LetsTalkSection />
