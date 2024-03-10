@@ -148,8 +148,8 @@ export default function Header() {
         <Link to={"/news"}>
           <li className="p-4">News</li>
         </Link>
-        <Link to={"/did-you-know"}>
-          <li>Did You Know?</li>
+        <Link to={"/robot_battles"}>
+          <li className="p-4">Robot Battle</li>
         </Link>
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>
