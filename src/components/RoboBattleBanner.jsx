@@ -11,7 +11,7 @@ function RoboBattleBanner() {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-black mt-20 bg-opacity-40 flex flex-col md:flex-row items-center md:justify-between text-center md:text-left p-12 rounded-2xl">
+      <div className="bg-black bg-opacity-40 flex flex-col md:flex-row items-center md:justify-between text-center md:text-left p-12 rounded-2xl">
         <div className="flex flex-col text-white md:max-w-5xl space-y-8 md:ml-12">
           <h2 className="text-2xl md:text-5xl xl:text-7xl font-bold">
             <span className="text-primary">Greatness</span> Shows No{" "}
