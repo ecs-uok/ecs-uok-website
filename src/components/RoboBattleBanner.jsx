@@ -1,5 +1,5 @@
 import RoboBattleImage from "../assets/robobattle.png";
-import RoboBattleCoverImage from "../assets/robobattleCover.png";
+import RoboBattleCoverImage from "../assets/roboBattleCover.png";
 
 function RoboBattleBanner() {
   return (
