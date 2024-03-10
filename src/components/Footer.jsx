@@ -44,8 +44,8 @@ const siteMapLinkArray = [
   },
   {
     id: 6,
-    name: "Events",
-    to: "/events",
+    name: "Robot Battles",
+    to: "/robot-battles",
   },
 ];
 

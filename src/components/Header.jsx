@@ -71,8 +71,8 @@ export default function Header() {
             <Link to={"/news"}>
               <li>News</li>
             </Link>
-            <Link to={"/did-you-know"}>
-              <li>Did You Know?</li>
+            <Link to={"/robot_battles"}>
+              <li>Robot Battles</li>
             </Link>
             <Link to={"/achievement"}>
               <li>Achievements</li>
