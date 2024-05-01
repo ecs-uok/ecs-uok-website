@@ -71,9 +71,9 @@ export default function Header() {
             <Link to={"/news"}>
               <li>News</li>
             </Link>
-            <Link to={"/robot_battles"}>
+            {/* <Link to={"/robot_battles"}>
               <li>Robot Battles</li>
-            </Link>
+            </Link> */}
             <Link to={"/achievement"}>
               <li>Achievements</li>
             </Link>
@@ -148,9 +148,9 @@ export default function Header() {
         <Link to={"/news"}>
           <li className="p-4">News</li>
         </Link>
-        <Link to={"/robot_battles"}>
+        {/* <Link to={"/robot_battles"}>
           <li className="p-4">Robot Battle</li>
-        </Link>
+        </Link> */}
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>
         </Link>
