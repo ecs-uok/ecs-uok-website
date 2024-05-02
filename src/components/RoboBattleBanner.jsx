@@ -27,25 +27,24 @@ function RoboBattleBanner() {
             Registration <span className="font-bold">Open now!</span>
           </p>
           <div className="flex flex-col md:flex-row gap-4 items-center">
-            <button className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
-              <a
-                href="https://docs.google.com/forms/d/1aW2N9A0GmMuo4zoIm7gCOGZIWwO4zoyA-lY4JXlxypQ/edit"
-                target="_blank"
-                rel="noreferrer"
-              >
+            <a
+              href="https://docs.google.com/forms/d/1aW2N9A0GmMuo4zoIm7gCOGZIWwO4zoyA-lY4JXlxypQ/edit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
                 REGISTER
-              </a>
-            </button>
-
-            <button className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
-              <a
-                href="https://drive.google.com/file/d/12G_rvUetIQjjqato-O93MMcZNh_c2EuU/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-              >
+              </button>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/12G_rvUetIQjjqato-O93MMcZNh_c2EuU/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
                 RULES & REGULATIONS
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
         <img

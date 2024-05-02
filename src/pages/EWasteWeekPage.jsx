@@ -1,7 +1,6 @@
 import EWasteBanner from "../assets/ewaste.jpg";
 import ECSCLogo from "../assets/logo/ecsc_logo_footer.png";
 import EWasteLogo from "../assets/ewasteLogo.jpeg";
-import EWastePDF from "../assets/pdf/EWasteWeek.pdf";
 
 function EWasteWeekPage() {
   return (
@@ -38,11 +37,15 @@ function EWasteWeekPage() {
           />
         </div>
 
-        <button className="mt-10 px-10 py-2 md:px-16 md:py-3 md:text-xl rounded-xl">
-          <a href={EWastePDF} target="_blank" rel="noreferrer">
+        <a
+          href="https://drive.google.com/file/d/1Jc4rD0WAsxeXZlRcXN0f-7QF05N0Mcaw/view?usp=drivesdk"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="mt-10 px-10 py-2 md:px-16 md:py-3 md:text-xl rounded-xl">
             Read more
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
   );

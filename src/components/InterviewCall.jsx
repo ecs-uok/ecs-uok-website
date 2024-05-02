@@ -11,25 +11,25 @@ function InterviewCall() {
           Join ECSC Executive Team: Apply Now!
         </h2>
         <div className="flex flex-col md:flex-row gap-4 items-center">
-          <button className="py-2 w-full text-sm md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
-            <a
-              href="https://drive.google.com/file/d/1nciF9t_Gfp0VhsnXWMx-jXQTztEjeR75/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-            >
+          <a
+            href="https://drive.google.com/file/d/1nciF9t_Gfp0VhsnXWMx-jXQTztEjeR75/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="py-2 w-full text-sm md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
               Read More
-            </a>
-          </button>
+            </button>
+          </a>
 
-          <button className="py-2 w-full text-sm md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeiZhmimtKbSGQtZDkZHSwGKRPqbbfcpIvoSCTmU27mP4rgpQ/viewform"
-              target="_blank"
-              rel="noreferrer"
-            >
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeiZhmimtKbSGQtZDkZHSwGKRPqbbfcpIvoSCTmU27mP4rgpQ/viewform"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="py-2 w-full text-sm md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
               Apply Now
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
       </div>
       <img
