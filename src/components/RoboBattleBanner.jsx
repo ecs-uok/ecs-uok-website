@@ -37,7 +37,7 @@ function RoboBattleBanner() {
               </button>
             </a>
             <a
-              href="https://drive.google.com/file/d/12G_rvUetIQjjqato-O93MMcZNh_c2EuU/view?usp=sharing"
+              href="https://drive.google.com/file/d/1MX2Jx5jBzSYpp8lU6p_3GJgD7AlYZxL_/view?usp=drivesdk"
               target="_blank"
               rel="noreferrer"
             >
