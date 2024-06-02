@@ -4,21 +4,32 @@ import { Link } from "react-router-dom";
 import { FaCaretDown, FaCaretRight, FaBars, FaXmark } from "react-icons/fa6";
 
 export default function Header() {
-  const [toggleNabBar, setToggleNavBar] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleNavBar, setToggleNavBar] = useState(false);
+  const [toggleMenu1, setToggleMenu1] = useState(false);
+  const [toggleMenu2, setToggleMenu2] = useState(false);
 
   const handleClickNavBar = () => {
-    setToggleNavBar(!toggleNabBar);
+    setToggleNavBar(!toggleNavBar);
   };
 
-  const handleClickMenuBar = () => {
-    setToggleMenu(!toggleMenu);
+  const handleClickMenuBar1 = () => {
+    setToggleMenu1(!toggleMenu1);
+    setToggleMenu2(false);
   };
 
-  const handleCloseMenu = () => {
-    setToggleMenu(false);
+  const handleCloseMenu1 = () => {
+    setToggleMenu1(false);
   };
 
+  const handleClickMenuBar2 = () => {
+    setToggleMenu2(!toggleMenu2);
+    setToggleMenu1(false);
+  };
+
+  const handleCloseMenu2 = () => {
+    setToggleMenu2(false);
+    
+  };
   return (
     <div className="w-full h-[80px] z-10 bg-primary drop-shadow-lg fixed">
       <div className="flex justify-between items-center w-full h-full m-auto">
@@ -39,44 +50,62 @@ export default function Header() {
             </Link>
             <li
               className="cursor-pointer flex items-center gap-4"
-              onClick={handleClickMenuBar}
+              onClick={handleClickMenuBar1}
             >
-              About {toggleMenu ? <FaCaretDown /> : <FaCaretRight />}
+              About {toggleMenu1 ? <FaCaretDown /> : <FaCaretRight />}
             </li>
             <ul
               className={
-                toggleMenu
+                toggleMenu1
                   ? `absolute mt-12 ml-16 bg-primary max-w-[300px] px-8 text-white`
                   : `hidden`
               }
             >
               <Link to={"/about/about-ecsc"}>
-                <li className="py-6" onClick={handleCloseMenu}>
+                <li className="py-6" onClick={handleCloseMenu1}>
                   About ECSC
                 </li>
                 <hr />
               </Link>
               <Link to={"/about/messages"}>
-                <li className="py-6" onClick={handleCloseMenu}>
+                <li className="py-6" onClick={handleCloseMenu1}>
                   Messages
                 </li>
                 <hr />
               </Link>
               <Link to={"/about/executive-committee"}>
-                <li className="py-6" onClick={handleCloseMenu}>
+                <li className="py-6" onClick={handleCloseMenu1}>
                   Executive Committee
                 </li>
               </Link>
             </ul>
+            
             <Link to={"/news"}>
               <li>News</li>
             </Link>
-            {/* <Link to={"/robot_battles"}>
-              <li>Robot Battles</li>
-            </Link> */}
+            <li
+              className="cursor-pointer flex items-center gap-4"
+              onClick={handleClickMenuBar2}
+            >
+              Events {toggleMenu2 ? <FaCaretDown /> : <FaCaretRight />}
+            </li>
+            <ul
+              className={
+                toggleMenu2
+                  ? `absolute mt-12 ml-80 bg-primary max-w-[300px] px-8 text-white`
+                  : `hidden`
+              }
+            >
+              <Link to={"https://robotbattles.ecsc-uok.com/"} target="_blank">
+                <li className="py-6" onClick={handleCloseMenu2}>
+                  UOK Robot Battles
+                </li>
+              </Link>
+            </ul>
             <Link to={"/achievement"}>
               <li>Achievements</li>
             </Link>
+            
           </ul>
         </div>
 
@@ -84,17 +113,16 @@ export default function Header() {
           className="md:hidden cursor-pointer mr-10"
           onClick={handleClickNavBar}
         >
-          {toggleNabBar ? (
+          {toggleNavBar ? (
             <FaXmark color="white" className="w-6 h-8" />
           ) : (
             <FaBars color="white" className="w-6 h-8" />
           )}
         </div>
       </div>
-
       <ul
         className={
-          toggleNabBar
+          toggleNavBar
             ? `bg-primary w-full px-8 md:hidden text-white`
             : `hidden`
         }
@@ -104,11 +132,11 @@ export default function Header() {
         </Link>
         <li
           className="cursor-pointer flex items-center gap-4 p-4"
-          onClick={handleClickMenuBar}
+          onClick={handleClickMenuBar1}
         >
-          About {toggleMenu ? <FaCaretDown /> : <FaCaretRight />}
+          About {toggleMenu1 ? <FaCaretDown /> : <FaCaretRight />}
         </li>
-        {toggleMenu ? (
+        {toggleMenu1 ? (
           <div className="pl-4">
             <Link to={"/about/about-ecsc"}>
               <li
@@ -148,9 +176,28 @@ export default function Header() {
         <Link to={"/news"}>
           <li className="p-4">News</li>
         </Link>
-        {/* <Link to={"/robot_battles"}>
-          <li className="p-4">Robot Battle</li>
-        </Link> */}
+        <li
+          className="cursor-pointer flex items-center gap-4 p-4"
+          onClick={handleClickMenuBar2}
+        >
+          Events {toggleMenu2 ? <FaCaretDown /> : <FaCaretRight />}
+        </li>
+        {toggleMenu2 ? (
+          <div className="pl-4">
+            <Link to={"https://robotbattles.ecsc-uok.com/"} target="_blank">
+              <li
+                className="p-4"
+                onClick={() => {
+                  setToggleNavBar(false);
+                }}
+              >
+                UOK Robot Battles
+              </li>
+            </Link>
+          </div>
+        ) : (
+          ""
+        )}
         <Link to={"/achievement"}>
           <li className="p-4">Achievements</li>
         </Link>
