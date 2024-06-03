@@ -96,7 +96,7 @@ export default function Header() {
                   : `hidden`
               }
             >
-              <Link to={"https://robotbattles.ecsc-uok.com/"} target="_blank">
+              <Link to={"/robot_battles"} target="_blank">
                 <li className="py-6" onClick={handleCloseMenu2}>
                   UOK Robot Battles
                 </li>
@@ -184,7 +184,7 @@ export default function Header() {
         </li>
         {toggleMenu2 ? (
           <div className="pl-4">
-            <Link to={"https://robotbattles.ecsc-uok.com/"} target="_blank">
+            <Link to={"/robot_battles"} target="_blank">
               <li
                 className="p-4"
                 onClick={() => {
