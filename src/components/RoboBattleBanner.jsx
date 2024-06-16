@@ -24,7 +24,8 @@ function RoboBattleBanner() {
             arena now!
           </p>
           <p className="xl:text-2xl">
-            Registration <span className="font-bold">Open now!</span>
+            {/* Registration <span className="font-bold">Open now!</span> */}
+            Registration <span className="font-bold">Closed!</span>
           </p>
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <a
@@ -32,7 +33,7 @@ function RoboBattleBanner() {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
+              <button disabled='true' className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none opacity-50 cursor-not-allowed">
                 REGISTER
               </button>
             </a>
@@ -51,7 +52,7 @@ function RoboBattleBanner() {
               rel="noreferrer"
             >
               <button className="px-8 py-2 w-72 h-12 md:text-lg rounded-lg hover:bg-secondary hover:text-white font-semibold border-none">
-                Visit Site
+                VISIT SITE
               </button>
             </a>
           </div>
