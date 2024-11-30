@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { doc, getDoc } from "firebase/firestore";
 import { db, storage } from "../config/firebase";
 import { ref, getDownloadURL } from "firebase/storage";
@@ -8,13 +9,18 @@ const TeamLogo = ({ imagePath }) => {
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
-    const imageRef = ref(storage, `teamLogos/${imagePath}.webp`);
+    const fetchImage = async () => {
+      try {
+        const formattedPath = imagePath.replace(/\s+/g, "_");
+        const imageRef = ref(storage, `teamLogos/${formattedPath}`);
+        const url = await getDownloadURL(imageRef);
+        setImageUrl(url);
+      } catch (error) {
+        console.error("Error fetching team logo:", error);
+      }
+    };
 
-    getDownloadURL(imageRef)
-      .then((url) => setImageUrl(url))
-      .catch((error) =>
-        console.error("Error while getting team logo: ", error)
-      );
+    fetchImage();
   }, [imagePath]);
 
   return (
@@ -126,5 +132,8 @@ function Scoreboard() {
     </>
   );
 }
+TeamLogo.propTypes = {
+  imagePath: PropTypes.string.isRequired,
+};
 
 export default Scoreboard;
