@@ -5,7 +5,7 @@ import PurposeSection from "../components/PurposeSection";
 import { Helmet } from "react-helmet-async";
 // import InterviewCall from "../components/InterviewCall";
 // import RobotBattleBanner from "../components/RoboBattleBanner";
-// import Scoreboard from "../components/Scoreboard";
+import Scoreboard from "../components/Scoreboard";
 
 export default function LandingPage() {
   return (
@@ -19,7 +19,7 @@ export default function LandingPage() {
         <link rel="canonical" href="/" />
       </Helmet>
       <HeroSection />
-      {/* <Scoreboard /> */}
+      <Scoreboard />
       {/* <RobotBattleBanner /> */}
       {/* <InterviewCall /> */}
       <PurposeSection />
