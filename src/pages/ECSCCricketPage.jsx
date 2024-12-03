@@ -15,7 +15,7 @@ export default function ECSCCricketPage() {
 
       <div>
         <div>
-          <Scoreboard />
+          {/*<Scoreboard />*/}
         </div>
         <div></div>
       </div>
