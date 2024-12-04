@@ -202,7 +202,7 @@ export default function Footer() {
           })}
         </div>
         <p className="text-sm md:text-base">
-          © Copyright 2023 by&nbsp;
+          © Copyright 2024 by&nbsp;
           {/* <a
             href="https://www.genzdevlabs.com"
             target="_blank"
