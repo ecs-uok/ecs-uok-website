@@ -4,7 +4,7 @@ import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
    apiKey: "AIzaSyC-9-bY326xHwfDU-x_ygUqaTDNzxD4Y6U",
-  authDomain: "scoreboard-app-14012024.firebaseapp.com",
+   authDomain: "scoreboard-app-14012024.firebaseapp.com",
    projectId: "scoreboard-app-14012024",
    storageBucket: "scoreboard-app-14012024.appspot.com",
    messagingSenderId: "754915355073",
