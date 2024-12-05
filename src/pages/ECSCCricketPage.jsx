@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-//import Scoreboard from "../components/Scoreboard";
+import Scoreboard from "../components/Scoreboard";
 
 export default function ECSCCricketPage() {
   return (
@@ -15,7 +15,7 @@ export default function ECSCCricketPage() {
 
       <div>
         <div>
-          {/*<Scoreboard />*/}
+          <Scoreboard />
         </div>
         <div></div>
       </div>
