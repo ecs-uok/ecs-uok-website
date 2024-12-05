@@ -28,7 +28,7 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/did-you-know" element={<DidYouKnow />} />
         <Route path="/achievement" element={<AchievementPage />} />
-        <Route path="/ecsc-cricket-livescore" element={<ECSCCricketPage />} />
+        {/*<Route path="/ecsc-cricket-livescore" element={<ECSCCricketPage />} />*/}
         <Route path="/robot_battles" element={<RobotBattlePage />} />
         <Route path="/e-waste-week" element={<EWasteWeekPage />} />
       </Route>
