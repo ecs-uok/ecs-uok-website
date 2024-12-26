@@ -19,7 +19,7 @@ export default function LandingPage() {
         <link rel="canonical" href="/" />
       </Helmet>
       <HeroSection />
-      <Scoreboard />
+      {/*<Scoreboard />*/}
       {/* <RobotBattleBanner /> */}
       {/* <InterviewCall /> */}
       <PurposeSection />
