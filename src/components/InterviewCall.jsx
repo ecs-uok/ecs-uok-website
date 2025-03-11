@@ -22,7 +22,7 @@ function InterviewCall() {
           </a>
 
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeiZhmimtKbSGQtZDkZHSwGKRPqbbfcpIvoSCTmU27mP4rgpQ/viewform"
+            href="https://forms.gle/q7ALEqgN5mtQGz9u9"
             target="_blank"
             rel="noreferrer"
           >
