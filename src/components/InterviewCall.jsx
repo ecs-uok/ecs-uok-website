@@ -12,7 +12,7 @@ function InterviewCall() {
         </h2>
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <a
-            href="https://drive.google.com/file/d/17qI5eBWjgsJLlFrH3F-6HagwYdG0FDVk/view?usp=sharing"
+            href="https://drive.google.com/file/d/17qI5eBWjgsJLlFrH3F-6HagwYdG0FDVk/view"
             target="_blank"
             rel="noreferrer"
           >
