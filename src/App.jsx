@@ -9,7 +9,7 @@ import NewsPage from "./pages/NewsPage";
 import AchievementPage from "./pages/AchievementPage";
 import DidYouKnow from "./pages/DidYouKnow";
 import RobotBattlePage from "./pages/RobotBattlePage";
-import ECSCCricketPage from "./pages/ECSCCricketPage";
+//import ECSCCricketPage from "./pages/ECSCCricketPage";
 import EWasteWeekPage from "./pages/EWasteWeekPage";
 
 function App() {
