@@ -1,6 +1,6 @@
 function Essencia() {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between w-full h-auto md:h-[80vh] pl-5 py-8">
+    <div className="flex flex-col md:flex-row items-start justify-between w-full h-auto md:h-[80vh] p-5 py-8">
       <div className="w-full h-auto md:w-1/2 md:h-full flex items-center justify-center">
         <img
           src={
