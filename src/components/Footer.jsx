@@ -56,12 +56,12 @@ const StayConnectedLinkArray = [
     to: "https://goo.gl/maps/98oGFdWo3nPwue2d9",
     icon: <FaLocationDot className="w-5 md:w-8 h-5 md:h-8" />,
   },
-  {
-    id: 2,
-    name: "(+94) 12 345 6789",
-    to: "tel:+94123456789",
-    icon: <FaPhone className="w-4 md:w-5 h-4 md:h-5" />,
-  },
+  // {
+  //   id: 2,
+  //   name: "(+94) 12 345 6789",
+  //   to: "tel:+94123456789",
+  //   icon: <FaPhone className="w-4 md:w-5 h-4 md:h-5" />,
+  // },
   {
     id: 3,
     name: "ecs.uok@gmail.com",
@@ -113,26 +113,26 @@ export default function Footer() {
 
   return (
     <div className="w-full bg-primary text-white p-4 static">
-      <div className="grid grid-cols-1 md:grid-cols-6 md:gap-8 mx-10 md:mx-20 border-b-2 border-white pb-6">
-        <div className="flex flex-col md:col-span-2 items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-6 md:gap-8 mx-4 sm:mx-10 md:mx-20 border-b-2 border-white pb-6">
+        <div className="flex flex-col md:col-span-2 items-center justify-center text-center">
           <img
             src={Logo}
             alt="ecsc logo"
-            className="w-auto max-h-[120px] md:max-h-[200px]"
+            className="w-auto max-h-[100px] sm:max-h-[120px] md:max-h-[200px]"
           />
-          <p className="mt-2 md:mt-0 text-sm md:text-base">
+          <p className="mt-2 text-sm sm:text-base md:mt-0">
             &quot;Let&apos;s Embrace the world of Hardware and Software, to
             create a sustainable future&quot;
           </p>
         </div>
 
         <div className="col-span-2 md:col-span-1 flex flex-col justify-center items-center mt-4 md:mt-8">
-          <h6 className="font-bold uppercase text-lg md:text-xl">Site Map</h6>
+          <h6 className="font-bold uppercase text-lg sm:text-xl">Site Map</h6>
           <ol>
             {siteMapLinkArray.map((item) => {
               return (
                 <Link key={item.id} to={item.to}>
-                  <li className="text-base md:text-lg font-sans cursor-pointer py-1">
+                  <li className="text-sm sm:text-base md:text-lg font-sans cursor-pointer py-1">
                     {item.name}
                   </li>
                 </Link>
@@ -141,20 +141,21 @@ export default function Footer() {
           </ol>
         </div>
 
-        <div className="flex flex-col justify-center items-center mt-4 md:mt-8">
-          <h6 className="font-bold uppercase text-lg md:text-xl">
+        <div className="flex flex-col items-center mt-4 md:mt-8">
+          {/* Stay Connected Section */}
+          <h6 className="font-bold uppercase text-lg sm:text-xl">
             Stay Connected
           </h6>
           <ol>
             {StayConnectedLinkArray.map((item) => {
               return (
                 <div
-                  className="flex items-center justify-start gap-4 my-2"
+                  className="flex items-center justify-start gap-2 sm:gap-4 my-2"
                   key={item.id}
                 >
                   {item.icon}
                   <a
-                    className="text-base md:text-lg cursor-pointer"
+                    className="text-sm sm:text-base md:text-lg cursor-pointer"
                     href={item.to}
                     target="_blank"
                     rel="noreferrer"
@@ -167,22 +168,23 @@ export default function Footer() {
           </ol>
         </div>
 
-        <div className="col-span-2 flex flex-col justify-center items-center mt-4 md:mt-8">
-          <p className="font-bold uppercase text-lg md:text-xl text-center">
+        <div className="col-span-2 flex flex-col flex-wrap justify-center items-center mt-8 md:mt-8 pl-4 ">
+          {/* Subscribe to Newsletter Section */}
+          <p className="font-bold uppercase text-lg sm:text-xl text-center">
             Subscribe To Our Newsletter
           </p>
-          <p className="py-2 text-center md:text-start text-base md:text-lg ">
+          <p className="py-2 text-center text-sm sm:text-base md:text-lg">
             The latest news, articles and resources will be sent to your inbox
             weekly
           </p>
-          <form className="flex sm:flex-row flex-col gap-2 md:gap-4 mt-2 md:mt-0">
+          <form className="flex flex-col sm:flex-row gap-2 md:gap-4 mt-2 md:mt-0">
             <input
-              className="p-2 rounded-md mb-2 md:mb-0 border-2 border-secondary max-w-[200px]"
+              className="p-2 rounded-md border-2 border-secondary max-w-[200px] sm:max-w-[300px]"
               type="email"
               placeholder="Enter your email"
             />
             <button
-              className="p-2 px-8 bg-primary text-white hover:bg-secondary hover:text-white hover:border-white duration-500"
+              className="p-2 px-6 sm:px-8 bg-primary text-white hover:bg-secondary hover:text-white hover:border-white duration-500"
               onClick={handleSubscribe}
             >
               Subscribe
@@ -192,7 +194,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col pt-6 md:pt-8 justify-center items-center text-center text-white">
-        <div className="flex mb-4 gap-8 md:gap-12">
+        <div className="flex flex-wrap justify-center mb-4 gap-6 sm:gap-8 md:gap-12">
           {SocialMediaLinksArray.map((item) => {
             return (
               <a key={item.id} href={item.to} target="_blank" rel="noreferrer">
@@ -201,15 +203,8 @@ export default function Footer() {
             );
           })}
         </div>
-        <p className="text-sm md:text-base">
-          © Copyright 2024 by&nbsp;
-          {/* <a
-            href="https://www.genzdevlabs.com"
-            target="_blank"
-            rel="noreferrer"
-          > */}
-          ECS Club
-          {/* </a> */}. All Rights Reserved.
+        <p className="text-xs sm:text-sm md:text-base">
+          © Copyright 2024 by&nbsp; ECS Club. All Rights Reserved.
         </p>
       </div>
     </div>
