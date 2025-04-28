@@ -11,17 +11,31 @@ export default function MemberCard({
   return (
     <div className="flex flex-col sm:flex-row rounded-2xl drop-shadow-md bg-white sm:gap-2 hover:shadow-lg transition-shadow duration-300 h-auto sm:h-[180px] pr-2">
       <div className="w-full sm:w-[160px] aspect-[4/3]">
-        <img
-          src={member_photo}
-          alt={`${member_role} image`}
-          className="h-full w-full object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-r-none"
-        />
+        <a
+          href={
+            member_linkedinUrl?.startsWith("http")
+              ? member_linkedinUrl
+              : `https://${member_linkedinUrl}`
+          }
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src={member_photo}
+            alt={`${member_role} image`}
+            className="h-full w-full object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-r-none"
+          />
+        </a>
       </div>
       <div className="flex flex-col gap-1 mx-auto sm:mx-0 sm:justify-center my-2 sm:my-0 text-secondary text-xs sm:text-sm md:text-base font-medium sm:font-semibold px-2 sm:px-0 overflow-hidden">
         <div className="flex gap-2 sm:gap-3 items-center">
           <FaUser className="w-4 h-4 sm:w-5 sm:h-5" color="#0065AD" />
           <a
-            href={member_linkedinUrl}
+            href={
+              member_linkedinUrl?.startsWith("http")
+                ? member_linkedinUrl
+                : `https://${member_linkedinUrl}`
+            }
             target="_blank"
             rel="noreferrer"
             className="hover:underline break-words"
