@@ -11,7 +11,15 @@ export default function MemberCard({
   return (
     <div className="flex flex-col sm:flex-row rounded-2xl drop-shadow-md bg-white sm:gap-2 hover:shadow-lg transition-shadow duration-300 h-auto sm:h-[180px] pr-2">
       <div className="w-full sm:w-[160px] aspect-[4/3]">
-        <a href={member_linkedinUrl} target="_blank" rel="noreferrer">
+        <a
+          href={
+            member_linkedinUrl?.startsWith("http")
+              ? member_linkedinUrl
+              : `https://${member_linkedinUrl}`
+          }
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             src={member_photo}
             alt={`${member_role} image`}
