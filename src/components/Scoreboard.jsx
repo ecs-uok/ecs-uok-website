@@ -24,12 +24,12 @@ const TeamLogo = ({ imagePath }) => {
   }, [imagePath]);
 
   return (
-    <div>
+    <div className="flex items-center justify-center w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32">
       {imageUrl && (
         <img
           src={imageUrl}
-          alt={`${imagePath} logo }`}
-          className="h-40 w-h-40"
+          alt={`${imagePath} logo`}
+          className="object-contain w-full h-full rounded-lg"
         />
       )}
     </div>
@@ -58,9 +58,12 @@ function Scoreboard() {
       const team2Ref = doc(db, "teamDetails", "team2Details");
       const matchRef = doc(db, "matchState", "nowMatchState");
 
-      const team1DocSnap = await getDoc(team1Ref);
-      const team2DocSnap = await getDoc(team2Ref);
-      const matchDocSnap = await getDoc(matchRef);
+      // Fetch all docs in parallel for faster performance
+      const [team1DocSnap, team2DocSnap, matchDocSnap] = await Promise.all([
+        getDoc(team1Ref),
+        getDoc(team2Ref),
+        getDoc(matchRef),
+      ]);
 
       const team1Data = team1DocSnap.exists() ? team1DocSnap.data() : null;
       const team2Data = team2DocSnap.exists() ? team2DocSnap.data() : null;
@@ -82,51 +85,70 @@ function Scoreboard() {
   }, []);
   return (
     <>
-      <div className="bg-primary w-full py-6 md:py-12 px-10 md:px-48 transition-all duration-1000">
+      <div className="bg-primary w-full py-6 md:py-12 px-2 sm:px-4 md:px-48 transition-all duration-1000">
         <div className="flex flex-col text-white">
-          <span className="text-white text-2xl md:text-4xl">
+          <span className="text-white text-xl sm:text-2xl md:text-4xl font-bold tracking-wide text-center">
             ECSC Challenge Trophy
           </span>
-          <div className="flex items-center -ml-2 mt-1">
+          <div className="flex items-center justify-center mt-1">
             <RedDot />
-            <p className="text-lg ml-2">Live Score</p>
+            <p className="text-base sm:text-lg ml-2">Live Score</p>
           </div>
         </div>
       </div>
-      <div className="bg-gray-200 p-4 md:w-1/3 mx-auto md:my-4">
-        <div className="flex flex-col items-center md:flex-row md:justify-around">
-          <h1 className="text-xl font-semibold my-2 uppercase">
-            {firstTeamName} <span className="capitalize">Vs. </span>
-            {secondTeamName}
-          </h1>
-          <p className="mb-4">{matchData.matchNumber}</p>
-          <div className="flex items-center md:gap-8 gap-24">
-            <div className="flex flex-col items-center">
+      <div className="md:bg-gray-100 pt-8 pb-8 sm:pt-12 sm:pb-12 p-2 sm:p-4 w-full sm:w-11/12 md:w-2/3 mx-auto my-4 md:my-8 rounded-xl md:shadow-lg">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
+          {/* Teams and Score */}
+          <div className="flex flex-1 flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
+            {/* First Team */}
+            <div className="flex flex-col items-center flex-1">
               <TeamLogo imagePath={firstTeamName} />
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="font-bold text-xl">
+              <h2 className="text-base sm:text-lg font-semibold mt-2 uppercase text-center">
+                {firstTeamName}
+              </h2>
+              <p className="font-bold text-xl sm:text-2xl mt-1">
                 {firstTeamScore}/{firstTeamWickets}
               </p>
-              <p className="font-medium text-base">
+              <p className="font-medium text-sm sm:text-base text-gray-600">
                 ({firstTeamBalls}/{matchData.totalBalls})
               </p>
             </div>
-          </div>
-
-          <div className="flex items-center md:gap-8 gap-24">
-            <div className="flex flex-col items-center">
-              <TeamLogo imagePath={secondTeamName} />
+            {/* VS and Match Number */}
+            <div className="flex flex-col items-center justify-center flex-shrink-0 my-4 md:my-0">
+              <span className="text-xl sm:text-2xl font-bold text-primary mb-1">
+                VS
+              </span>
+              <span className="text-xs text-gray-500 font-semibold">Match</span>
+              <span className="text-base sm:text-lg font-bold text-gray-700">
+                {matchData.matchNumber}
+              </span>
             </div>
-            <div className="flex flex-col items-center">
-              <p className="font-bold text-xl">
+            {/* Second Team */}
+            <div className="flex flex-col items-center flex-1">
+              <TeamLogo imagePath={secondTeamName} />
+              <h2 className="text-base sm:text-lg font-semibold mt-2 uppercase text-center">
+                {secondTeamName}
+              </h2>
+              <p className="font-bold text-xl sm:text-2xl mt-1">
                 {secondTeamScore}/{secondTeamWickets}
               </p>
-              <p className="font-medium text-base">
+              <p className="font-medium text-sm sm:text-base text-gray-600">
                 ({secondTeamBalls}/{matchData.totalBalls})
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex flex-row items-center justify-center mt-4">
+          <button>
+            <a
+              href="https://www.score7.io/tournaments/ecscct3/standings"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 bg-primary text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+            >
+              View Standings and Fixture
+            </a>
+          </button>
         </div>
       </div>
     </>
