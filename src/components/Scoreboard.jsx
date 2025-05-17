@@ -138,6 +138,18 @@ function Scoreboard() {
             </div>
           </div>
         </div>
+        <div className="flex flex-row items-center justify-center mt-4">
+          <button>
+            <a
+              href="https://www.score7.io/tournaments/ecscct3/standings"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 bg-primary text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+            >
+              View Standings and Fixture
+            </a>
+          </button>
+        </div>
       </div>
     </>
   );
