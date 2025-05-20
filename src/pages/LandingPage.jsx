@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 //import Essencia from "../components/Essencia";
 //import InterviewCall from "../components/InterviewCall";
 //import RobotBattleBanner from "../components/RoboBattleBanner";
-import Scoreboard from "../components/Scoreboard";
+//import Scoreboard from "../components/Scoreboard";
 
 export default function LandingPage() {
   return (
@@ -21,7 +21,7 @@ export default function LandingPage() {
       </Helmet>
       <HeroSection />
       {/*<Essencia />*/}
-      <Scoreboard />
+      {/*<Scoreboard />*/}
       {/*<RobotBattleBanner /> */}
       {/*<InterviewCall />*/}
       <PurposeSection />
