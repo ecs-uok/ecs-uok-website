@@ -57,17 +57,24 @@ export default function CarouselSlider() {
         <div className="my-8 mx-8 md:mx-16">
           <Slider {...settings}>
             {cachedData &&
-              cachedData.data.map((blog) => {
-                return (
-                  <CarouselCard
-                    key={blog.id}
-                    blogImage={blog.attributes.coverImage.data.attributes.url}
-                    blogTitle={blog.attributes.blogTitle}
-                    blogDate={blog.attributes.blogDate}
-                    blogUrl={blog.attributes.blogUrl}
-                  />
-                );
-              })}
+              cachedData.data
+                .slice() // create a shallow copy to avoid mutating original data
+                .sort(
+                  (a, b) =>
+                    new Date(b.attributes.blogDate) -
+                    new Date(a.attributes.blogDate)
+                )
+                .map((blog) => {
+                  return (
+                    <CarouselCard
+                      key={blog.id}
+                      blogImage={blog.attributes.coverImage.data.attributes.url}
+                      blogTitle={blog.attributes.blogTitle}
+                      blogDate={blog.attributes.blogDate}
+                      blogUrl={blog.attributes.blogUrl}
+                    />
+                  );
+                })}
           </Slider>
         </div>
       )}
