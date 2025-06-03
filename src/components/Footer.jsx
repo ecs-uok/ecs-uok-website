@@ -204,7 +204,7 @@ export default function Footer() {
           })}
         </div>
         <p className="text-xs sm:text-sm md:text-base">
-          © Copyright 2024 by&nbsp; ECS Club. All Rights Reserved.
+          © Copyright 2025 by&nbsp; ECS Club. All Rights Reserved.
         </p>
       </div>
     </div>
