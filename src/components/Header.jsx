@@ -96,11 +96,11 @@ export default function Header() {
                   : `hidden`
               }
             >
-              <Link to={"/robot_battles"} target="_blank">
+              <a href="https://robotbattles.ecsc-uok.com/" target="_blank" rel="noreferrer">
                 <li className="py-6" onClick={handleCloseMenu2}>
                   UOK Robot Battles
                 </li>
-              </Link>
+              </a>
             </ul>
             <Link to={"/achievement"}>
               <li>Achievements</li>
@@ -184,7 +184,7 @@ export default function Header() {
         </li>
         {toggleMenu2 ? (
           <div className="pl-4">
-            <Link to={"/robot_battles"} target="_blank">
+            <a href="https://robotbattles.ecsc-uok.com/" target="_blank" rel="noreferrer">
               <li
                 className="p-4"
                 onClick={() => {
@@ -193,7 +193,7 @@ export default function Header() {
               >
                 UOK Robot Battles
               </li>
-            </Link>
+            </a>
           </div>
         ) : (
           ""

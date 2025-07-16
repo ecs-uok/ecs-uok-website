@@ -45,7 +45,8 @@ const siteMapLinkArray = [
   {
     id: 6,
     name: "Robot Battles",
-    to: "/robot-battles",
+    to: "https://robotbattles.ecsc-uok.com/",
+    external: true,
   },
 ];
 
@@ -130,7 +131,13 @@ export default function Footer() {
           <h6 className="font-bold uppercase text-lg sm:text-xl">Site Map</h6>
           <ol>
             {siteMapLinkArray.map((item) => {
-              return (
+              return item.external ? (
+                <a key={item.id} href={item.to} target="_blank" rel="noreferrer">
+                  <li className="text-sm sm:text-base md:text-lg font-sans cursor-pointer py-1">
+                    {item.name}
+                  </li>
+                </a>
+              ) : (
                 <Link key={item.id} to={item.to}>
                   <li className="text-sm sm:text-base md:text-lg font-sans cursor-pointer py-1">
                     {item.name}
