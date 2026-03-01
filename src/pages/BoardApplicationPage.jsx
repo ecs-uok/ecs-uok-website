@@ -19,6 +19,7 @@ import {
   FaCloudUploadAlt,
   FaFile,
   FaTrash,
+  FaLinkedin,
 } from "react-icons/fa";
 
 const POSITIONS = [
@@ -47,6 +48,7 @@ export default function BoardApplicationPage() {
     studentId: "",
     email: "",
     phone: "",
+    linkedIn: "",
     positions: [],
     motivation: "",
     contribution: "",
@@ -81,6 +83,10 @@ export default function BoardApplicationPage() {
         if (!/^[0-9+\-\s()]+$/.test(value)) return "Please enter digits only";
         const digits = value.replace(/\D/g, "");
         if (digits.length !== 10) return "Phone number must be exactly 10 digits";
+        return "";
+      case "linkedIn":
+        if (!value.trim()) return "LinkedIn profile link is required";
+        if (!/^https?:\/\/(www\.)?linkedin\.com\/.*$/.test(value)) return "Please enter a valid LinkedIn URL";
         return "";
       case "positions":
         if (!value || value.length === 0) return "Please select at least one position";
@@ -140,6 +146,11 @@ export default function BoardApplicationPage() {
       newErrors.phone = "Please enter a valid phone number (digits only)";
     } else if (formData.phone.replace(/\D/g, "").length < 10) {
       newErrors.phone = "Phone number must be at least 10 digits";
+    }
+    if (!formData.linkedIn.trim()) {
+      newErrors.linkedIn = "LinkedIn profile link is required";
+    } else if (!/^https?:\/\/(www\.)?linkedin\.com\/.*$/.test(formData.linkedIn)) {
+      newErrors.linkedIn = "Please enter a valid LinkedIn URL";
     }
     if (!formData.positions || formData.positions.length === 0)
       newErrors.positions = "Please select at least one position";
@@ -204,6 +215,7 @@ export default function BoardApplicationPage() {
       data.append("Student ID", formData.studentId);
       data.append("Email", formData.email);
       data.append("Phone", formData.phone);
+      data.append("LinkedIn Profile", formData.linkedIn);
       data.append("Positions Applied For", formData.positions.join(", "));
       data.append("Motivation", formData.motivation);
       data.append("Past Contributions to ECSC", formData.contribution);
@@ -592,6 +604,38 @@ export default function BoardApplicationPage() {
                   {errors.phone && (
                     <p className="text-red-500 text-sm mt-1.5 ml-1">
                       {errors.phone}
+                    </p>
+                  )}
+                </div>
+
+                {/* LinkedIn */}
+                <div className="md:col-span-2">
+                  <label
+                    htmlFor="linkedIn"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    LinkedIn Profile Link <span className="text-red-500">*</span>
+                  </label>
+                  <div className="relative">
+                    <FaLinkedin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+                    <input
+                      type="url"
+                      id="linkedIn"
+                      name="linkedIn"
+                      value={formData.linkedIn}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="https://linkedin.com/in/yourprofile"
+                      className={`form-input w-full pl-11 pr-4 py-3.5 rounded-xl border-2 ${
+                        errors.linkedIn
+                          ? "border-red-400 bg-red-50"
+                          : "border-gray-200 hover:border-blue-300 focus:border-blue-500"
+                      } outline-none text-gray-900 placeholder-gray-400`}
+                    />
+                  </div>
+                  {errors.linkedIn && (
+                    <p className="text-red-500 text-sm mt-1.5 ml-1">
+                      {errors.linkedIn}
                     </p>
                   )}
                 </div>
