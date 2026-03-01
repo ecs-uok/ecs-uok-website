@@ -461,6 +461,22 @@ export default function BoardApplicationPage() {
       {/* ── Form Section ──────────────────────────────────── */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Call for Applications Banner */}
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8 text-center shadow-sm animate-fade-in-up">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">READ THIS before applying</h3>
+            <p className="text-blue-700 mb-4">Please review the official Call for Applications document carefully to understand the roles, requirements, and responsibilities.</p>
+            <a 
+              href="https://res.cloudinary.com/dtpwzhjp9/raw/upload/v1772376241/ecsc_applications/call_for_applications.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 shadow hover:shadow-md transform hover:-translate-y-0.5"
+            >
+              <FaFile className="text-white" />
+              View Call for Applications (PDF)
+            </a>
+          </div>
+
           <form
             onSubmit={handleSubmit}
             noValidate
