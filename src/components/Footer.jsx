@@ -1,4 +1,4 @@
-const Logo = "/assets/logo/ecsc_logo_footer.png";
+const Logo = "https://res.cloudinary.com/dtpwzhjp9/image/upload/ecsc_website/ecsc_logo_footer.png";
 import {
   FaFacebook,
   FaInstagram,

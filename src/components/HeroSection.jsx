@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import WavyUnderline from "./common/WavyUnderline";
 import BlobAnimation from "./common/BlobAnimation";
+import { REGISTRATION_OPEN } from "../config/appConfig";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,6 +60,33 @@ export default function HeroSection() {
               together.
             </p>
 
+            {/* Board Application CTA */}
+            {REGISTRATION_OPEN && (
+              <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 rounded-2xl p-5 shadow-xl border border-blue-600/30 max-w-lg mx-auto lg:mx-0 overflow-hidden">
+                {/* Shimmer overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 animate-pulse" />
+                <div className="relative flex items-center gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center text-2xl shadow-lg">
+                    📋
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-bold text-base leading-tight">
+                      Board Applications Open!
+                    </p>
+                    <p className="text-blue-200 text-sm mt-0.5">
+                      Be a leader — join the ECSC board today
+                    </p>
+                  </div>
+                  <Link
+                    to="/apply"
+                    className="flex-shrink-0 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold px-5 py-2.5 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-md hover:shadow-lg text-sm whitespace-nowrap"
+                  >
+                    Apply Now 🚀
+                  </Link>
+                </div>
+              </div>
+            )}
+
             {/* Swipe Up Indicator */}
             <a
               href="#about"
@@ -110,7 +139,7 @@ export default function HeroSection() {
               }}
             >
               <img
-                src="/images/hero_image.jpg"
+                src="https://res.cloudinary.com/dtpwzhjp9/image/upload/v1772373379/ecsc_website/hero_image.jpg"
                 alt="ECSC Students working together"
                 className="w-full h-full object-cover"
               />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-const logo = "/assets/logo/ecsc_logo_load.png";
+const logo = "https://res.cloudinary.com/dtpwzhjp9/image/upload/ecsc_website/ecsc_logo_load.png";
 import WavyUnderline from "./common/WavyUnderline";
 
 export default function Preloader() {

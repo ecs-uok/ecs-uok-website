@@ -1,7 +1,8 @@
 import { useState } from "react";
-const Logo = "/assets/logo/ecsc_logo_header.png";
+const Logo = "https://res.cloudinary.com/dtpwzhjp9/image/upload/ecsc_website/ecsc_logo_header.png";
 import { Link } from "react-router-dom";
 import { FaBars, FaXmark } from "react-icons/fa6";
+import { REGISTRATION_OPEN } from "../config/appConfig";
 
 export default function Header() {
   const [toggleNavBar, setToggleNavBar] = useState(false);
@@ -69,6 +70,15 @@ export default function Header() {
             >
               Contact Us
             </a>
+
+            {REGISTRATION_OPEN && (
+              <Link
+                to="/apply"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold px-5 py-2.5 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-md hover:shadow-lg text-sm tracking-wide"
+              >
+                🚀 Apply Now
+              </Link>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -135,6 +145,17 @@ export default function Header() {
               Contact Us
             </div>
           </a>
+
+          {REGISTRATION_OPEN && (
+            <Link
+              to="/apply"
+              onClick={() => setToggleNavBar(false)}
+            >
+              <div className="mx-4 my-3 py-3 text-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-xl shadow-md">
+                🚀 Apply Now
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </header>

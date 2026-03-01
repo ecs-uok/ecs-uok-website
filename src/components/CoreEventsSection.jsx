@@ -11,7 +11,7 @@ export default function CoreEventsSection() {
       title: "UOK Robot Battles",
       description:
         "An intense competition where engineering meets creativity. Students design, build, and program autonomous and manual robots to compete in various arena challenges. Test your hardware skills in the ultimate showdown.",
-      image: "/images/robot-battles.jpg",
+      image: "https://res.cloudinary.com/dtpwzhjp9/image/upload/ecsc_website/robot-battles.jpg",
       link: "https://robotbattles.ecsc-uok.com/",
       color: "purple",
     },
@@ -20,7 +20,7 @@ export default function CoreEventsSection() {
       title: "Medusa - Inter University CTF",
       description:
         "Sri Lanka's premier Capture The Flag competition organized by ECSC. A grueling test of cybersecurity skills involving cryptography, reverse engineering, web exploitation, and forensics.",
-      image: "/images/medusa.jpg",
+      image: "https://res.cloudinary.com/dtpwzhjp9/image/upload/ecsc_website/medusa.jpg",
       link: "https://medusa.ecsc-uok.com/",
       color: "green",
     },

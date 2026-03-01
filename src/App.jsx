@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import TeamPage from "./pages/TeamPage";
 import AchievementsPage from "./pages/AchievementsPage";
+import BoardApplicationPage from "./pages/BoardApplicationPage";
 import Preloader from "./components/Preloader";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route index element={<LandingPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/achievements" element={<AchievementsPage />} />
+            <Route path="/apply" element={<BoardApplicationPage />} />
           </Route>
         </Routes>
       )}
