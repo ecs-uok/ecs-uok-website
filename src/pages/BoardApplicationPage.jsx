@@ -467,7 +467,7 @@ export default function BoardApplicationPage() {
             <h3 className="text-xl font-bold text-blue-900 mb-2">READ THIS before applying</h3>
             <p className="text-blue-700 mb-4">Please review the official Call for Applications document carefully to understand the roles, requirements, and responsibilities.</p>
             <a 
-              href="https://res.cloudinary.com/dtpwzhjp9/raw/upload/v1772376241/ecsc_applications/call_for_applications.pdf" 
+              href="https://res.cloudinary.com/dtpwzhjp9/raw/upload/v1772441047/ecsc_applications/call_for_applications_v2.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 shadow hover:shadow-md transform hover:-translate-y-0.5"
