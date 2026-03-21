@@ -8,8 +8,9 @@
 /**
  * Set to `true` to open board member registration.
  * Set to `false` to close registration and hide the form.
+ * Re-enable later by changing this value back to `true`.
  */
-export const REGISTRATION_OPEN = true;
+export const REGISTRATION_OPEN = false;
 
 /**
  * Web3Forms API key for form submissions.
