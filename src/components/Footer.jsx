@@ -208,10 +208,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>© 2025 University of Kelaniya ECSC. All rights reserved.</p>
+          <p>© 2026 University of Kelaniya ECSC. All rights reserved.</p>
           <p className="mt-2 md:mt-0 flex items-center gap-1">
-            Made with <span className="text-red-500 text-lg">❤️</span> by ECSC
-            Team
+            Made with ECSC Web Team
           </p>
         </div>
       </div>
